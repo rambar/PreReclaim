@@ -3,11 +3,11 @@
 #include <string>
 #include <vector>
 
-#include "common.h"
-#include "proc.h"
-
 #include <sys/types.h>
 #include <dirent.h>
+
+#include "common.h"
+#include "proc.h"
 
 using namespace std;
 
@@ -38,7 +38,7 @@ bool Proc::ReadProcessName(int pid, string &name) {
 	return false;
 }
 
-int Proc::FindProcessName(const string &find) {
+int Proc::FindProcessName(const string &find) {
 	DIR *dir;
 	struct dirent *ent;
 
