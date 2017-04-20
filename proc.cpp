@@ -11,7 +11,7 @@
 
 using namespace std;
 
-bool Proc::ReadProcessName(int pid, string &name) {
+bool Proc::ReadProcessName(const int pid, string &name) {
 	char path[PATH_MAX];
 	string line;
 	const string STR_NAME("Name:");
@@ -62,7 +62,7 @@ int Proc::FindProcessName(const string &find) {
 	return -1;
 }
 
-bool Proc::WriteProc(string path, string value){
+bool Proc::WriteProc(const string path, const string value){
 	ofstream fileProc(path);
 
 	if(!fileProc.is_open()){
@@ -75,4 +75,3 @@ bool Proc::WriteProc(string path, string value){
 	
 	return true;
 }
-

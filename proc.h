@@ -4,7 +4,7 @@
 
 class Proc {
 public:
-	static bool ReadProcessName(int pid, std::string &name);
+	static bool ReadProcessName(const int pid, std::string &name);
 	static int FindProcessName(const std::string &find);
-	static bool WriteProc(std::string path, std::string value);
+	static bool WriteProc(const std::string path, const std::string value);
 };
