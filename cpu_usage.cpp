@@ -2,6 +2,7 @@
 #include <sstream>
 #include <fstream>
 #include <string>
+#include <chrono>
 
 #include <sys/types.h>
 #include <dirent.h>
@@ -16,11 +17,29 @@ CPUUsage::CPUUsage(const int pid) {
 }
 
 void CPUUsage::Tick() {
-	copy(curCpuTime, curCpuTime + NUM_CPU_TIME_STATES, prevCpuTime);
-	copy(curProcTimes, curProcTimes + NUM_PROCESS_TIME_STATES, prevProcTimes);
+	if(firstTick) {
+		ReadCPUStats();
+		ReadProcStats();
+		tickStart = chrono::system_clock::now();
 
-	ReadCPUStats();
-	ReadProcStats();
+		firstTick = false;
+	}
+	else {
+		//save it to prev
+		copy(curCpuTime, curCpuTime + NUM_CPU_TIME_STATES, prevCpuTime);
+		copy(curProcTimes, curProcTimes + NUM_PROCESS_TIME_STATES, prevProcTimes);
+		
+		ReadCPUStats();
+		ReadProcStats();
+		CountUsage();
+
+		tickLast = chrono::system_clock::now();
+
+		CheckUsageStable();
+
+		measurable = true;
+		frame++;
+	}
 }
 
 size_t CPUUsage::GetIdleTime(size_t *cpu_times) {
@@ -105,8 +124,8 @@ void CPUUsage::CountUsage() {
 	idleTime	= static_cast<float>(GetIdleTime(curCpuTime) - GetIdleTime(prevCpuTime));
 	totalTime	= activeTime + idleTime;
 
-	usageActive = (100.f * activeTime / totalTime);
-	usageIdle = (100.f * idleTime / totalTime);
+	cpuActive = (100.f * activeTime / totalTime);
+	cpuIdle = (100.f * idleTime / totalTime);
 	
 	double user_time = curProcTimes[S_UTIME] - prevProcTimes[S_UTIME];
 	double sys_time = curProcTimes[S_KTIME] - prevProcTimes[S_KTIME];
@@ -115,11 +134,33 @@ void CPUUsage::CountUsage() {
 }
 
 void CPUUsage::GetCPUUsage(double &cpuActive, double &cpuIdle) {
-	cpuActive = usageActive;
-	cpuIdle = usageIdle;
+	cpuActive = this->cpuActive;
+	cpuIdle = this->cpuIdle;
 }
 
 void CPUUsage::GetProcUsage(double &userActive) {
 	userActive = this->userActive;
+}
+
+double CPUUsage::TimeBetween(std::chrono::system_clock::time_point a, std::chrono::system_clock::time_point b) {
+	return ((std::chrono::duration<double>)(b - a)).count();
+}
+
+void CPUUsage::CheckUsageStable() {
+	if(isUsageStable == S_ABOVE && userActive < usageBelow) {
+		//first time usage gets below
+		isUsageStable = S_BELOW;
+		tickUsageBelow = tickLast;
+	}
+	else if(isUsageStable == S_BELOW) {
+		if(userActive >= usageBelow) {
+			isUsageStable = S_ABOVE;
+		}
+		else{
+			if(TimeBetween(tickUsageBelow, tickLast) >= secToStay){
+				isUsageStable = S_STABLIZED;
+			}
+		}
+	}
 }
 

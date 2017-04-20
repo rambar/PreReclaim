@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 
+#include "launcher.h"
 #include "common.h"
 #include "proc.h"
 #include "cpu_usage.h"
@@ -13,25 +14,37 @@
 
 using namespace std;
 
-void PrintCPUUsage(const double cpu_active, const double cpu_idle, int pid, const double user_active, const double kswapd_active, MemInfo &memInfo)
-{
-	cout << "active: ";
-	cout.setf(ios::fixed, ios::floatfield);
-	cout.width(4);
+void PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const MemInfo &memInfo) {
+	double cpuActive, cpuIdle;
+	double userActive, kswapdActive;
+	
+	userUsage.GetCPUUsage(cpuActive, cpuIdle);
+	userUsage.GetProcUsage(userActive);
+	kswapdUsage.GetProcUsage(kswapdActive);
+
+	cout << "frame: ";
+	cout.width(2);
+	cout << userUsage.GetFrame() << "(";
 	cout.precision(1);
-	cout << cpu_active << "%";
+	cout << userUsage.GetRunningTime() << ")";
+	
+	cout << " - active: ";
+	cout.setf(ios::fixed, ios::floatfield);
+	cout.width(5);
+	cout.precision(1);
+	cout << cpuActive << "%";
 	
 	cout << " - idle: ";
 	cout.setf(ios::fixed, ios::floatfield);
-	cout.width(4);
+	cout.width(5);
 	cout.precision(1);
-	cout << cpu_idle << "%";
+	cout << cpuIdle << "%";
 
-	cout << " - pid(" << pid << "): ";
-	cout << user_active << "%";
+	cout << " - pid(" << userUsage.GetPID() << "): ";
+	cout << userActive << "%";
 
 	cout << " - kswapd: ";
-	cout << kswapd_active << "%";
+	cout << kswapdActive << "%";
 
 	cout << " - avail Mem: ";
 	cout << KBtoMB(memInfo.available) << "MB";
@@ -40,18 +53,20 @@ void PrintCPUUsage(const double cpu_active, const double cpu_idle, int pid, cons
 }
 
 int main(int argc, char *argv[]) {
-	int userPid = -1;
+	//int userPid = -1;
 	int kswapdPid;
 	int first = true;
-
+	Launcher launcher;
+	MemInfo memInfo;
+	unsigned int childpid;
 	const string KSWAPD_NAME("kswapd0");
 	
-	if(argc == 1) {
+	/*if(argc == 1) {
 		cout << "usage: sys_stat [PID]" << endl;
 		return 0;
-	}
+	}*/
 
-	userPid = stoi(argv[1]);
+	//userPid = stoi(argv[1]);
 
 	kswapdPid = Proc::FindProcessName(KSWAPD_NAME);
 	if(kswapdPid == -1) {
@@ -59,37 +74,27 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 
-	CPUUsage userUsage(userPid);
-	CPUUsage kswapdUsage(kswapdPid);
-	MemInfo memInfo;
+	childpid = launcher.LaunchFireFox();
 
-	double cpuActive, cpuIdle;
-	double userActive, kswapdActive;
+	CPUUsage userUsage(childpid);
+	CPUUsage kswapdUsage(kswapdPid);
 	
 	while(true) {
-		if(first == true) {
-			userUsage.Tick();
-			kswapdUsage.Tick();
-			
-			first = false;
-		}
-		else {
-			userUsage.Tick();
-			kswapdUsage.Tick();
-
-			userUsage.CountUsage();
-			kswapdUsage.CountUsage();
-
-			userUsage.GetCPUUsage(cpuActive, cpuIdle);
-			userUsage.GetProcUsage(userActive);
-			kswapdUsage.GetProcUsage(kswapdActive);
-
+		userUsage.Tick();
+		kswapdUsage.Tick();
+		
+		if(userUsage.IsMeasurable()) {
 			memInfo.Read();
 
-			PrintCPUUsage(cpuActive, cpuIdle, userPid, userActive, kswapdActive, memInfo);
+			PrintSystemUsage(userUsage, kswapdUsage, memInfo);
+
+			if(userUsage.IsUsageStable()){
+				cout << "Stablised at " << userUsage.StablisedAt() << "(s)" << endl;
+				break;
+			}
 		}
 
-		this_thread::sleep_for(chrono::milliseconds(1000));
+		this_thread::sleep_for(chrono::milliseconds(200));
 	}
 	
 	return 0;
