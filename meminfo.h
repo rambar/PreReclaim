@@ -1,3 +1,6 @@
+#ifndef _MEMINFO_H
+#define _MEMINFO_H 
+
 #define MEMINFO_PATH		"/proc/meminfo"
 #define MEMINFO_TOTAL		"MemTotal:"
 #define MEMINFO_FREE		"MemFree:"
@@ -12,3 +15,5 @@ public:
 
 	bool Read();	
 };
+
+#endif

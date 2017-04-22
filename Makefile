@@ -1,7 +1,7 @@
 CC = g++
 CXX = g++
 
-OBJS = launcher.o proc.o cpu_usage.o meminfo.o main.o
+OBJS = testset.o launcher.o proc.o cpu_usage.o meminfo.o main.o
 TARGET = sys_stat
  
 CXXFLAGS = -std=c++11 -O2 -g

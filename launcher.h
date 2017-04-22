@@ -1,7 +1,6 @@
-#define LAUNCHER_FIREFOX "/usr/bin/firefox"
+#include <string>
 
 class Launcher {
-public:
-	Launcher(){}
-	unsigned int LaunchFireFox();
+public:	
+	unsigned int forkAndExec(char* const path, char* const option, bool waitchild);
 };

@@ -1,11 +1,15 @@
 #include <iostream>
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 #include "launcher.h"
 
 using namespace std;
 
-unsigned int Launcher::LaunchFireFox(){
+unsigned int Launcher::forkAndExec(char* const path, char* const option, bool waitchild){
+	//if(path.length() == 0) return -1;
+	
 	pid_t pid = fork();
 
 	if (pid == -1) {
@@ -13,10 +17,15 @@ unsigned int Launcher::LaunchFireFox(){
 	} 
 	else if (pid > 0) {
 		// parent
+		if(waitchild) {
+			int status;
+			waitpid(pid, &status, 0);
+		}
 		return pid;
 	}
 	else {
 		// we are the child
-		execl(LAUNCHER_FIREFOX, NULL);
+		char* const argv[3] = {path, option, NULL};
+		execv(path, argv);
 	}
 }

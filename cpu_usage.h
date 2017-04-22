@@ -1,4 +1,8 @@
+#ifndef _CPU_USAGE_H
+#define _CPU_USAGE_H 
+
 #include <fstream>
+#include <chrono>
 
 #define PROCSTAT_PATH 		"/proc/stat"
 #define PROCPID_PATH		"/proc/%d/stat"
@@ -81,7 +85,8 @@ private:
 	double TimeBetween(std::chrono::system_clock::time_point a, std::chrono::system_clock::time_point b);
 	void CheckUsageStable();
 
-public:	
+public:
+	CPUUsage() {}
 	CPUUsage(const int pid);
 	
 	void Tick();
@@ -89,6 +94,7 @@ public:
 	void GetProcUsage(double &);
 	unsigned int GetFrame() { return frame; }
 	unsigned int GetPID() { return pid; }
+	void SetPID(const unsigned int pid) { this->pid = pid; }
 	double GetRunningTime() { return TimeBetween(tickStart, tickLast); }
 	bool IsMeasurable() { return measurable; }
 	
@@ -96,3 +102,4 @@ public:
 	double StablisedAt() { return TimeBetween(tickStart, tickUsageBelow); }
 };
 
+#endif
