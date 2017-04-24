@@ -9,11 +9,23 @@
 
 #include "common.h"
 #include "cpu_usage.h"
+#include "proc.h"
 
 using namespace std;
 
 CPUUsage::CPUUsage(const int pid) {
 	this->pid = pid;
+}
+
+void CPUUsage::SetPID(const unsigned int pid) { 
+	this->pid = pid; 
+}
+
+std::string CPUUsage::GetProcName() {
+	string name;
+	
+	Proc::ReadProcessName(pid, name); 
+	return name;
 }
 
 void CPUUsage::Tick() {
@@ -35,7 +47,8 @@ void CPUUsage::Tick() {
 
 		tickLast = chrono::system_clock::now();
 
-		CheckUsageStable();
+		double usageToCheck = (usageMonitor == S_USAGE_CPU_TOTAL)? cpuActive: userActive;
+		CheckUsageStable(usageToCheck);
 
 		measurable = true;
 		frame++;
@@ -146,19 +159,19 @@ double CPUUsage::TimeBetween(std::chrono::system_clock::time_point a, std::chron
 	return ((std::chrono::duration<double>)(b - a)).count();
 }
 
-void CPUUsage::CheckUsageStable() {
-	if(isUsageStable == S_ABOVE && userActive < usageBelow) {
+void CPUUsage::CheckUsageStable(const double usage) {	
+	if(isUsageStable == S_USAGE_ABOVE && usage < usageBelow) {
 		//first time usage gets below
-		isUsageStable = S_BELOW;
+		isUsageStable = S_USAGE_BELOW;
 		tickUsageBelow = tickLast;
 	}
-	else if(isUsageStable == S_BELOW) {
-		if(userActive >= usageBelow) {
-			isUsageStable = S_ABOVE;
+	else if(isUsageStable == S_USAGE_BELOW) {
+		if(usage >= usageBelow) {
+			isUsageStable = S_USAGE_ABOVE;
 		}
 		else{
 			if(TimeBetween(tickUsageBelow, tickLast) >= secToStay){
-				isUsageStable = S_STABLIZED;
+				isUsageStable = S_USAGE_STABLIZED;
 			}
 		}
 	}

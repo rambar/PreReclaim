@@ -44,12 +44,20 @@ private:
 	};
 
 	enum UsageStable {
-		S_ABOVE = 0,
-		S_BELOW,
-		S_STABLIZED
+		S_USAGE_ABOVE = 0,
+		S_USAGE_BELOW,
+		S_USAGE_STABLIZED
 	};
-	
+
+public:
+	enum UsageMonitor {
+		S_USAGE_CPU_TOTAL = 0,
+		S_USAGE_USER_PROC = 1,	
+	};
+
+private:	
 	int 			pid;
+	std::string		procName;
 	
 	size_t 			prevCpuTime[NUM_CPU_TIME_STATES];
 	size_t 			prevProcTimes[NUM_PROCESS_TIME_STATES];
@@ -72,9 +80,10 @@ private:
 	std::chrono::system_clock::time_point	tickStart;
 	std::chrono::system_clock::time_point	tickLast;
 
-	double usageBelow = 18.0;
-	double secToStay = 3.0;
-	UsageStable isUsageStable = S_ABOVE;
+	UsageMonitor	usageMonitor;
+	double 			usageBelow = -1.0;
+	double 			secToStay = 3.0;
+	UsageStable 	isUsageStable = S_USAGE_ABOVE;
 	std::chrono::system_clock::time_point	tickUsageBelow;
 	
 	size_t GetIdleTime(size_t *);
@@ -83,22 +92,25 @@ private:
 	bool ReadProcStats();
 	void CountUsage();
 	double TimeBetween(std::chrono::system_clock::time_point a, std::chrono::system_clock::time_point b);
-	void CheckUsageStable();
+	void CheckUsageStable(const double);
 
-public:
+public:	
 	CPUUsage() {}
 	CPUUsage(const int pid);
 	
 	void Tick();
 	void GetCPUUsage(double &, double &);
 	void GetProcUsage(double &);
+	std::string GetProcName();
 	unsigned int GetFrame() { return frame; }
+	void SetUsageBelow(const double usageBelow) { this->usageBelow = usageBelow; }
+	void SetUsageMonitor(const UsageMonitor usageMonitor) { this->usageMonitor = usageMonitor;} 
 	unsigned int GetPID() { return pid; }
-	void SetPID(const unsigned int pid) { this->pid = pid; }
+	void SetPID(const unsigned int pid);
 	double GetRunningTime() { return TimeBetween(tickStart, tickLast); }
 	bool IsMeasurable() { return measurable; }
 	
-	bool IsUsageStable() { return (isUsageStable == S_STABLIZED); }
+	bool IsUsageStable() { return (isUsageStable == S_USAGE_STABLIZED); }
 	double StablisedAt() { return TimeBetween(tickStart, tickUsageBelow); }
 };
 

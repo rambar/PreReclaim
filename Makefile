@@ -2,7 +2,7 @@ CC = g++
 CXX = g++
 
 OBJS = testset.o launcher.o proc.o cpu_usage.o meminfo.o main.o
-TARGET = sys_stat
+TARGET = run_benchmark
  
 CXXFLAGS = -std=c++11 -O2 -g
 LDFLAGS = -lstdc++

@@ -1,3 +1,4 @@
 *.o
 sys_stat
 backup
+run_benchmark
