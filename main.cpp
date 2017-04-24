@@ -10,8 +10,6 @@
 #define KILL_ALL		"/usr/bin/killall"
 #define LAUNCH_GAME		"/usr/games/gnome-mahjongg"
 
-#define LAUNCH(prog, option ...) TestSet::S_LAUNCH_FORK_AND_RUN, prog, [option ...]
-
 using namespace std;
 
 int main(int argc, char *argv[]) {
