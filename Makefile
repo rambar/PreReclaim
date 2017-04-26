@@ -2,7 +2,7 @@ CC = g++
 CXX = g++
 
 OBJS = testset.o launcher.o proc.o cpu_usage.o meminfo.o main.o
-TARGET = pre-reclaim
+TARGET = run_test
  
 CXXFLAGS = -std=c++11 -O2 -g
 LDFLAGS = -lstdc++

@@ -1,5 +1,4 @@
 *.o
 sys_stat
 backup
-run_benchmark
-pre-reclaim
+run_test

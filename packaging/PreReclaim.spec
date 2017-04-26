@@ -22,11 +22,11 @@ make %{?jobs:-j%jobs}
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/bin
-cp -a pre-reclaim %{buildroot}/usr/bin/
+cp -a run_test %{buildroot}/usr/bin/
 
 %clean
 rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-/usr/bin/pre-reclaim
+/usr/bin/run_test
