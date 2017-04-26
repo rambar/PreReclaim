@@ -1,0 +1,31 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+PROJECT("pre-reclaim" CXX)
+
+SET(SRCS testset.cpp
+	 launcher.cpp
+	 proc.cpp
+	 cpu_usage.cpp
+	 meminfo.cpp
+         main.cpp )
+SET(BINDIR ${CMAKE_INSTALL_PREFIX}/bin)
+
+ADD_DEFINITIONS (-DTIZEN)
+
+INCLUDE(FindPkgConfig)
+pkg_check_modules(pkgs REQUIRED aul)
+
+FOREACH(flag ${pkgs_CFLAGS})
+        SET(EXTRA_CFLAGS "${EXTRA_CFLAGS} ${flag}")
+ENDFOREACH(flag)
+
+MESSAGE("### CMAKE_SYSTEM_VERSION :: ${EXTRA_CFLAGS} ###")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${EXTRA_CFLAGS}")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -Wall -Werror-implicit-function-declaration")
+SET(CMAKE_CXX_FLAGS_DEBUG "-O2 -g")
+SET(CMAKE_CXX_FLAGS_RELEASE "-O2")
+
+ADD_EXECUTABLE(${PROJECT_NAME} ${SRCS})
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${PKGS_LDFLAGS} "-laul -lbundle")
+
+INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${BINDIR})
+

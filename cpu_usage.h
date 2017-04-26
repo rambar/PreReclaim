@@ -101,7 +101,7 @@ public:
 	void Tick();
 	void GetCPUUsage(double &, double &);
 	void GetProcUsage(double &);
-	std::string GetProcName();
+	void GetProcName(std::string &);
 	unsigned int GetFrame() { return frame; }
 	void SetUsageBelow(const double usageBelow) { this->usageBelow = usageBelow; }
 	void SetUsageMonitor(const UsageMonitor usageMonitor) { this->usageMonitor = usageMonitor;} 

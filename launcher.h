@@ -2,5 +2,8 @@
 
 class Launcher {
 public:	
-	unsigned int forkAndExec(char* const path, char* const option, bool waitchild);
+	unsigned int forkAndExec(char* const, bool);
+
+private:
+	char** TokenizeCommand(char* const);
 };

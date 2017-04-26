@@ -21,11 +21,13 @@ void CPUUsage::SetPID(const unsigned int pid) {
 	this->pid = pid; 
 }
 
-std::string CPUUsage::GetProcName() {
-	string name;
+void CPUUsage::GetProcName(string &name) {
+	if(pid == -1) {
+		name = "PID_UNDEFINED";
+		return;
+	}
 	
 	Proc::ReadProcessName(pid, name); 
-	return name;
 }
 
 void CPUUsage::Tick() {
