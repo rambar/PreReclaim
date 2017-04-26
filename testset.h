@@ -38,19 +38,19 @@ public:
 	class Testcase {
 	public: 
 		LaunchType 	type;
-		char 		sparam[TESTCASE_SPARAM_MAX];
+		std::string sparam;
 		long		lparam;
 		MonitorType monitor;
 		double 		usageBelow;
 	};
 
-	void AddAulLaunch(const char* const);
-	void AddAulLaunch(const char* const, const MonitorType, const double);
-	void AddForkAndExec(const char* const);
-	void AddForkAndExec(const char* const, const MonitorType, const double);
-	void AddQuickCommand(const char* const);
+	void AddAulLaunch(std::string );
+	void AddAulLaunch(std::string , const MonitorType, const double);
+	void AddForkAndExec(std::string);
+	void AddForkAndExec(std::string , const MonitorType, const double);
+	void AddQuickCommand(std::string );
 	void AddSleep(long);
-	void AddProcWrite(const char* const, const char* const);
+	void AddProcWrite(std::string, std::string);
 		
 	bool StartTest();
 
@@ -59,8 +59,8 @@ public:
 private:
 	std::vector<Testcase*> listTestset;
 	void PrintSystemUsage(CPUUsage &, CPUUsage &, const MemInfo &);
-	void AddTestset(const LaunchType, const char* const, long, const MonitorType, const double);
-	bool AulLaunch(const char*);
+	void AddTestset(const LaunchType, std::string , long, const MonitorType, const double);
+	bool AulLaunch(std::string);
 };
 
 #endif

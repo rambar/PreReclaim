@@ -19,10 +19,18 @@
 #define SIZE_TO_RECLAIM "150000"
 #define SIZE_ZERO		"0"
 
+#define FORK_EXEC(...) 	AddPreJob(testSet); \
+						testSet.AddForkAndExec(__VA_ARGS__); \
+						AddPostJob(testSet);
+
+#define AUL_LAUNCH(...) AddPreJob(testSet); \
+						testSet.AddAulLaunch(__VA_ARGS__); \
+						AddPostJob(testSet);
+
+
 using namespace std;
 
 ANNOTATE_DEFINE;
-
 bool enablePreReclaim = false;
 
 /*
@@ -49,59 +57,37 @@ void AddPostJob(TestSet &testSet) {
 
 #ifdef TIZEN
 void CreateTestJob(TestSet &testSet) {
-	AddPreJob(testSet);
-	testSet.AddForkAndExec ("/usr/bin/wascmd -r CZuqWL5gWu.pooq", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	AddPostJob(testSet);
 
-	AddPreJob(testSet);
-	testSet.AddAulLaunch ("org.tizen.browser", TestSet::S_MONITOR_CPU_TOTAL, 30.0);
-	AddPostJob(testSet);
+	FORK_EXEC ("/usr/bin/wascmd -r CZuqWL5gWu.pooq", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
+	AUL_LAUNCH ("org.tizen.browser", TestSet::S_MONITOR_CPU_TOTAL, 30.0);
+	AUL_LAUNCH ("org.volt.mycontents", TestSet::S_MONITOR_CPU_TOTAL, 25.0);
+	AUL_LAUNCH ("org.volt.search-all", TestSet::S_MONITOR_CPU_TOTAL, 30.0);
+	AUL_LAUNCH ("org.volt.apps", TestSet::S_MONITOR_CPU_TOTAL, 30.0);
+	AUL_LAUNCH ("evKhCgZelL.AmazonIgnitionLauncher2", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
+	FORK_EXEC ("/usr/bin/wascmd -r QizQxC7CUf.PlayMovies", TestSet::S_MONITOR_CPU_TOTAL, 30.0);
+	FORK_EXEC ("/usr/bin/wascmd -r 9Ur5IzDKqV.TizenYouTube", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
 
-	AddPreJob(testSet);
-	testSet.AddAulLaunch ("org.volt.mycontents", TestSet::S_MONITOR_CPU_TOTAL, 25.0);
-	AddPostJob(testSet);
-
-	AddPreJob(testSet);
-	testSet.AddAulLaunch ("org.volt.search-all", TestSet::S_MONITOR_CPU_TOTAL, 30.0);
-	AddPostJob(testSet);
-
-	AddPreJob(testSet);
-	testSet.AddAulLaunch ("org.volt.apps", TestSet::S_MONITOR_CPU_TOTAL, 30.0);
-	AddPostJob(testSet);
-
-	AddPreJob(testSet);
-	testSet.AddAulLaunch ("evKhCgZelL.AmazonIgnitionLauncher2", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	AddPostJob(testSet);
-
-	AddPreJob(testSet);
-	testSet.AddForkAndExec ("/usr/bin/wascmd -r QizQxC7CUf.PlayMovies", TestSet::S_MONITOR_CPU_TOTAL, 30.0);
-	AddPostJob(testSet);
-
-	AddPreJob(testSet);
-	testSet.AddForkAndExec ("/usr/bin/wascmd -r 9Ur5IzDKqV.TizenYouTube", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	AddPostJob(testSet);
-
-	//testSet.AddForkAndExec ("/usr/bin/wascmd -r RN1MCdNq8t.Netflix", TestSet::S_MONITOR_CPU_TOTAL, 32.0);
-	//testSet.AddForkAndExec ("/usr/bin/wascmd -r QizQxC7CUf.PlayMovies", TestSet::S_MONITOR_CPU_TOTAL, 30.0);
-	//testSet.AddForkAndExec ("/usr/bin/wascmd -r YgmIZRmiap.MelOn", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	//testSet.AddForkAndExec ("/usr/bin/aul_test launch org.volt.apps", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
+	//FORK_EXEC ("/usr/bin/wascmd -r RN1MCdNq8t.Netflix", TestSet::S_MONITOR_CPU_TOTAL, 32.0);
+	//FORK_EXEC ("/usr/bin/wascmd -r QizQxC7CUf.PlayMovies", TestSet::S_MONITOR_CPU_TOTAL, 30.0);
+	//FORK_EXEC ("/usr/bin/wascmd -r YgmIZRmiap.MelOn", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
+	//FORK_EXEC ("/usr/bin/aul_test launch org.volt.apps", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
 }
 #else 
 void CreateTestJob(TestSet &testSet) {
-
 	testSet.SetMonitorPeriod(300);
-	//testSet.AddForkAndExec (LAUNCH_GIMP);
-	testSet.AddForkAndExec ("/opt/google/chrome/chrome google.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	testSet.AddForkAndExec ("/opt/google/chrome/chrome amazon.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	testSet.AddForkAndExec ("/opt/google/chrome/chrome ebay.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	testSet.AddForkAndExec ("/opt/google/chrome/chrome youtube.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	testSet.AddForkAndExec ("/opt/google/chrome/chrome naver.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	testSet.AddForkAndExec ("/opt/google/chrome/chrome daum.net");
-	testSet.AddForkAndExec ("/opt/google/chrome/chrome netflix.com");
+	
+	FORK_EXEC (LAUNCH_GIMP);
+	FORK_EXEC ("/opt/google/chrome/chrome google.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
+	FORK_EXEC ("/opt/google/chrome/chrome amazon.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
+	FORK_EXEC ("/opt/google/chrome/chrome ebay.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
+	FORK_EXEC ("/opt/google/chrome/chrome youtube.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
+	FORK_EXEC ("/opt/google/chrome/chrome naver.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
+	FORK_EXEC ("/opt/google/chrome/chrome daum.net");
+	FORK_EXEC ("/opt/google/chrome/chrome netflix.com");
 
-	//testSet.AddForkAndExec (LAUNCH_GAME, NULL);
+	//FORK_EXEC (LAUNCH_GAME, NULL);
 	//testSet.AddQuickCommand(KILL_ALL, "gnome-mahjongg");
-	//testSet.AddForkAndExec (LAUNCH_FIREFOX, "naver.com");
+	//FORK_EXEC (LAUNCH_FIREFOX, "naver.com");
 	//testSet.AddQuickCommand(KILL_ALL, "gnome-mahjongg");	
 }
 #endif

@@ -66,52 +66,50 @@ void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const
 	cout << endl;
 }
 
-void TestSet::AddTestset(const LaunchType type, const char* const sparam, long lparam, const MonitorType monitor, const double usageBelow) {
+void TestSet::AddTestset(const LaunchType type, string sparam, long lparam, const MonitorType monitor, const double usageBelow) {
 	Testcase *testcase = new Testcase();
 	testcase->type = type;	
+	testcase->sparam = sparam;
 	testcase->lparam = lparam;
 	testcase->monitor = monitor;
 	testcase->usageBelow = usageBelow;
-
-	if(sparam != NULL)
-		strcpy(testcase->sparam, sparam);
 	
 	listTestset.push_back(testcase);
 }
 
-void TestSet::AddAulLaunch(const char* const appid){
+void TestSet::AddAulLaunch(string appid){
 	AddTestset(S_LAUNCH_AUL_LAUNCH, appid, 0, S_MONITOR_CPU_TOTAL, DEFAULT_USAGE_BELOW);
 }
 
-void TestSet::AddAulLaunch(const char* const appid, const MonitorType monitor, const double usageBelow){
+void TestSet::AddAulLaunch(string appid, const MonitorType monitor, const double usageBelow){
 	AddTestset(S_LAUNCH_AUL_LAUNCH, appid, 0, monitor, usageBelow);
 }
 
-void TestSet::AddForkAndExec(const char* const path) {
-	AddTestset(S_LAUNCH_FORK_AND_EXEC, path, 0, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
+void TestSet::AddForkAndExec(string command) {
+	AddTestset(S_LAUNCH_FORK_AND_EXEC, command, 0, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
 }
 
-void TestSet::AddForkAndExec(const char* const path, const MonitorType monitor, const double usageBelow) {
-	AddTestset(S_LAUNCH_FORK_AND_EXEC, path, 0, monitor, usageBelow);
+void TestSet::AddForkAndExec(string command, const MonitorType monitor, const double usageBelow) {
+	AddTestset(S_LAUNCH_FORK_AND_EXEC, command, 0, monitor, usageBelow);
 }
 
-void TestSet::AddQuickCommand(const char* const path) {
-	AddTestset(S_LAUNCH_QUICK_COMMAND, path, 0, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
+void TestSet::AddQuickCommand(string command) {
+	AddTestset(S_LAUNCH_QUICK_COMMAND, command, 0, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
 }
 
 void TestSet::AddSleep(long milliseconds) {
-	AddTestset(S_LAUNCH_SLEEP, NULL, milliseconds, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
+	AddTestset(S_LAUNCH_SLEEP, "", milliseconds, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
 }
 
-void TestSet::AddProcWrite(const char* const path, const char* const value){
+void TestSet::AddProcWrite(string path, string value){
 	stringstream ss;
 	
 	ss << path << " " << value;
-	AddTestset(S_LAUNCH_PROC_WRITE, ss.str().c_str(), 0, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
+	AddTestset(S_LAUNCH_PROC_WRITE, ss.str(), 0, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
 }
 
 #if defined(TIZEN)
-bool TestSet::AulLaunch(const char* appid) {
+bool TestSet::AulLaunch(string appid) {
 	bundle *b;
 	
 	b = bundle_create();
@@ -123,7 +121,7 @@ bool TestSet::AulLaunch(const char* appid) {
 		return false;
 }
 #else
-bool TestSet::AulLaunch(const char* appid) {
+bool TestSet::AulLaunch(string appid) {
 	return true;
 }
 #endif
@@ -142,7 +140,7 @@ bool TestSet::StartTest() {
 		CPUUsage kswapdUsage;
 		MemInfo memInfo;
 		LaunchType type = (*it)->type;
-		char* const sparam = const_cast<char*>((*it)->sparam);
+		string sparam = ((*it)->sparam);
 		bool waitStabilized;
 		bool waitChild;
 		int childpid = -1;
@@ -182,7 +180,7 @@ bool TestSet::StartTest() {
 			Proc::WriteProc(path, value);
 			cout << "written to " << path << " (" << value << ")" << endl;
 
-			ANNOTATE_CHANNEL(50, sparam);
+			ANNOTATE_CHANNEL(50, sparam.c_str());
 			ANNOTATE_CHANNEL_END(50);
 		}
 
@@ -196,7 +194,7 @@ bool TestSet::StartTest() {
 
 			kswapdUsage.SetPID(kswapdPid);
 
-			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_BLUE, sparam);
+			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_BLUE, sparam.c_str());
 			while(true) {
 				userUsage.Tick();
 				kswapdUsage.Tick();

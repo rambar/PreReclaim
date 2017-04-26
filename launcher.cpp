@@ -11,7 +11,7 @@
 
 using namespace std;
 
-char** Launcher::TokenizeCommand(char* const command) {
+char** Launcher::TokenizeCommand(string &command) {
 	char** tokenArray;
 	unsigned int i;
 	
@@ -35,8 +35,8 @@ char** Launcher::TokenizeCommand(char* const command) {
 	return tokenArray;
 }
 
-unsigned int Launcher::forkAndExec(char* const command, bool waitchild) {
-	if(command == NULL) {
+unsigned int Launcher::forkAndExec(string &command, bool waitchild) {
+	if(command.length() == 0) {
 		error("No command to fork and execute\n");
 		return -1;
 	}

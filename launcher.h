@@ -2,8 +2,8 @@
 
 class Launcher {
 public:	
-	unsigned int forkAndExec(char* const, bool);
+	unsigned int forkAndExec(std::string &, bool);
 
 private:
-	char** TokenizeCommand(char* const);
+	char** TokenizeCommand(std::string &);
 };
