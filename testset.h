@@ -10,6 +10,10 @@
 
 class TestSet {	
 private:
+	long monitorPeriod = 100; //default 1000ms
+	bool preReclaimEnabled = false;
+	
+public:	
 	enum LaunchType {
 		S_LAUNCH_FORK_AND_EXEC = 0,
 		S_LAUNCH_QUICK_COMMAND,
@@ -17,10 +21,7 @@ private:
 		S_LAUNCH_SLEEP,
 		S_LAUNCH_PROC_WRITE,
 	};
-
-	long monitorPeriod = 100; //default 1000ms
 	
-public:	
 	enum MonitorType {
 		S_MONITOR_CPU_TOTAL = 0,
 		S_MONITOR_USER_PROC = 1,	
@@ -55,6 +56,8 @@ public:
 	bool StartTest();
 
 	void SetMonitorPeriod(long milliseconds) { monitorPeriod = milliseconds; }
+	void SetPreReclaim(bool preReclaim) { preReclaimEnabled = preReclaim; }
+	bool PreReclaimEnabled() { return preReclaimEnabled; }
 	
 private:
 	std::vector<Testcase*> listTestset;

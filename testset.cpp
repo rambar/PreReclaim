@@ -156,7 +156,12 @@ bool TestSet::StartTest() {
 				return 0;
 			}
 
+			const double usageBelow = (*it)->usageBelow;
+			const MonitorType monitor = (*it)->monitor;
+
 			cout << "Fork Launching... " << sparam << " pid:" << childpid << endl;
+			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "total": "proc") 
+				 << " cpu usage below " << usageBelow << endl;
 		}
 		else if(type == S_LAUNCH_AUL_LAUNCH) {
 			cout << "AUL Launching... " << sparam << endl;

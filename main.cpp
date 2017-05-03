@@ -4,6 +4,7 @@
 #include <string>
 
 #include "common.h"
+#include "loader.h"
 #include "testset.h"
 #include "streamline_annotate.h"
 
@@ -13,47 +14,9 @@
 #define LAUNCH_GAME		"/usr/games/gnome-mahjongg"
 #define LAUNCH_GIMP		"/usr/bin/gimp"
 
-#define MALLOC_SIZE     4*1024*1024
-
-#define PROC_EFM		"/proc/sys/vm/extra_free_kbytes"
-#define SIZE_TO_RECLAIM "150000"
-#define SIZE_ZERO		"0"
-
-#define FORK_EXEC(...) 	AddPreJob(testSet); \
-						testSet.AddForkAndExec(__VA_ARGS__); \
-						AddPostJob(testSet);
-
-#define AUL_LAUNCH(...) AddPreJob(testSet); \
-						testSet.AddAulLaunch(__VA_ARGS__); \
-						AddPostJob(testSet);
-
-
 using namespace std;
 
 ANNOTATE_DEFINE;
-bool enablePreReclaim = false;
-
-/*
-void memalloc() {	
-	char* buf;
-
-	buf = (char*) malloc(MALLOC_SIZE);
-	memset(buf, 0xff, MALLOC_SIZE);
-
-	free(buf);
-}*/
-
-void AddPreJob(TestSet &testSet) {
-	if(enablePreReclaim) {
-		testSet.AddProcWrite(PROC_EFM, SIZE_TO_RECLAIM);
-		testSet.AddSleep(3000);
-		testSet.AddProcWrite(PROC_EFM, SIZE_ZERO);
-	}
-}
-
-void AddPostJob(TestSet &testSet) {
-	testSet.AddSleep(5000);
-}
 
 #ifdef TIZEN
 void CreateTestJob(TestSet &testSet) {
@@ -72,36 +35,28 @@ void CreateTestJob(TestSet &testSet) {
 	//FORK_EXEC ("/usr/bin/wascmd -r YgmIZRmiap.MelOn", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
 	//FORK_EXEC ("/usr/bin/aul_test launch org.volt.apps", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
 }
-#else 
-void CreateTestJob(TestSet &testSet) {
-	testSet.SetMonitorPeriod(300);
-	
-	FORK_EXEC (LAUNCH_GIMP);
-	FORK_EXEC ("/opt/google/chrome/chrome google.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	FORK_EXEC ("/opt/google/chrome/chrome amazon.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	FORK_EXEC ("/opt/google/chrome/chrome ebay.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	FORK_EXEC ("/opt/google/chrome/chrome youtube.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	FORK_EXEC ("/opt/google/chrome/chrome naver.com", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
-	FORK_EXEC ("/opt/google/chrome/chrome daum.net");
-	FORK_EXEC ("/opt/google/chrome/chrome netflix.com");
-
-	//FORK_EXEC (LAUNCH_GAME, NULL);
-	//testSet.AddQuickCommand(KILL_ALL, "gnome-mahjongg");
-	//FORK_EXEC (LAUNCH_FIREFOX, "naver.com");
-	//testSet.AddQuickCommand(KILL_ALL, "gnome-mahjongg");	
-}
 #endif
 
 int main(int argc, char *argv[]) {	
 	ANNOTATE_SETUP;
-	TestSet testSet;
+
+	Loader loader;
+	TestSet testset;
+	string filename = "default_testset.json";
 
 	if(argc > 1 && !strcmp(argv[1], "-pr")) {
-		enablePreReclaim = true;
+		testset.SetPreReclaim(true);
 	}
 
-	CreateTestJob(testSet);
-	testSet.StartTest();
+	if(loader.LoadFromFile(filename, testset) == false){
+		error("error reading %s\n", filename.c_str());
+	}
+
+#ifndef TIZEN
+	testset.SetMonitorPeriod(300);
+#endif
+
+	testset.StartTest();
 	
 	return 0;
 }
