@@ -71,8 +71,8 @@ unsigned int Launcher::forkAndExec(string &command, bool waitchild) {
 		execv(options[0], options); //only return when error occurs.
 
 		cout << "exec error: " << strerror(errno) << endl;
-		delete [] options;
-		delete options;
+		//delete [] options;
+		//delete options;
 		
 		exit(0);
 	}

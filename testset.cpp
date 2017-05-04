@@ -4,6 +4,9 @@
 #include <string>
 #include <sys/types.h>
 #include <dirent.h>
+#include <stdlib.h>
+#include <glib-object.h>
+#include <json-glib/json-glib.h>
 
 #include "common.h"
 #include "launcher.h"
@@ -21,6 +24,15 @@
 #define KSWAPD_NAME 			"kswapd0"
 #define DEFAULT_USAGE_BELOW		18.0
 #define DEFAULT_MONITOR_TYPE 	S_MONITOR_USER_PROC
+
+#define CONFIGURATION_LAUNCHTYPE	"launchType"
+#define CONFIGURATION_COMMAND 		"command"
+#define CONFIGURATION_MONITOR 		"monitor"
+#define CONFIGURATION_USAGEBELOW	"usageBelow"
+
+#define PROC_EFM		"/proc/sys/vm/extra_free_kbytes"
+#define SIZE_TO_RECLAIM "150000"
+#define SIZE_ZERO		"0"
 
 using namespace std;
 
@@ -77,16 +89,8 @@ void TestSet::AddTestset(const LaunchType type, string sparam, long lparam, cons
 	listTestset.push_back(testcase);
 }
 
-void TestSet::AddAulLaunch(string appid){
-	AddTestset(S_LAUNCH_AUL_LAUNCH, appid, 0, S_MONITOR_CPU_TOTAL, DEFAULT_USAGE_BELOW);
-}
-
 void TestSet::AddAulLaunch(string appid, const MonitorType monitor, const double usageBelow){
 	AddTestset(S_LAUNCH_AUL_LAUNCH, appid, 0, monitor, usageBelow);
-}
-
-void TestSet::AddForkAndExec(string command) {
-	AddTestset(S_LAUNCH_FORK_AND_EXEC, command, 0, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
 }
 
 void TestSet::AddForkAndExec(string command, const MonitorType monitor, const double usageBelow) {
@@ -126,6 +130,121 @@ bool TestSet::AulLaunch(string appid) {
 }
 #endif
 
+bool TestSet::LoadFromFile(string &filename) {
+	JsonParser *parser;
+	JsonNode *root;
+	GError *error = NULL;
+	JsonArray* array;
+	guint arraySize;
+	bool returnValue = false;
+
+	if(filename.length() == 0) return false;
+	
+	parser = json_parser_new ();
+	json_parser_load_from_file (parser, filename.c_str(), &error);
+	if (error) {
+		cout << "Unable to parse:" << error->message << endl; 
+		g_error_free (error);
+		goto finish;
+	}
+
+	root = json_parser_get_root (parser);
+
+	if (root == NULL || (JSON_NODE_TYPE (root) != JSON_NODE_ARRAY))
+		goto finish;
+	
+	/*
+	cout << "JSON_NODE_TYPE(root) :" << JSON_NODE_TYPE(root) << endl;
+	cout << "JSON_NODE_ARRAY :" << JSON_NODE_ARRAY << endl;
+	cout << "JSON_NODE_OBJECT :" << JSON_NODE_OBJECT << endl;
+	*/
+	
+	array = json_node_get_array(root);
+	arraySize = json_array_get_length (array);
+
+	if(arraySize <= 0) 
+		goto finish;
+    
+	for(guint i = 0; i < arraySize; i++) {
+		string 				value;
+		TestSet::LaunchType launchType;
+		string 				command;
+		TestSet::MonitorType monitor = TestSet::S_MONITOR_CPU_TOTAL;
+		double 				usageBelow = 50.0f;
+		
+		JsonNode *arrayElem = json_array_get_element (array, i);
+		JsonObject *object  = json_node_get_object (arrayElem);
+
+		if(object == NULL) goto finish;
+
+		value = json_object_get_string_member (object, CONFIGURATION_LAUNCHTYPE);		
+
+		if(!value.compare("ForkAndExec")) 
+			launchType = TestSet::S_LAUNCH_FORK_AND_EXEC;
+		else if(!value.compare("QuickCommand"))
+			launchType = TestSet::S_LAUNCH_QUICK_COMMAND;
+		else if(!value.compare("AulLaunch"))
+			launchType = TestSet::S_LAUNCH_AUL_LAUNCH;
+		else if(!value.compare("Sleep"))
+			launchType = TestSet::S_LAUNCH_SLEEP;
+		else if(!value.compare("ProcWrite"))
+			launchType = TestSet::S_LAUNCH_PROC_WRITE;
+
+		if(json_object_has_member (object, CONFIGURATION_COMMAND)) {
+			command = json_object_get_string_member (object, CONFIGURATION_COMMAND);
+		}
+
+		if(json_object_has_member (object, CONFIGURATION_MONITOR)) {
+			value = json_object_get_string_member (object, CONFIGURATION_MONITOR);
+
+			if(!value.compare("CPU_TOTAL"))
+				monitor = TestSet::S_MONITOR_CPU_TOTAL;
+			else if(!value.compare("USER_PROC"))
+				monitor = TestSet::S_MONITOR_USER_PROC;
+		}
+
+		if(json_object_has_member (object, CONFIGURATION_USAGEBELOW)) {
+			usageBelow = json_object_get_double_member (object, CONFIGURATION_USAGEBELOW);
+		}
+
+		if(launchType == TestSet::S_LAUNCH_FORK_AND_EXEC){
+			//pre-test
+			if(PreReclaimEnabled()) {
+				AddProcWrite(PROC_EFM, SIZE_TO_RECLAIM);
+				AddSleep(3000);
+				AddProcWrite(PROC_EFM, SIZE_ZERO);
+			}
+
+			//test
+			AddForkAndExec(command, monitor, usageBelow); 
+
+			//post-test
+			AddSleep(5000);
+		}
+		else if(launchType == TestSet::S_LAUNCH_AUL_LAUNCH){
+			//pre-test
+			if(PreReclaimEnabled()) {
+				AddProcWrite(PROC_EFM, SIZE_TO_RECLAIM);
+				AddSleep(3000);
+				AddProcWrite(PROC_EFM, SIZE_ZERO);
+			}
+
+			//test
+			AddAulLaunch(command, monitor, usageBelow); 
+
+			//post-test
+			AddSleep(5000);
+		}
+	}
+
+	returnValue = true;
+
+finish:
+	g_object_unref (parser);
+
+	return returnValue;
+}
+
 bool TestSet::StartTest() {
 	// kswapd cpu usage measurement
 	int kswapdPid = Proc::FindProcessName(KSWAPD_NAME);
@@ -141,15 +260,13 @@ bool TestSet::StartTest() {
 		MemInfo memInfo;
 		LaunchType type = (*it)->type;
 		string sparam = ((*it)->sparam);
-		bool waitStabilized;
+		bool waitStabilized = false;
 		bool waitChild;
 		int childpid = -1;
 
-		waitStabilized = (type == S_LAUNCH_FORK_AND_EXEC || type == S_LAUNCH_AUL_LAUNCH)? true: false;
-		waitChild = (type == S_LAUNCH_QUICK_COMMAND)? true: false;
-
 		if(type == S_LAUNCH_FORK_AND_EXEC || type == S_LAUNCH_QUICK_COMMAND) {
-			//cout << "sparam: " << sparam << endl;
+			waitChild = (type == S_LAUNCH_QUICK_COMMAND)? true: false;
+			
 			childpid = launcher.forkAndExec(sparam, waitChild);
 			if(childpid == -1) {
 				error("Launch failed\n");
@@ -162,12 +279,14 @@ bool TestSet::StartTest() {
 			cout << "Fork Launching... " << sparam << " pid:" << childpid << endl;
 			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "total": "proc") 
 				 << " cpu usage below " << usageBelow << endl;
+
+			waitStabilized = true;
 		}
 		else if(type == S_LAUNCH_AUL_LAUNCH) {
 			cout << "AUL Launching... " << sparam << endl;
 			AulLaunch(sparam);
 		}
-		else if(type == S_LAUNCH_SLEEP) {			
+		else if(type == S_LAUNCH_SLEEP) {
 			long timeToSleep = (*it)->lparam;
 
 			cout << "Sleep for " << timeToSleep << "ms" << endl;

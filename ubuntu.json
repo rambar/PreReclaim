@@ -1,9 +1,7 @@
 [
 	{
 		"launchType": "ForkAndExec",
-		"command": "/usr/bin/firefox google.com",
-		"monitor": "CPU_TOTAL",
-		"usageBelow": 50.0
+		"command": "/usr/bin/firefox google.com"
 	},
 	{
 		"launchType": "ForkAndExec",

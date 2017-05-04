@@ -8,6 +8,8 @@
 
 #define TESTCASE_SPARAM_MAX 256
 
+using namespace std;
+
 class TestSet {	
 private:
 	long monitorPeriod = 100; //default 1000ms
@@ -27,15 +29,6 @@ public:
 		S_MONITOR_USER_PROC = 1,	
 	};
 	
-	/*enum MonitorTarget {
-		S_MONITOR_CPU		= 0x0001,
-		S_MONITOR_MEMORY	= 0x0002,
-		S_MONITOR_KSWAPD	= 0x0004,	
-	};
-	void SetMonitor(int target);
-	int monitorTarget;
-	*/
-
 	class Testcase {
 	public: 
 		LaunchType 	type;
@@ -45,9 +38,7 @@ public:
 		double 		usageBelow;
 	};
 
-	void AddAulLaunch(std::string );
 	void AddAulLaunch(std::string , const MonitorType, const double);
-	void AddForkAndExec(std::string);
 	void AddForkAndExec(std::string , const MonitorType, const double);
 	void AddQuickCommand(std::string );
 	void AddSleep(long);
@@ -58,7 +49,9 @@ public:
 	void SetMonitorPeriod(long milliseconds) { monitorPeriod = milliseconds; }
 	void SetPreReclaim(bool preReclaim) { preReclaimEnabled = preReclaim; }
 	bool PreReclaimEnabled() { return preReclaimEnabled; }
-	
+
+	bool LoadFromFile(string &);
+		
 private:
 	std::vector<Testcase*> listTestset;
 	void PrintSystemUsage(CPUUsage &, CPUUsage &, const MemInfo &);

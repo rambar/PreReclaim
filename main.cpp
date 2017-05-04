@@ -4,20 +4,20 @@
 #include <string>
 
 #include "common.h"
-#include "loader.h"
 #include "testset.h"
 #include "streamline_annotate.h"
 
 //#define LAUNCH_FIREFOX 	"/usr/bin/firefox"
 //#define LAUNCH_CHROME 	"/opt/google/chrome/chrome"
-#define KILL_ALL		"/usr/bin/killall"
-#define LAUNCH_GAME		"/usr/games/gnome-mahjongg"
-#define LAUNCH_GIMP		"/usr/bin/gimp"
+//#define KILL_ALL		"/usr/bin/killall"
+//#define LAUNCH_GAME		"/usr/games/gnome-mahjongg"
+//#define LAUNCH_GIMP		"/usr/bin/gimp"
 
 using namespace std;
 
 ANNOTATE_DEFINE;
 
+/*
 #ifdef TIZEN
 void CreateTestJob(TestSet &testSet) {
 
@@ -36,20 +36,45 @@ void CreateTestJob(TestSet &testSet) {
 	//FORK_EXEC ("/usr/bin/aul_test launch org.volt.apps", TestSet::S_MONITOR_CPU_TOTAL, 50.0);
 }
 #endif
+*/
 
 int main(int argc, char *argv[]) {	
 	ANNOTATE_SETUP;
 
-	Loader loader;
 	TestSet testset;
-	string filename = "default_testset.json";
+	string filename;
 
-	if(argc > 1 && !strcmp(argv[1], "-pr")) {
-		testset.SetPreReclaim(true);
+	if(argc == 1) {
+		cout << "usage: ./run_test -file [filename] -pr" << endl;
+		cout << "       -file : load testset from file" << endl;
+		cout << "       -pr   : do pre-reclaim" << endl;	
+		return 0;
+	}
+	
+	for(int p = 1; p < argc; p++) {
+		string arg = argv[p];
+		
+		if(!arg.compare("-pr")) {
+			testset.SetPreReclaim(true);
+		}
+		else if(!arg.compare("-file")) {
+			if(p + 1 >= argc) {
+				//-file without filename
+				cout << "filename is not specified" << endl;
+				return 0;
+			}
+			filename = argv[++p];
+		}
 	}
 
-	if(loader.LoadFromFile(filename, testset) == false){
-		error("error reading %s\n", filename.c_str());
+	if(filename.length() == 0) {
+		cout << "filename is not specified" << endl;
+		return 0;
+	}
+
+	if(testset.LoadFromFile(filename) == false){
+		error("error loading json file (filename:%s)\n", filename.c_str());
+		return 0;
 	}
 
 #ifndef TIZEN
