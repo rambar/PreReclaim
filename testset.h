@@ -2,20 +2,13 @@
 #define _TESTSET_H 
 
 #include <vector>
-
 #include "cpu_usage.h"
 #include "meminfo.h"
-
-#define TESTCASE_SPARAM_MAX 256
 
 using namespace std;
 
 class TestSet {	
 private:
-	long monitorPeriod = 100; //default 1000ms
-	bool preReclaimEnabled = false;
-	
-public:	
 	enum LaunchType {
 		S_LAUNCH_FORK_AND_EXEC = 0,
 		S_LAUNCH_QUICK_COMMAND,
@@ -26,37 +19,55 @@ public:
 	
 	enum MonitorType {
 		S_MONITOR_CPU_TOTAL = 0,
-		S_MONITOR_USER_PROC = 1,	
-	};
-	
-	class Testcase {
-	public: 
-		LaunchType 	type;
-		std::string sparam;
-		long		lparam;
-		MonitorType monitor;
-		double 		usageBelow;
+		S_MONITOR_USER_PROC,
+		S_MONITOR_UNDEFINED,
 	};
 
-	void AddAulLaunch(std::string , const MonitorType, const double);
-	void AddForkAndExec(std::string , const MonitorType, const double);
-	void AddQuickCommand(std::string );
-	void AddSleep(long);
-	void AddProcWrite(std::string, std::string);
-		
+	struct Constants {
+		static const string JSON_LAUNCHTYPE;
+		static const string JSON_COMMAND;
+		static const string JSON_MONITOR;
+		static const string JSON_USAGEBELOW;
+
+		static const string EFM_PROC_PATH;
+		static const string EFM_SIZE_TO_RECLAIM;
+		static const string EFM_SIZE_ZERO;
+
+		static const string KSWAPD_NAME;
+	};
+
+	class Testcase {
+	public: 
+		LaunchType	type;
+		string 		sparam;
+		long		lparam;
+		MonitorType monitor;
+		double		usageBelow;
+	};
+
+private:
+	long monitorPeriod = 100; //default 1000ms
+	bool preReclaimEnabled = false;
+	vector<Testcase*> listTestset;
+
+public: 
+	bool LoadFromFile(string &);
 	bool StartTest();
 
 	void SetMonitorPeriod(long milliseconds) { monitorPeriod = milliseconds; }
 	void SetPreReclaim(bool preReclaim) { preReclaimEnabled = preReclaim; }
 	bool PreReclaimEnabled() { return preReclaimEnabled; }
 
-	bool LoadFromFile(string &);
-		
 private:
-	std::vector<Testcase*> listTestset;
+	void AddAulLaunch(string, const MonitorType, const double);
+	void AddForkAndExec(string, const MonitorType, const double);
+	void AddQuickCommand(string);
+	void AddSleep(long);
+	void AddProcWrite(string, string);
+	void AddTestset(const LaunchType, string, long, const MonitorType, const double);
+
 	void PrintSystemUsage(CPUUsage &, CPUUsage &, const MemInfo &);
-	void AddTestset(const LaunchType, std::string , long, const MonitorType, const double);
-	bool AulLaunch(std::string);
+	bool AulLaunch(string);
 };
 
 #endif

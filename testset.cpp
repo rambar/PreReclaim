@@ -21,18 +21,16 @@
 #include "bundle.h"
 #endif
 
-#define KSWAPD_NAME 			"kswapd0"
-#define DEFAULT_USAGE_BELOW		18.0
-#define DEFAULT_MONITOR_TYPE 	S_MONITOR_USER_PROC
+const string TestSet::Constants::KSWAPD_NAME 		= "kswapd0";
 
-#define CONFIGURATION_LAUNCHTYPE	"launchType"
-#define CONFIGURATION_COMMAND 		"command"
-#define CONFIGURATION_MONITOR 		"monitor"
-#define CONFIGURATION_USAGEBELOW	"usageBelow"
+const string TestSet::Constants::JSON_LAUNCHTYPE 	= "launchType";
+const string TestSet::Constants::JSON_COMMAND 		= "command";
+const string TestSet::Constants::JSON_MONITOR 		= "monitor";
+const string TestSet::Constants::JSON_USAGEBELOW 	= "usageBelow";
 
-#define PROC_EFM		"/proc/sys/vm/extra_free_kbytes"
-#define SIZE_TO_RECLAIM "150000"
-#define SIZE_ZERO		"0"
+const string TestSet::Constants::EFM_PROC_PATH 		= "/proc/sys/vm/extra_free_kbytes";
+const string TestSet::Constants::EFM_SIZE_TO_RECLAIM = "150000";
+const string TestSet::Constants::EFM_SIZE_ZERO 		= "0";
 
 using namespace std;
 
@@ -98,18 +96,18 @@ void TestSet::AddForkAndExec(string command, const MonitorType monitor, const do
 }
 
 void TestSet::AddQuickCommand(string command) {
-	AddTestset(S_LAUNCH_QUICK_COMMAND, command, 0, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
+	AddTestset(S_LAUNCH_QUICK_COMMAND, command, 0, S_MONITOR_UNDEFINED, 0);
 }
 
 void TestSet::AddSleep(long milliseconds) {
-	AddTestset(S_LAUNCH_SLEEP, "", milliseconds, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
+	AddTestset(S_LAUNCH_SLEEP, "", milliseconds, S_MONITOR_UNDEFINED, 0);
 }
 
 void TestSet::AddProcWrite(string path, string value){
 	stringstream ss;
 	
 	ss << path << " " << value;
-	AddTestset(S_LAUNCH_PROC_WRITE, ss.str(), 0, DEFAULT_MONITOR_TYPE, DEFAULT_USAGE_BELOW);
+	AddTestset(S_LAUNCH_PROC_WRITE, ss.str(), 0, S_MONITOR_UNDEFINED, 0);
 }
 
 #if defined(TIZEN)
@@ -177,42 +175,42 @@ bool TestSet::LoadFromFile(string &filename) {
 
 		if(object == NULL) goto finish;
 
-		value = json_object_get_string_member (object, CONFIGURATION_LAUNCHTYPE);		
+		value = json_object_get_string_member (object, Constants::JSON_LAUNCHTYPE.c_str());		
 
 		if(!value.compare("ForkAndExec")) 
-			launchType = TestSet::S_LAUNCH_FORK_AND_EXEC;
+			launchType = S_LAUNCH_FORK_AND_EXEC;
 		else if(!value.compare("QuickCommand"))
-			launchType = TestSet::S_LAUNCH_QUICK_COMMAND;
+			launchType = S_LAUNCH_QUICK_COMMAND;
 		else if(!value.compare("AulLaunch"))
-			launchType = TestSet::S_LAUNCH_AUL_LAUNCH;
+			launchType = S_LAUNCH_AUL_LAUNCH;
 		else if(!value.compare("Sleep"))
-			launchType = TestSet::S_LAUNCH_SLEEP;
+			launchType = S_LAUNCH_SLEEP;
 		else if(!value.compare("ProcWrite"))
-			launchType = TestSet::S_LAUNCH_PROC_WRITE;
+			launchType = S_LAUNCH_PROC_WRITE;
 
-		if(json_object_has_member (object, CONFIGURATION_COMMAND)) {
-			command = json_object_get_string_member (object, CONFIGURATION_COMMAND);
+		if(json_object_has_member (object, Constants::JSON_COMMAND.c_str())) {
+			command = json_object_get_string_member (object, Constants::JSON_COMMAND.c_str());
 		}
 
-		if(json_object_has_member (object, CONFIGURATION_MONITOR)) {
-			value = json_object_get_string_member (object, CONFIGURATION_MONITOR);
+		if(json_object_has_member (object, Constants::JSON_MONITOR.c_str())) {
+			value = json_object_get_string_member (object, Constants::JSON_MONITOR.c_str());
 
 			if(!value.compare("CPU_TOTAL"))
-				monitor = TestSet::S_MONITOR_CPU_TOTAL;
+				monitor = S_MONITOR_CPU_TOTAL;
 			else if(!value.compare("USER_PROC"))
-				monitor = TestSet::S_MONITOR_USER_PROC;
+				monitor = S_MONITOR_USER_PROC;
 		}
 
-		if(json_object_has_member (object, CONFIGURATION_USAGEBELOW)) {
-			usageBelow = json_object_get_double_member (object, CONFIGURATION_USAGEBELOW);
+		if(json_object_has_member (object, Constants::JSON_USAGEBELOW.c_str())) {
+			usageBelow = json_object_get_double_member (object, Constants::JSON_USAGEBELOW.c_str());
 		}
 
-		if(launchType == TestSet::S_LAUNCH_FORK_AND_EXEC){
+		if(launchType == S_LAUNCH_FORK_AND_EXEC){
 			//pre-test
 			if(PreReclaimEnabled()) {
-				AddProcWrite(PROC_EFM, SIZE_TO_RECLAIM);
+				AddProcWrite(Constants::EFM_PROC_PATH, Constants::EFM_SIZE_TO_RECLAIM);
 				AddSleep(3000);
-				AddProcWrite(PROC_EFM, SIZE_ZERO);
+				AddProcWrite(Constants::EFM_PROC_PATH, Constants::EFM_SIZE_ZERO);
 			}
 
 			//test
@@ -221,12 +219,12 @@ bool TestSet::LoadFromFile(string &filename) {
 			//post-test
 			AddSleep(5000);
 		}
-		else if(launchType == TestSet::S_LAUNCH_AUL_LAUNCH){
+		else if(launchType == S_LAUNCH_AUL_LAUNCH){
 			//pre-test
 			if(PreReclaimEnabled()) {
-				AddProcWrite(PROC_EFM, SIZE_TO_RECLAIM);
+				AddProcWrite(Constants::EFM_PROC_PATH, Constants::EFM_SIZE_TO_RECLAIM);
 				AddSleep(3000);
-				AddProcWrite(PROC_EFM, SIZE_ZERO);
+				AddProcWrite(Constants::EFM_PROC_PATH, Constants::EFM_SIZE_ZERO);
 			}
 
 			//test
@@ -247,7 +245,7 @@ finish:
 
 bool TestSet::StartTest() {
 	// kswapd cpu usage measurement
-	int kswapdPid = Proc::FindProcessName(KSWAPD_NAME);
+	int kswapdPid = Proc::FindProcessName(Constants::KSWAPD_NAME);
 	if(kswapdPid == -1) {
 		error("kswapd is not enabled\n");
 		return 0;
