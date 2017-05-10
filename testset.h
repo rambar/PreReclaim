@@ -28,6 +28,7 @@ private:
 		static const string JSON_COMMAND;
 		static const string JSON_MONITOR;
 		static const string JSON_USAGEBELOW;
+		static const string JSON_PROCNAME;
 
 		static const string EFM_PROC_PATH;
 		static const string EFM_SIZE_TO_RECLAIM;
@@ -43,6 +44,7 @@ private:
 		long		lparam;
 		MonitorType monitor;
 		double		usageBelow;
+		string		procname;
 	};
 
 private:
@@ -59,12 +61,12 @@ public:
 	bool PreReclaimEnabled() { return preReclaimEnabled; }
 
 private:
-	void AddAulLaunch(string, const MonitorType, const double);
-	void AddForkAndExec(string, const MonitorType, const double);
+	void AddAulLaunch(string, const MonitorType, const double, string);
+	void AddForkAndExec(string, const MonitorType, const double, string);
 	void AddQuickCommand(string);
 	void AddSleep(long);
 	void AddProcWrite(string, string);
-	void AddTestset(const LaunchType, string, long, const MonitorType, const double);
+	void AddTestset(const LaunchType, string, long, const MonitorType, const double, string);
 
 	void PrintSystemUsage(CPUUsage &, CPUUsage &, const MemInfo &);
 	bool AulLaunch(string);

@@ -7,6 +7,7 @@ License:   GPL2
 Source0:    %{name}-%{version}.tar.gz
 
 BuildRequires: pkgconfig(aul)
+BuildRequires: pkgconfig(json-glib-1.0)
 
 %description
 Memory pre-reclamation for performance optimisation

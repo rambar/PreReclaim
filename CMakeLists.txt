@@ -12,7 +12,8 @@ SET(BINDIR ${CMAKE_INSTALL_PREFIX}/bin)
 ADD_DEFINITIONS (-DTIZEN)
 
 INCLUDE(FindPkgConfig)
-pkg_check_modules(pkgs REQUIRED aul)
+pkg_check_modules(pkgs REQUIRED aul
+				json-glib-1.0)
 
 FOREACH(flag ${pkgs_CFLAGS})
         SET(EXTRA_CFLAGS "${EXTRA_CFLAGS} ${flag}")
@@ -25,7 +26,7 @@ SET(CMAKE_CXX_FLAGS_DEBUG "-O2 -g")
 SET(CMAKE_CXX_FLAGS_RELEASE "-O2")
 
 ADD_EXECUTABLE("run_test" ${SRCS})
-TARGET_LINK_LIBRARIES("run_test" ${PKGS_LDFLAGS} "-laul -lbundle")
+TARGET_LINK_LIBRARIES("run_test" ${PKGS_LDFLAGS} "-laul -lbundle -ljson-glib-1.0 -lgobject-2.0 -lglib-2.0")
 
 INSTALL(TARGETS "run_test" DESTINATION ${BINDIR})
 

@@ -29,6 +29,12 @@ bool MemInfo::Read() {
 			ss >> free;
 		else if(!token.compare(MEMINFO_AVAILABLE))
 			ss >> available;
+		else if(!token.compare(MEMINFO_SWAPTOTAL))
+			ss >> swaptotal;
+		else if(!token.compare(MEMINFO_SWAPFREE))
+			ss >> swapfree;
+
+		swapused = swaptotal - swapfree;
 	}
 
 	return true;
