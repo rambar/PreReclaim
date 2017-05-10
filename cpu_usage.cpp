@@ -21,6 +21,11 @@ void CPUUsage::SetPID(const unsigned int pid) {
 	this->pid = pid; 
 }
 
+void CPUUsage::SetProcName(string &name) { 
+	this->pname = name;
+}
+
+/*
 void CPUUsage::GetProcName(string &name) {
 	if(pid == -1) {
 		name = "PID_UNDEFINED";
@@ -29,8 +34,13 @@ void CPUUsage::GetProcName(string &name) {
 	
 	Proc::ReadProcessName(pid, name); 
 }
+*/
 
 void CPUUsage::Tick() {
+	if(pid == -1 && usageMonitor == S_USAGE_USER_PROC) {
+		pid = Proc::FindProcessName(pname);
+	}
+	
 	if(firstTick) {
 		ReadCPUStats();
 		ReadProcStats();
@@ -159,6 +169,13 @@ void CPUUsage::GetProcUsage(double &userActive) {
 
 double CPUUsage::TimeBetween(std::chrono::system_clock::time_point a, std::chrono::system_clock::time_point b) {
 	return ((std::chrono::duration<double>)(b - a)).count();
+}
+
+bool CPUUsage::IsUsageStable() { 
+	if(usageMonitor == S_USAGE_CPU_TOTAL)
+		return isUsageStable == S_USAGE_STABLIZED;
+	else if(usageMonitor == S_USAGE_USER_PROC)
+		return isUsageStable == S_USAGE_STABLIZED && pid != -1;
 }
 
 void CPUUsage::CheckUsageStable(const double usage) {	

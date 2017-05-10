@@ -27,6 +27,7 @@ const string TestSet::Constants::JSON_LAUNCHTYPE 	= "launchType";
 const string TestSet::Constants::JSON_COMMAND 		= "command";
 const string TestSet::Constants::JSON_MONITOR 		= "monitor";
 const string TestSet::Constants::JSON_USAGEBELOW 	= "usageBelow";
+const string TestSet::Constants::JSON_WAITSTABLIZED	= "waitStablized";
 const string TestSet::Constants::JSON_PROCNAME		= "procname";
 
 
@@ -60,10 +61,16 @@ void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const
 	cout << cpuIdle;
 
 	cout << " - proc:" ;
-	cout.setf(ios::fixed, ios::floatfield);
-	cout.width(3);
-	cout.precision(0);
-	cout << userActive << "%";
+
+	if(userUsage.GetPID() == -1) {
+		cout << " process not found(" << userUsage.GetProcName() << ")";
+	}
+	else {
+		cout.setf(ios::fixed, ios::floatfield);
+		cout.width(3);
+		cout.precision(0);
+		cout << userActive << "%";
+	}
 
 	cout << " - kswapd:";
 	cout.setf(ios::fixed, ios::floatfield);
@@ -79,7 +86,7 @@ void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const
 	cout << endl;
 }
 
-void TestSet::AddTestset(const LaunchType type, string sparam, long lparam, const MonitorType monitor, const double usageBelow, string procname) {
+void TestSet::AddTestset(const LaunchType type, string sparam, long lparam, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized) {
 	Testcase *testcase = new Testcase();
 	testcase->type = type;
 	testcase->sparam = sparam;
@@ -87,31 +94,28 @@ void TestSet::AddTestset(const LaunchType type, string sparam, long lparam, cons
 	testcase->monitor = monitor;
 	testcase->usageBelow = usageBelow;
 	testcase->procname = procname;
+	testcase->waitStablized = waitStablized;
 	
 	listTestset.push_back(testcase);
 }
 
-void TestSet::AddAulLaunch(string appid, const MonitorType monitor, const double usageBelow, string procname){
-	AddTestset(S_LAUNCH_AUL_LAUNCH, appid, 0, monitor, usageBelow, procname);
+void TestSet::AddAulLaunch(string appid, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized){
+	AddTestset(S_LAUNCH_AUL_LAUNCH, appid, 0, monitor, usageBelow, procname, waitStablized);
 }
 
-void TestSet::AddForkAndExec(string command, const MonitorType monitor, const double usageBelow, string procname) {
-	AddTestset(S_LAUNCH_FORK_AND_EXEC, command, 0, monitor, usageBelow, procname);
-}
-
-void TestSet::AddQuickCommand(string command) {
-	AddTestset(S_LAUNCH_QUICK_COMMAND, command, 0, S_MONITOR_UNDEFINED, 0, "");
+void TestSet::AddForkAndExec(string command, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized) {
+	AddTestset(S_LAUNCH_FORK_AND_EXEC, command, 0, monitor, usageBelow, procname, waitStablized);
 }
 
 void TestSet::AddSleep(long milliseconds) {
-	AddTestset(S_LAUNCH_SLEEP, "", milliseconds, S_MONITOR_UNDEFINED, 0, "");
+	AddTestset(S_LAUNCH_SLEEP, "", milliseconds, S_MONITOR_UNDEFINED, 0, "", false);
 }
 
 void TestSet::AddProcWrite(string path, string value){
 	stringstream ss;
 	
 	ss << path << " " << value;
-	AddTestset(S_LAUNCH_PROC_WRITE, ss.str(), 0, S_MONITOR_UNDEFINED, 0, "");
+	AddTestset(S_LAUNCH_PROC_WRITE, ss.str(), 0, S_MONITOR_UNDEFINED, 0, "", false);
 }
 
 #if defined(TIZEN)
@@ -155,12 +159,6 @@ bool TestSet::LoadFromFile(string &filename) {
 	if (root == NULL || (JSON_NODE_TYPE (root) != JSON_NODE_ARRAY))
 		goto finish;
 	
-	/*
-	cout << "JSON_NODE_TYPE(root) :" << JSON_NODE_TYPE(root) << endl;
-	cout << "JSON_NODE_ARRAY :" << JSON_NODE_ARRAY << endl;
-	cout << "JSON_NODE_OBJECT :" << JSON_NODE_OBJECT << endl;
-	*/
-	
 	array = json_node_get_array(root);
 	arraySize = json_array_get_length (array);
 
@@ -168,12 +166,13 @@ bool TestSet::LoadFromFile(string &filename) {
 		goto finish;
     
 	for(guint i = 0; i < arraySize; i++) {
-		string 				value;
-		TestSet::LaunchType launchType;
-		string 				command;
-		TestSet::MonitorType monitor = TestSet::S_MONITOR_CPU_TOTAL;
-		double 				usageBelow = 50.0f;
-		string 				procname;
+		string 		value;
+		LaunchType 	launchType;
+		string 		command;
+		MonitorType monitor = S_MONITOR_USER_PROC;
+		double 		usageBelow = 50.0f;
+		string 		procname;
+		bool		waitStablized = true;
 		
 		JsonNode *arrayElem = json_array_get_element (array, i);
 		JsonObject *object  = json_node_get_object (arrayElem);
@@ -184,8 +183,6 @@ bool TestSet::LoadFromFile(string &filename) {
 
 		if(!value.compare("ForkAndExec")) 
 			launchType = S_LAUNCH_FORK_AND_EXEC;
-		else if(!value.compare("QuickCommand"))
-			launchType = S_LAUNCH_QUICK_COMMAND;
 		else if(!value.compare("AulLaunch"))
 			launchType = S_LAUNCH_AUL_LAUNCH;
 		else if(!value.compare("Sleep"))
@@ -210,11 +207,15 @@ bool TestSet::LoadFromFile(string &filename) {
 			usageBelow = json_object_get_double_member (object, Constants::JSON_USAGEBELOW.c_str());
 		}
 
+		if(json_object_has_member (object, Constants::JSON_WAITSTABLIZED.c_str())) {
+			waitStablized = json_object_get_boolean_member (object, Constants::JSON_WAITSTABLIZED.c_str());
+		}
+
 		if(json_object_has_member (object, Constants::JSON_PROCNAME.c_str())) {
 			procname = json_object_get_string_member (object, Constants::JSON_PROCNAME.c_str());
-		}		
+		}
 
-		if(launchType == S_LAUNCH_FORK_AND_EXEC){
+		if(launchType == S_LAUNCH_FORK_AND_EXEC) {
 			//pre-test
 			if(PreReclaimEnabled()) {
 				AddProcWrite(Constants::EFM_PROC_PATH, Constants::EFM_SIZE_TO_RECLAIM);
@@ -223,12 +224,12 @@ bool TestSet::LoadFromFile(string &filename) {
 			}
 
 			//test
-			AddForkAndExec(command, monitor, usageBelow, procname); 
+			AddForkAndExec(command, monitor, usageBelow, procname, waitStablized); 
 
 			//post-test
 			AddSleep(5000);
 		}
-		else if(launchType == S_LAUNCH_AUL_LAUNCH){
+		else if(launchType == S_LAUNCH_AUL_LAUNCH) {
 			//pre-test
 			if(PreReclaimEnabled()) {
 				AddProcWrite(Constants::EFM_PROC_PATH, Constants::EFM_SIZE_TO_RECLAIM);
@@ -237,7 +238,7 @@ bool TestSet::LoadFromFile(string &filename) {
 			}
 
 			//test
-			AddAulLaunch(command, monitor, usageBelow, procname); 
+			AddAulLaunch(command, monitor, usageBelow, procname, waitStablized); 
 
 			//post-test
 			AddSleep(5000);
@@ -265,34 +266,34 @@ bool TestSet::StartTest() {
 		CPUUsage userUsage;
 		CPUUsage kswapdUsage;
 		MemInfo memInfo;
+
 		LaunchType type = (*it)->type;
-		string sparam = ((*it)->sparam);
-		bool waitStabilized = false;
-		bool waitChild;
+		string sparam = (*it)->sparam;
+		bool waitStablized = (*it)->waitStablized;
+		const double usageBelow = (*it)->usageBelow;
+		const MonitorType monitor = (*it)->monitor;
+		string procname = (*it)->procname;
+
+		bool waitChild = false;
 		int childpid = -1;
 
-		if(type == S_LAUNCH_FORK_AND_EXEC || type == S_LAUNCH_QUICK_COMMAND) {
-			waitChild = (type == S_LAUNCH_QUICK_COMMAND)? true: false;
-			
+		if(type == S_LAUNCH_FORK_AND_EXEC) {
 			childpid = launcher.forkAndExec(sparam, waitChild);
 			if(childpid == -1) {
 				error("Launch failed\n");
 				return 0;
-			}
-
-			const double usageBelow = (*it)->usageBelow;
-			const MonitorType monitor = (*it)->monitor;
+			}			
 
 			cout << "Fork Launching... " << sparam << " pid:" << childpid << endl;
 			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "total": "proc") 
 				 << " cpu usage below " << usageBelow << endl;
-
-			waitStabilized = true;
 		}
 		else if(type == S_LAUNCH_AUL_LAUNCH) {
-			cout << "AUL Launching... " << sparam << endl;
 			AulLaunch(sparam);
-			waitStabilized = true;
+
+			cout << "AUL Launching... " << sparam << endl;
+			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "total": "proc") 
+				 << " cpu usage below " << usageBelow << endl;
 		}
 		else if(type == S_LAUNCH_SLEEP) {
 			long timeToSleep = (*it)->lparam;
@@ -316,16 +317,21 @@ bool TestSet::StartTest() {
 			ANNOTATE_CHANNEL_END(50);
 		}
 
-		if(waitStabilized) {
-			const double usageBelow = (*it)->usageBelow;
-			const MonitorType monitor = (*it)->monitor;
-			string procname = (*it)->procname;
-			bool foundChildProcess = false;
+		if(waitStablized) {
+			if(procname.length() == 0) {
+				istringstream ss(sparam);
+				string token;
 
-			if(procname.length() == 0)
-				procname = sparam.substr(0, 15);
+				ss >> token; //split " ";
+				ss.str(token);
 				
-			userUsage.SetPID(childpid);
+				while(getline(ss, token, '/')); //split "/";
+				
+				procname = token.substr(0, 15);
+			}
+				
+			//userUsage.SetPID(childpid);
+			userUsage.SetProcName(procname);
 			userUsage.SetUsageBelow(usageBelow);
 			userUsage.SetUsageMonitor(static_cast<CPUUsage::UsageMonitor>(monitor));
 
@@ -333,12 +339,6 @@ bool TestSet::StartTest() {
 
 			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_BLUE, sparam.c_str());
 			while(true) {
-				if(!foundChildProcess && monitor == S_MONITOR_USER_PROC) {
-					childpid = Proc::FindProcessName(procname);
-					foundChildProcess = (childpid == -1)? false: true;
-					userUsage.SetPID(childpid);
-				}
-			
 				userUsage.Tick();
 				kswapdUsage.Tick();
 				
@@ -346,12 +346,10 @@ bool TestSet::StartTest() {
 					memInfo.Read();
 					PrintSystemUsage(userUsage, kswapdUsage, memInfo);
 
-					if(userUsage.IsUsageStable()){
-						if(monitor == S_MONITOR_CPU_TOTAL || (monitor == S_MONITOR_USER_PROC && foundChildProcess)) {
-							cout.precision(1);
-							cout << /*userUsage.GetProcName()*/ sparam << " is stablised at " << userUsage.StablisedAt() << "(s)" << endl << endl;
-							break;
-						}
+					if(userUsage.IsUsageStable()) {
+						cout.precision(1);
+						cout << /*userUsage.GetProcName()*/ sparam << " is stablised at " << userUsage.StablisedAt() << "(s)" << endl << endl;
+						break;
 					}
 				}
 

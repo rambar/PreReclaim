@@ -7,6 +7,8 @@
 #define PROCSTAT_PATH 		"/proc/stat"
 #define PROCPID_PATH		"/proc/%d/stat"
 
+using namespace std;
+
 class CPUUsage {
 	
 private:
@@ -52,12 +54,12 @@ private:
 public:
 	enum UsageMonitor {
 		S_USAGE_CPU_TOTAL = 0,
-		S_USAGE_USER_PROC = 1,	
+		S_USAGE_USER_PROC = 1,
 	};
 
 private:	
-	int 			pid;
-	std::string		procName;
+	int 			pid = -1;
+	string			pname;
 	
 	size_t 			prevCpuTime[NUM_CPU_TIME_STATES];
 	size_t 			prevProcTimes[NUM_PROCESS_TIME_STATES];
@@ -77,21 +79,21 @@ private:
 
 	bool			firstTick = true;
 	bool			measurable = false;
-	std::chrono::system_clock::time_point	tickStart;
-	std::chrono::system_clock::time_point	tickLast;
+	chrono::system_clock::time_point	tickStart;
+	chrono::system_clock::time_point	tickLast;
 
 	UsageMonitor	usageMonitor;
 	double 			usageBelow = -1.0;
 	double 			secToStay = 3.0;
 	UsageStable 	isUsageStable = S_USAGE_ABOVE;
-	std::chrono::system_clock::time_point	tickUsageBelow;
+	chrono::system_clock::time_point	tickUsageBelow;
 	
 	size_t GetIdleTime(size_t *);
 	size_t GetActiveTime(size_t *);
 	bool ReadCPUStats();
 	bool ReadProcStats();
 	void CountUsage();
-	double TimeBetween(std::chrono::system_clock::time_point a, std::chrono::system_clock::time_point b);
+	double TimeBetween(chrono::system_clock::time_point a, chrono::system_clock::time_point b);
 	void CheckUsageStable(const double);
 
 public:	
@@ -101,7 +103,9 @@ public:
 	void Tick();
 	void GetCPUUsage(double &, double &);
 	void GetProcUsage(double &);
-	void GetProcName(std::string &);
+	void SetProcName(string &name);
+	string& GetProcName() { return pname; };
+	//void GetProcName(string &);
 	unsigned int GetFrame() { return frame; }
 	void SetUsageBelow(const double usageBelow) { this->usageBelow = usageBelow; }
 	void SetUsageMonitor(const UsageMonitor usageMonitor) { this->usageMonitor = usageMonitor;} 
@@ -109,9 +113,9 @@ public:
 	void SetPID(const unsigned int pid);
 	double GetRunningTime() { return TimeBetween(tickStart, tickLast); }
 	bool IsMeasurable() { return measurable; }
-	
-	bool IsUsageStable() { return (isUsageStable == S_USAGE_STABLIZED); }
+
 	double StablisedAt() { return TimeBetween(tickStart, tickUsageBelow); }
+	bool IsUsageStable();
 };
 
 #endif

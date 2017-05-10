@@ -5,15 +5,11 @@
 	},
 	{
 		"launchType": "ForkAndExec",
-		"command": "/usr/bin/firefox amazon.com",
-		"monitor": "CPU_TOTAL",
-		"usageBelow": 50.0
+		"command": "/usr/bin/firefox amazon.com"
 	},
 	{
 		"launchType": "ForkAndExec",
-		"command": "/usr/bin/firefox ebay.com",
-		"monitor": "CPU_TOTAL",
-		"usageBelow": 50.0
+		"command": "/usr/bin/firefox ebay.com"
 	},
 	{
 		"launchType": "ForkAndExec",

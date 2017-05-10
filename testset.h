@@ -11,7 +11,6 @@ class TestSet {
 private:
 	enum LaunchType {
 		S_LAUNCH_FORK_AND_EXEC = 0,
-		S_LAUNCH_QUICK_COMMAND,
 		S_LAUNCH_AUL_LAUNCH,
 		S_LAUNCH_SLEEP,
 		S_LAUNCH_PROC_WRITE,
@@ -28,6 +27,7 @@ private:
 		static const string JSON_COMMAND;
 		static const string JSON_MONITOR;
 		static const string JSON_USAGEBELOW;
+		static const string JSON_WAITSTABLIZED;
 		static const string JSON_PROCNAME;
 
 		static const string EFM_PROC_PATH;
@@ -45,6 +45,7 @@ private:
 		MonitorType monitor;
 		double		usageBelow;
 		string		procname;
+		bool 		waitStablized;
 	};
 
 private:
@@ -61,12 +62,12 @@ public:
 	bool PreReclaimEnabled() { return preReclaimEnabled; }
 
 private:
-	void AddAulLaunch(string, const MonitorType, const double, string);
-	void AddForkAndExec(string, const MonitorType, const double, string);
-	void AddQuickCommand(string);
+	void AddAulLaunch(string appid, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized);
+	void AddForkAndExec(string command, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized);
 	void AddSleep(long);
 	void AddProcWrite(string, string);
-	void AddTestset(const LaunchType, string, long, const MonitorType, const double, string);
+	
+	void AddTestset(const LaunchType type, string sparam, long lparam, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized);
 
 	void PrintSystemUsage(CPUUsage &, CPUUsage &, const MemInfo &);
 	bool AulLaunch(string);
