@@ -109,6 +109,7 @@ public:
 	unsigned int GetFrame() { return frame; }
 	void SetUsageBelow(const double usageBelow) { this->usageBelow = usageBelow; }
 	void SetUsageMonitor(const UsageMonitor usageMonitor) { this->usageMonitor = usageMonitor;} 
+	UsageMonitor GetUsageMonitor() { return usageMonitor; }
 	unsigned int GetPID() { return pid; }
 	void SetPID(const unsigned int pid);
 	double GetRunningTime() { return TimeBetween(tickStart, tickLast); }

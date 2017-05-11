@@ -60,16 +60,18 @@ void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const
 	cout.precision(0);
 	cout << cpuIdle;
 
-	cout << " - proc:" ;
-
-	if(userUsage.GetPID() == -1) {
-		cout << " process not found(" << userUsage.GetProcName() << ")";
-	}
-	else {
-		cout.setf(ios::fixed, ios::floatfield);
-		cout.width(3);
-		cout.precision(0);
-		cout << userActive << "%";
+	if(userUsage.GetUsageMonitor() == CPUUsage::S_USAGE_USER_PROC) {
+		cout << " - proc:" ;
+		
+		if(userUsage.GetPID() == -1) {
+			cout << " \"" << userUsage.GetProcName() << "\" not found";
+		}
+		else {
+			cout.setf(ios::fixed, ios::floatfield);
+			cout.width(3);
+			cout.precision(0);
+			cout << userActive << "%";
+		}
 	}
 
 	cout << " - kswapd:";
@@ -284,23 +286,40 @@ bool TestSet::StartTest() {
 				return 0;
 			}			
 
-			cout << "Fork Launching... " << sparam << " pid:" << childpid << endl;
-			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "total": "proc") 
-				 << " cpu usage below " << usageBelow << endl;
+			cout << endl << "Fork Launching... \"" << sparam << "\" pid:" << childpid << endl;
+			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "total": "process") 
+				 << " CPU usage < " << usageBelow << endl;
 		}
 		else if(type == S_LAUNCH_AUL_LAUNCH) {
 			AulLaunch(sparam);
 
-			cout << "AUL Launching... " << sparam << endl;
-			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "total": "proc") 
-				 << " cpu usage below " << usageBelow << endl;
+			cout << endl << "AUL Launching... \"" << sparam << "\"" << endl;
+			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "total": "process") 
+				 << " CPU usage < " << usageBelow << endl;
 		}
 		else if(type == S_LAUNCH_SLEEP) {
 			long timeToSleep = (*it)->lparam;
 
-			cout << "Sleep for " << timeToSleep << "ms" << endl;
+			cout << endl << "Sleep for " << timeToSleep << "ms" << endl;
 			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_LTGRAY, "Sleep");
-			this_thread::sleep_for(chrono::milliseconds(timeToSleep));
+
+			kswapdUsage.SetPID(kswapdPid);
+			//userUsage.SetProcName(procname);
+			userUsage.SetUsageMonitor(CPUUsage::S_USAGE_CPU_TOTAL);
+
+			while(true) {
+				userUsage.Tick();
+				kswapdUsage.Tick();
+
+				if(userUsage.IsMeasurable()) {
+					memInfo.Read();					
+					PrintSystemUsage(userUsage, kswapdUsage, memInfo);
+				}
+				
+				this_thread::sleep_for(chrono::milliseconds(monitorPeriod));
+				if(userUsage.GetRunningTime() > (timeToSleep / 1000)) break;
+			}
+			
 			ANNOTATE_CHANNEL_END(50);
 		}
 		else if(type == S_LAUNCH_PROC_WRITE) {				
@@ -310,8 +329,8 @@ bool TestSet::StartTest() {
 			ss >> path;
 			ss >> value;
 
-			Proc::WriteProc(path, value);
-			cout << "written to " << path << " (" << value << ")" << endl;
+			cout << endl << "Write to " << path << " (" << value << ")" << endl;
+			Proc::WriteProc(path, value);				
 
 			ANNOTATE_CHANNEL(50, sparam.c_str());
 			ANNOTATE_CHANNEL_END(50);
