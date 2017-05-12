@@ -1,5 +1,27 @@
 [
 	{
+		"launchType": "PreReclaim",
+		"command" : "150000"
+	},
+	{
+		"launchType": "AulLaunch",
+		"command": "org.tizen.browser",
+		"procname": "browser",
+		"monitor": "USER_PROC",
+		"usageBelow": 30.0
+	},
+	{
+		"launchType": "AulLaunch",
+		"command": "org.tizen.tv-viewer",
+		"waitStablized" : false
+	},
+
+
+	{
+		"launchType": "PreReclaim",
+		"command" : "150000"
+	},
+	{
 		"launchType": "AulLaunch",
 		"command": "org.volt.apps",
 		"monitor": "USER_PROC",
@@ -9,6 +31,12 @@
 		"launchType": "AulLaunch",
 		"command": "org.tizen.tv-viewer",
 		"waitStablized" : false
+	},
+
+
+	{
+		"launchType": "PreReclaim",
+		"command" : "150000"
 	},
 	{
 		"launchType": "AulLaunch",
@@ -21,6 +49,11 @@
 		"command": "org.tizen.tv-viewer",
 		"waitStablized" : false
 	},
+
+	{
+		"launchType": "PreReclaim",
+		"command" : "150000"
+	},
 	{
 		"launchType": "AulLaunch",
 		"command": "org.volt.search-all",
@@ -31,6 +64,12 @@
 		"launchType": "AulLaunch",
 		"command": "org.tizen.tv-viewer",
 		"waitStablized" : false
+	},
+
+
+	{
+		"launchType": "PreReclaim",
+		"command" : "120000"
 	},
 	{
 		"launchType": "AulLaunch",
@@ -44,10 +83,16 @@
 		"command": "org.tizen.tv-viewer",
 		"waitStablized" : false
 	},
+
+
+	{
+		"launchType": "PreReclaim",
+		"command" : "130000"
+	},
 	{
 		"launchType": "ForkAndExec",
-		"command": "/usr/bin/wascmd -r CZuqWL5gWu.pooq",
-		"procname": "CZuqWL5gWu.pooq",
+		"command": "/usr/bin/wascmd -r 9Ur5IzDKqV.TizenYouTube",
+		"procname": "9Ur5IzDKqV.Tize",
 		"monitor": "USER_PROC",
 		"usageBelow": 30.0
 	},
@@ -55,6 +100,12 @@
 		"launchType": "AulLaunch",
 		"command": "org.tizen.tv-viewer",
 		"waitStablized" : false
+	},
+
+
+	{
+		"launchType": "PreReclaim",
+		"command" : "300000"
 	},
 	{
 		"launchType": "AulLaunch",
@@ -68,10 +119,16 @@
 		"command": "org.tizen.tv-viewer",
 		"waitStablized" : false
 	},
+
+
+	{
+		"launchType": "PreReclaim",
+		"command" : "240000"
+	},
 	{
 		"launchType": "ForkAndExec",
-		"command": "/usr/bin/wascmd -r 9Ur5IzDKqV.TizenYouTube",
-		"procname": "9Ur5IzDKqV.Tize",
+		"command": "/usr/bin/wascmd -r RN1MCdNq8t.Netflix",
+		"procname": "GIBBON_MAIN",
 		"monitor": "USER_PROC",
 		"usageBelow": 30.0
 	}

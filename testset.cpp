@@ -30,12 +30,20 @@ const string TestSet::Constants::JSON_USAGEBELOW 	= "usageBelow";
 const string TestSet::Constants::JSON_WAITSTABLIZED	= "waitStablized";
 const string TestSet::Constants::JSON_PROCNAME		= "procname";
 
-
 const string TestSet::Constants::EFM_PROC_PATH 		= "/proc/sys/vm/extra_free_kbytes";
-const string TestSet::Constants::EFM_SIZE_TO_RECLAIM = "150000";
-const string TestSet::Constants::EFM_SIZE_ZERO 		= "0";
+const string TestSet::Constants::ZERO 				= "0";
 
 using namespace std;
+
+void TestSet::PrintSystemUsageHeader() {
+	cout << "time\t";
+	cout << "tot.cpu\t";
+	cout << "usr.cpu\t";
+	cout << "kswapd\t";
+	cout << "mem.av\t";
+	cout << "mem.fr\t";
+	cout << "mem.sw\n";
+}
 
 void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const MemInfo &memInfo) {
 	double cpuActive, cpuIdle;
@@ -47,22 +55,16 @@ void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const
 
 	cout.width(4);
 	cout.precision(1);
-	cout << userUsage.GetRunningTime() << "s";
-	
-	cout << " - cpu%:(ac/id)";
-	cout.setf(ios::fixed, ios::floatfield);
-	cout.width(3);
-	cout.precision(0);
-	cout << cpuActive << "/";
+	cout << left << userUsage.GetRunningTime();
+	cout << "\t";
 	
 	cout.setf(ios::fixed, ios::floatfield);
-	cout.width(3);
+	cout.width(4);
 	cout.precision(0);
-	cout << cpuIdle;
+	cout << cpuActive;
+	cout << "\t";
 
 	if(userUsage.GetUsageMonitor() == CPUUsage::S_USAGE_USER_PROC) {
-		cout << " - proc:" ;
-		
 		if(userUsage.GetPID() == -1) {
 			cout << " \"" << userUsage.GetProcName() << "\" not found";
 		}
@@ -70,20 +72,32 @@ void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const
 			cout.setf(ios::fixed, ios::floatfield);
 			cout.width(3);
 			cout.precision(0);
-			cout << userActive << "%";
+			cout << userActive;
+			cout << "\t";
 		}
 	}
-
-	cout << " - kswapd:";
+	else{
+		cout << 0;
+		cout << "\t";
+	}
+	
 	cout.setf(ios::fixed, ios::floatfield);
-	cout.width(2);
+	cout.width(3);
 	cout.precision(0);
-	cout << kswapdActive << "%";
+	cout << kswapdActive;
+	cout << "\t";
 
-	cout << " - mem(MB):(av/fr/sw) ";
-	cout << KBtoMB(memInfo.available) << "/";
-	cout << KBtoMB(memInfo.free) << "/";
+	cout.width(4);
+	cout << KBtoMB(memInfo.available);
+	cout << "\t";
+	
+	cout.width(4);
+	cout << KBtoMB(memInfo.free);
+	cout << "\t";
+	
+	cout.width(4);
 	cout << KBtoMB(memInfo.swapused);
+	cout << "\t";
 	
 	cout << endl;
 }
@@ -113,11 +127,8 @@ void TestSet::AddSleep(long milliseconds) {
 	AddTestset(S_LAUNCH_SLEEP, "", milliseconds, S_MONITOR_UNDEFINED, 0, "", false);
 }
 
-void TestSet::AddProcWrite(string path, string value){
-	stringstream ss;
-	
-	ss << path << " " << value;
-	AddTestset(S_LAUNCH_PROC_WRITE, ss.str(), 0, S_MONITOR_UNDEFINED, 0, "", false);
+void TestSet::AddPreReclaim(string value){
+	AddTestset(S_LAUNCH_PRE_RECLAIM, value, 0, S_MONITOR_UNDEFINED, 0, "", false);
 }
 
 #if defined(TIZEN)
@@ -189,8 +200,8 @@ bool TestSet::LoadFromFile(string &filename) {
 			launchType = S_LAUNCH_AUL_LAUNCH;
 		else if(!value.compare("Sleep"))
 			launchType = S_LAUNCH_SLEEP;
-		else if(!value.compare("ProcWrite"))
-			launchType = S_LAUNCH_PROC_WRITE;
+		else if(!value.compare("PreReclaim"))
+			launchType = S_LAUNCH_PRE_RECLAIM;
 
 		if(json_object_has_member (object, Constants::JSON_COMMAND.c_str())) {
 			command = json_object_get_string_member (object, Constants::JSON_COMMAND.c_str());
@@ -218,32 +229,26 @@ bool TestSet::LoadFromFile(string &filename) {
 		}
 
 		if(launchType == S_LAUNCH_FORK_AND_EXEC) {
-			//pre-test
-			if(PreReclaimEnabled()) {
-				AddProcWrite(Constants::EFM_PROC_PATH, Constants::EFM_SIZE_TO_RECLAIM);
-				AddSleep(3000);
-				AddProcWrite(Constants::EFM_PROC_PATH, Constants::EFM_SIZE_ZERO);
-			}
-
 			//test
 			AddForkAndExec(command, monitor, usageBelow, procname, waitStablized); 
 
 			//post-test
-			AddSleep(5000);
+			AddSleep(3000);
 		}
 		else if(launchType == S_LAUNCH_AUL_LAUNCH) {
-			//pre-test
-			if(PreReclaimEnabled()) {
-				AddProcWrite(Constants::EFM_PROC_PATH, Constants::EFM_SIZE_TO_RECLAIM);
-				AddSleep(3000);
-				AddProcWrite(Constants::EFM_PROC_PATH, Constants::EFM_SIZE_ZERO);
-			}
-
 			//test
 			AddAulLaunch(command, monitor, usageBelow, procname, waitStablized); 
 
 			//post-test
-			AddSleep(5000);
+			AddSleep(3000);
+		}
+		else if(launchType == S_LAUNCH_PRE_RECLAIM) {
+			if(PreReclaimEnabled()) {
+				AddPreReclaim(command);
+				AddSleep(5000);
+				AddPreReclaim(Constants::ZERO);
+				AddSleep(1000);
+			}		
 		}
 	}
 
@@ -287,14 +292,14 @@ bool TestSet::StartTest() {
 			}			
 
 			cout << endl << "Fork Launching... \"" << sparam << "\" pid:" << childpid << endl;
-			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "total": "process") 
+			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "tot.cpu": "usr.cpu") 
 				 << " CPU usage < " << usageBelow << endl;
 		}
 		else if(type == S_LAUNCH_AUL_LAUNCH) {
 			AulLaunch(sparam);
 
 			cout << endl << "AUL Launching... \"" << sparam << "\"" << endl;
-			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "total": "process") 
+			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "tot.cpu": "usr.cpu") 
 				 << " CPU usage < " << usageBelow << endl;
 		}
 		else if(type == S_LAUNCH_SLEEP) {
@@ -307,12 +312,13 @@ bool TestSet::StartTest() {
 			//userUsage.SetProcName(procname);
 			userUsage.SetUsageMonitor(CPUUsage::S_USAGE_CPU_TOTAL);
 
+			PrintSystemUsageHeader();
 			while(true) {
 				userUsage.Tick();
 				kswapdUsage.Tick();
 
 				if(userUsage.IsMeasurable()) {
-					memInfo.Read();					
+					memInfo.Read();	
 					PrintSystemUsage(userUsage, kswapdUsage, memInfo);
 				}
 				
@@ -322,15 +328,9 @@ bool TestSet::StartTest() {
 			
 			ANNOTATE_CHANNEL_END(50);
 		}
-		else if(type == S_LAUNCH_PROC_WRITE) {				
-			string path, value;
-			istringstream ss(sparam);
-			
-			ss >> path;
-			ss >> value;
-
-			cout << endl << "Write to " << path << " (" << value << ")" << endl;
-			Proc::WriteProc(path, value);				
+		else if(type == S_LAUNCH_PRE_RECLAIM) {			
+			cout << endl << "Pre-Reclaim: " << sparam << endl;
+			Proc::WriteProc(Constants::EFM_PROC_PATH, sparam);				
 
 			ANNOTATE_CHANNEL(50, sparam.c_str());
 			ANNOTATE_CHANNEL_END(50);
@@ -357,6 +357,7 @@ bool TestSet::StartTest() {
 			kswapdUsage.SetPID(kswapdPid);
 
 			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_BLUE, sparam.c_str());
+			PrintSystemUsageHeader();
 			while(true) {
 				userUsage.Tick();
 				kswapdUsage.Tick();

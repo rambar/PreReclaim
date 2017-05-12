@@ -13,7 +13,7 @@ private:
 		S_LAUNCH_FORK_AND_EXEC = 0,
 		S_LAUNCH_AUL_LAUNCH,
 		S_LAUNCH_SLEEP,
-		S_LAUNCH_PROC_WRITE,
+		S_LAUNCH_PRE_RECLAIM,
 	};
 	
 	enum MonitorType {
@@ -32,7 +32,7 @@ private:
 
 		static const string EFM_PROC_PATH;
 		static const string EFM_SIZE_TO_RECLAIM;
-		static const string EFM_SIZE_ZERO;
+		static const string ZERO;
 
 		static const string KSWAPD_NAME;
 	};
@@ -65,10 +65,11 @@ private:
 	void AddAulLaunch(string appid, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized);
 	void AddForkAndExec(string command, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized);
 	void AddSleep(long);
-	void AddProcWrite(string, string);
+	void AddPreReclaim(string);
 	
 	void AddTestset(const LaunchType type, string sparam, long lparam, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized);
 
+	void PrintSystemUsageHeader();
 	void PrintSystemUsage(CPUUsage &, CPUUsage &, const MemInfo &);
 	bool AulLaunch(string);
 };
