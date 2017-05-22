@@ -1,0 +1,2172 @@
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 91/  9 - kswapd:25% - mem(MB):(av/fr/sw) 328/22/59
+ 0.2s - cpu%:(ac/id)100/  0 - kswapd:40% - mem(MB):(av/fr/sw) 331/28/63
+ 0.4s - cpu%:(ac/id) 87/ 13 - kswapd:32% - mem(MB):(av/fr/sw) 335/34/69
+ 0.5s - cpu%:(ac/id)100/  0 - kswapd:46% - mem(MB):(av/fr/sw) 337/48/73
+ 0.6s - cpu%:(ac/id)100/  0 - kswapd:47% - mem(MB):(av/fr/sw) 342/52/80
+ 0.7s - cpu%:(ac/id)100/  0 - kswapd:44% - mem(MB):(av/fr/sw) 345/56/85
+ 0.8s - cpu%:(ac/id)100/  0 - kswapd:46% - mem(MB):(av/fr/sw) 348/58/90
+ 0.9s - cpu%:(ac/id)100/  0 - kswapd:43% - mem(MB):(av/fr/sw) 351/84/94
+ 1.0s - cpu%:(ac/id) 98/  2 - kswapd:42% - mem(MB):(av/fr/sw) 352/89/97
+ 1.1s - cpu%:(ac/id) 86/ 14 - kswapd:46% - mem(MB):(av/fr/sw) 356/96/103
+ 1.2s - cpu%:(ac/id) 64/ 36 - kswapd:50% - mem(MB):(av/fr/sw) 356/114/103
+ 1.3s - cpu%:(ac/id) 73/ 27 - kswapd:46% - mem(MB):(av/fr/sw) 357/140/103
+ 1.4s - cpu%:(ac/id) 63/ 37 - kswapd:54% - mem(MB):(av/fr/sw) 360/149/109
+ 1.5s - cpu%:(ac/id) 64/ 36 - kswapd:47% - mem(MB):(av/fr/sw) 363/152/115
+ 1.6s - cpu%:(ac/id) 25/ 75 - kswapd: 4% - mem(MB):(av/fr/sw) 363/152/115
+ 1.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 1.8s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 1.9s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 2.0s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 2.1s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 2.2s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 2.3s - cpu%:(ac/id) 39/ 61 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 2.4s - cpu%:(ac/id) 35/ 65 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 2.5s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 2.6s - cpu%:(ac/id)  9/ 91 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 2.7s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 2.8s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 2.9s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+ 3.0s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 363/152/115
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.tizen.browser"
+Wait until process CPU usage < 30
+ 0.1s - cpu%:(ac/id) 67/ 33 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 354/140/115
+ 0.4s - cpu%:(ac/id)100/  0 - proc: 15% - kswapd: 0% - mem(MB):(av/fr/sw) 344/124/115
+ 0.6s - cpu%:(ac/id)100/  0 - proc: 16% - kswapd: 0% - mem(MB):(av/fr/sw) 342/121/115
+ 0.8s - cpu%:(ac/id) 99/  1 - proc: 56% - kswapd: 0% - mem(MB):(av/fr/sw) 355/132/115
+ 1.0s - cpu%:(ac/id)100/  0 - proc: 32% - kswapd: 0% - mem(MB):(av/fr/sw) 355/130/115
+ 1.1s - cpu%:(ac/id)100/  0 - proc: 62% - kswapd: 0% - mem(MB):(av/fr/sw) 354/129/115
+ 1.2s - cpu%:(ac/id) 98/  2 - proc: 62% - kswapd: 0% - mem(MB):(av/fr/sw) 354/127/114
+ 1.3s - cpu%:(ac/id) 98/  2 - proc: 55% - kswapd: 0% - mem(MB):(av/fr/sw) 354/124/114
+ 1.4s - cpu%:(ac/id)100/  0 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 354/122/114
+ 1.5s - cpu%:(ac/id) 98/  2 - proc: 60% - kswapd: 0% - mem(MB):(av/fr/sw) 354/121/114
+ 1.6s - cpu%:(ac/id)100/  0 - proc: 58% - kswapd: 0% - mem(MB):(av/fr/sw) 354/120/114
+ 1.7s - cpu%:(ac/id) 92/  8 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 354/120/114
+ 1.8s - cpu%:(ac/id) 98/  2 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 353/118/114
+ 1.9s - cpu%:(ac/id) 98/  2 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 353/117/114
+ 2.0s - cpu%:(ac/id) 98/  2 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 353/116/114
+ 2.2s - cpu%:(ac/id)100/  0 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 346/107/114
+ 2.3s - cpu%:(ac/id)100/  0 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 343/102/114
+ 2.4s - cpu%:(ac/id)100/  0 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 349/107/114
+ 2.5s - cpu%:(ac/id)100/  0 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 348/103/114
+ 2.6s - cpu%:(ac/id)100/  0 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 346/101/114
+ 2.7s - cpu%:(ac/id)100/  0 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 346/100/114
+ 2.8s - cpu%:(ac/id)100/  0 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 347/100/114
+ 2.9s - cpu%:(ac/id)100/  0 - proc: 63% - kswapd: 0% - mem(MB):(av/fr/sw) 347/100/114
+ 3.0s - cpu%:(ac/id)100/  0 - proc: 67% - kswapd: 0% - mem(MB):(av/fr/sw) 347/99/114
+ 3.1s - cpu%:(ac/id) 98/  2 - proc: 57% - kswapd: 0% - mem(MB):(av/fr/sw) 352/103/114
+ 3.2s - cpu%:(ac/id) 98/  2 - proc: 61% - kswapd: 0% - mem(MB):(av/fr/sw) 352/101/114
+ 3.3s - cpu%:(ac/id) 94/  6 - proc: 67% - kswapd: 0% - mem(MB):(av/fr/sw) 352/99/114
+ 3.4s - cpu%:(ac/id) 98/  2 - proc: 83% - kswapd: 0% - mem(MB):(av/fr/sw) 351/98/114
+ 3.5s - cpu%:(ac/id) 96/  4 - proc: 65% - kswapd: 0% - mem(MB):(av/fr/sw) 351/98/114
+ 3.6s - cpu%:(ac/id) 94/  6 - proc: 62% - kswapd: 0% - mem(MB):(av/fr/sw) 351/97/114
+ 3.7s - cpu%:(ac/id) 96/  4 - proc: 63% - kswapd: 0% - mem(MB):(av/fr/sw) 350/96/114
+ 3.8s - cpu%:(ac/id)100/  0 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 347/93/114
+ 3.9s - cpu%:(ac/id) 94/  6 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 349/94/114
+ 4.0s - cpu%:(ac/id) 53/ 47 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 348/93/114
+ 4.1s - cpu%:(ac/id) 56/ 44 - proc: 15% - kswapd: 0% - mem(MB):(av/fr/sw) 348/92/114
+ 4.2s - cpu%:(ac/id) 60/ 40 - proc: 12% - kswapd: 0% - mem(MB):(av/fr/sw) 347/89/114
+ 4.3s - cpu%:(ac/id) 75/ 25 - proc: 21% - kswapd: 0% - mem(MB):(av/fr/sw) 346/87/114
+ 4.4s - cpu%:(ac/id) 74/ 26 - proc: 20% - kswapd: 0% - mem(MB):(av/fr/sw) 344/84/114
+ 4.5s - cpu%:(ac/id) 46/ 54 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 344/83/114
+ 4.6s - cpu%:(ac/id) 16/ 84 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 344/83/114
+ 4.7s - cpu%:(ac/id) 16/ 84 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 344/83/114
+ 4.8s - cpu%:(ac/id) 15/ 85 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 344/83/114
+ 5.0s - cpu%:(ac/id) 23/ 77 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 344/83/114
+ 5.1s - cpu%:(ac/id) 14/ 86 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 344/83/114
+ 5.2s - cpu%:(ac/id) 36/ 64 - proc: 16% - kswapd: 0% - mem(MB):(av/fr/sw) 344/83/114
+ 5.3s - cpu%:(ac/id) 50/ 50 - proc: 31% - kswapd: 0% - mem(MB):(av/fr/sw) 344/84/114
+ 5.4s - cpu%:(ac/id) 14/ 86 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 344/84/114
+ 5.5s - cpu%:(ac/id) 27/ 73 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 344/84/114
+ 5.6s - cpu%:(ac/id) 94/  6 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 344/83/114
+ 5.7s - cpu%:(ac/id) 79/ 21 - proc: 17% - kswapd: 0% - mem(MB):(av/fr/sw) 341/81/114
+ 5.8s - cpu%:(ac/id) 76/ 24 - proc:  6% - kswapd: 0% - mem(MB):(av/fr/sw) 343/83/114
+ 5.9s - cpu%:(ac/id) 35/ 65 - proc: 10% - kswapd: 0% - mem(MB):(av/fr/sw) 343/83/114
+ 6.0s - cpu%:(ac/id) 16/ 84 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 343/83/114
+ 6.1s - cpu%:(ac/id) 29/ 71 - proc: 10% - kswapd: 0% - mem(MB):(av/fr/sw) 343/83/114
+ 6.2s - cpu%:(ac/id) 27/ 73 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 344/83/114
+ 6.3s - cpu%:(ac/id) 86/ 14 - proc: 30% - kswapd: 0% - mem(MB):(av/fr/sw) 344/83/114
+ 6.4s - cpu%:(ac/id) 98/  2 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 342/81/114
+ 6.5s - cpu%:(ac/id) 74/ 26 - proc: 23% - kswapd: 0% - mem(MB):(av/fr/sw) 342/80/114
+ 6.6s - cpu%:(ac/id) 70/ 30 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 341/79/114
+ 6.7s - cpu%:(ac/id) 75/ 25 - proc: 21% - kswapd: 0% - mem(MB):(av/fr/sw) 340/78/114
+ 6.8s - cpu%:(ac/id) 98/  2 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 339/77/114
+ 6.9s - cpu%:(ac/id) 98/  2 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 338/75/114
+ 7.0s - cpu%:(ac/id)100/  0 - proc: 31% - kswapd: 0% - mem(MB):(av/fr/sw) 337/75/114
+ 7.1s - cpu%:(ac/id) 94/  6 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 335/71/114
+ 7.2s - cpu%:(ac/id) 92/  8 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 333/67/114
+ 7.3s - cpu%:(ac/id) 90/ 10 - proc: 55% - kswapd: 0% - mem(MB):(av/fr/sw) 327/61/114
+ 7.4s - cpu%:(ac/id)100/  0 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 325/58/114
+ 7.5s - cpu%:(ac/id)100/  0 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 320/53/114
+ 7.6s - cpu%:(ac/id) 82/ 18 - proc: 58% - kswapd: 0% - mem(MB):(av/fr/sw) 319/52/114
+ 7.7s - cpu%:(ac/id) 98/  2 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 318/51/114
+ 7.8s - cpu%:(ac/id)100/  0 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 319/52/114
+ 7.9s - cpu%:(ac/id)100/  0 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 319/52/114
+ 8.0s - cpu%:(ac/id)100/  0 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 318/50/114
+ 8.1s - cpu%:(ac/id)100/  0 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 314/44/114
+ 8.2s - cpu%:(ac/id)100/  0 - proc: 24% - kswapd: 0% - mem(MB):(av/fr/sw) 312/41/114
+ 8.4s - cpu%:(ac/id)100/  0 - proc: 11% - kswapd: 0% - mem(MB):(av/fr/sw) 311/40/114
+ 8.5s - cpu%:(ac/id)100/  0 - proc:  6% - kswapd: 0% - mem(MB):(av/fr/sw) 322/51/114
+ 8.6s - cpu%:(ac/id)100/  0 - proc: 12% - kswapd: 0% - mem(MB):(av/fr/sw) 326/54/114
+ 8.7s - cpu%:(ac/id)100/  0 - proc:  6% - kswapd: 0% - mem(MB):(av/fr/sw) 318/46/114
+ 8.8s - cpu%:(ac/id)100/  0 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 320/46/114
+ 8.9s - cpu%:(ac/id)100/  0 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 320/46/114
+ 9.0s - cpu%:(ac/id) 70/ 30 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 330/55/114
+ 9.1s - cpu%:(ac/id) 65/ 35 - proc: 12% - kswapd: 0% - mem(MB):(av/fr/sw) 330/55/114
+ 9.2s - cpu%:(ac/id) 70/ 30 - proc:  9% - kswapd: 0% - mem(MB):(av/fr/sw) 329/54/114
+ 9.3s - cpu%:(ac/id) 75/ 25 - proc: 10% - kswapd: 0% - mem(MB):(av/fr/sw) 328/53/114
+ 9.4s - cpu%:(ac/id) 74/ 26 - proc: 12% - kswapd: 0% - mem(MB):(av/fr/sw) 327/53/114
+ 9.5s - cpu%:(ac/id) 73/ 27 - proc: 10% - kswapd: 0% - mem(MB):(av/fr/sw) 327/53/114
+ 9.6s - cpu%:(ac/id)100/  0 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 327/53/114
+ 9.7s - cpu%:(ac/id)100/  0 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 327/53/114
+ 9.8s - cpu%:(ac/id) 75/ 25 - proc:  4% - kswapd: 0% - mem(MB):(av/fr/sw) 327/53/114
+ 9.9s - cpu%:(ac/id) 72/ 28 - proc: 11% - kswapd: 0% - mem(MB):(av/fr/sw) 327/53/114
+10.0s - cpu%:(ac/id) 96/  4 - proc: 18% - kswapd: 0% - mem(MB):(av/fr/sw) 324/49/114
+10.1s - cpu%:(ac/id) 95/  5 - proc: 24% - kswapd: 0% - mem(MB):(av/fr/sw) 315/39/114
+10.2s - cpu%:(ac/id) 85/ 15 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 309/34/114
+10.3s - cpu%:(ac/id) 80/ 20 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 297/22/114
+10.4s - cpu%:(ac/id) 84/ 16 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 293/18/114
+10.5s - cpu%:(ac/id) 88/ 12 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 289/14/114
+10.6s - cpu%:(ac/id) 92/  8 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 288/13/114
+10.7s - cpu%:(ac/id) 70/ 30 - proc: 10% - kswapd: 0% - mem(MB):(av/fr/sw) 288/13/114
+10.8s - cpu%:(ac/id) 94/  6 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 286/10/114
+10.9s - cpu%:(ac/id) 96/  4 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 284/5/114
+11.0s - cpu%:(ac/id) 78/ 22 - proc: 37% - kswapd:12% - mem(MB):(av/fr/sw) 284/9/115
+11.1s - cpu%:(ac/id) 60/ 40 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 286/11/115
+11.2s - cpu%:(ac/id) 67/ 33 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 288/12/115
+11.3s - cpu%:(ac/id) 61/ 39 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 291/15/115
+11.4s - cpu%:(ac/id) 77/ 23 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 289/13/115
+11.5s - cpu%:(ac/id) 96/  4 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 288/12/115
+11.6s - cpu%:(ac/id) 67/ 33 - proc:  4% - kswapd: 0% - mem(MB):(av/fr/sw) 288/12/115
+11.7s - cpu%:(ac/id) 63/ 37 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 286/10/115
+11.8s - cpu%:(ac/id) 65/ 35 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 285/9/115
+11.9s - cpu%:(ac/id) 64/ 36 - proc:  2% - kswapd: 9% - mem(MB):(av/fr/sw) 288/13/116
+12.1s - cpu%:(ac/id) 67/ 33 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 288/13/116
+12.2s - cpu%:(ac/id) 57/ 43 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 288/13/116
+12.3s - cpu%:(ac/id) 63/ 37 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 288/13/116
+12.4s - cpu%:(ac/id) 78/ 22 - proc: 16% - kswapd: 0% - mem(MB):(av/fr/sw) 288/13/116
+12.5s - cpu%:(ac/id) 61/ 39 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 288/13/116
+12.6s - cpu%:(ac/id) 62/ 38 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 288/13/116
+12.7s - cpu%:(ac/id) 63/ 37 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 287/13/116
+12.8s - cpu%:(ac/id) 60/ 40 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 287/12/116
+12.9s - cpu%:(ac/id) 71/ 29 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 287/12/116
+13.0s - cpu%:(ac/id) 75/ 25 - proc: 10% - kswapd: 0% - mem(MB):(av/fr/sw) 287/12/116
+13.1s - cpu%:(ac/id) 72/ 28 - proc: 13% - kswapd: 0% - mem(MB):(av/fr/sw) 286/11/116
+13.2s - cpu%:(ac/id) 84/ 16 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 286/10/116
+13.3s - cpu%:(ac/id)100/  0 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 284/9/116
+13.4s - cpu%:(ac/id)100/  0 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 281/6/116
+13.5s - cpu%:(ac/id)100/  0 - proc: 41% - kswapd:16% - mem(MB):(av/fr/sw) 280/10/117
+13.6s - cpu%:(ac/id)100/  0 - proc: 33% - kswapd: 4% - mem(MB):(av/fr/sw) 279/10/117
+13.7s - cpu%:(ac/id) 98/  2 - proc: 38% - kswapd: 2% - mem(MB):(av/fr/sw) 284/17/117
+13.8s - cpu%:(ac/id) 79/ 21 - proc: 15% - kswapd: 2% - mem(MB):(av/fr/sw) 284/17/117
+13.9s - cpu%:(ac/id) 66/ 34 - proc:  5% - kswapd: 2% - mem(MB):(av/fr/sw) 284/17/117
+14.0s - cpu%:(ac/id) 82/ 18 - proc:  6% - kswapd: 2% - mem(MB):(av/fr/sw) 280/14/117
+14.1s - cpu%:(ac/id) 65/ 35 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 284/18/118
+14.2s - cpu%:(ac/id) 76/ 24 - proc:  6% - kswapd: 0% - mem(MB):(av/fr/sw) 282/16/118
+14.3s - cpu%:(ac/id) 69/ 31 - proc: 10% - kswapd: 0% - mem(MB):(av/fr/sw) 282/16/118
+14.4s - cpu%:(ac/id) 59/ 41 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 281/15/118
+14.5s - cpu%:(ac/id) 61/ 39 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 281/15/118
+14.6s - cpu%:(ac/id) 65/ 35 - proc:  2% - kswapd: 4% - mem(MB):(av/fr/sw) 281/15/118
+14.7s - cpu%:(ac/id) 78/ 22 - proc: 18% - kswapd: 0% - mem(MB):(av/fr/sw) 280/15/118
+14.8s - cpu%:(ac/id) 80/ 20 - proc: 18% - kswapd: 2% - mem(MB):(av/fr/sw) 280/15/118
+14.9s - cpu%:(ac/id) 67/ 33 - proc:  0% - kswapd: 4% - mem(MB):(av/fr/sw) 280/15/118
+15.0s - cpu%:(ac/id) 66/ 34 - proc:  2% - kswapd: 2% - mem(MB):(av/fr/sw) 279/15/118
+15.1s - cpu%:(ac/id) 78/ 22 - proc:  0% - kswapd: 2% - mem(MB):(av/fr/sw) 278/15/118
+15.2s - cpu%:(ac/id) 74/ 26 - proc:  2% - kswapd: 2% - mem(MB):(av/fr/sw) 279/16/118
+15.3s - cpu%:(ac/id) 58/ 42 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 279/17/118
+15.4s - cpu%:(ac/id) 98/  2 - proc: 22% - kswapd: 0% - mem(MB):(av/fr/sw) 272/9/118
+15.5s - cpu%:(ac/id)100/  0 - proc: 30% - kswapd: 8% - mem(MB):(av/fr/sw) 269/11/119
+15.6s - cpu%:(ac/id) 81/ 19 - proc: 17% - kswapd: 0% - mem(MB):(av/fr/sw) 268/11/119
+15.7s - cpu%:(ac/id) 13/ 87 - proc:  0% - kswapd: 2% - mem(MB):(av/fr/sw) 268/11/119
+15.8s - cpu%:(ac/id) 74/ 26 - proc:  4% - kswapd: 2% - mem(MB):(av/fr/sw) 267/12/119
+15.9s - cpu%:(ac/id) 84/ 16 - proc: 12% - kswapd: 4% - mem(MB):(av/fr/sw) 267/10/119
+16.0s - cpu%:(ac/id)100/  0 - proc:  2% - kswapd: 2% - mem(MB):(av/fr/sw) 267/13/119
+16.1s - cpu%:(ac/id) 98/  2 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 267/13/119
+16.2s - cpu%:(ac/id) 85/ 15 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 266/11/119
+16.3s - cpu%:(ac/id) 63/ 37 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 265/9/119
+16.4s - cpu%:(ac/id) 42/ 58 - proc: 12% - kswapd: 0% - mem(MB):(av/fr/sw) 268/12/119
+16.6s - cpu%:(ac/id) 25/ 75 - proc:  4% - kswapd: 0% - mem(MB):(av/fr/sw) 272/16/119
+16.7s - cpu%:(ac/id) 25/ 75 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 272/16/119
+16.8s - cpu%:(ac/id) 14/ 86 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 272/16/119
+16.9s - cpu%:(ac/id) 22/ 78 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 272/17/119
+17.0s - cpu%:(ac/id) 40/ 60 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 272/17/119
+17.1s - cpu%:(ac/id) 21/ 79 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 272/17/119
+17.2s - cpu%:(ac/id) 17/ 83 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+17.3s - cpu%:(ac/id) 16/ 84 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+17.4s - cpu%:(ac/id) 14/ 86 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+17.5s - cpu%:(ac/id) 33/ 67 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+17.6s - cpu%:(ac/id) 16/ 84 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+17.7s - cpu%:(ac/id) 23/ 77 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+17.8s - cpu%:(ac/id) 22/ 78 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+17.9s - cpu%:(ac/id) 19/ 81 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+18.0s - cpu%:(ac/id) 33/ 67 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 272/17/119
+18.1s - cpu%:(ac/id) 17/ 83 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 272/17/119
+18.2s - cpu%:(ac/id) 25/ 75 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+18.3s - cpu%:(ac/id) 25/ 75 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+18.4s - cpu%:(ac/id) 21/ 79 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+18.5s - cpu%:(ac/id) 33/ 67 - proc: 10% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+18.6s - cpu%:(ac/id) 25/ 75 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+18.7s - cpu%:(ac/id) 14/ 86 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 272/16/119
+org.tizen.browser is stablised at 15.6(s)
+
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 0.2s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 0.3s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 0.4s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 0.5s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 0.6s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 0.7s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 0.8s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 0.9s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 1.0s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 1.1s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 1.2s - cpu%:(ac/id) 27/ 73 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 1.3s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 273/17/119
+ 1.4s - cpu%:(ac/id)  7/ 93 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 1.5s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 1.6s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 1.7s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 1.8s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 1.9s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 2.0s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 2.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 2.2s - cpu%:(ac/id) 29/ 71 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 2.3s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 2.4s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 2.5s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 2.6s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 2.7s - cpu%:(ac/id) 30/ 70 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 2.9s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 3.0s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 3.1s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 3.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 3.3s - cpu%:(ac/id) 34/ 66 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 3.4s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 3.5s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 3.6s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 3.7s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 3.8s - cpu%:(ac/id) 27/ 73 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 3.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 4.0s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 4.1s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 4.2s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 4.3s - cpu%:(ac/id) 31/ 69 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 4.4s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 4.5s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 4.6s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 4.7s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 4.8s - cpu%:(ac/id) 28/ 72 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 4.9s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+ 5.0s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 273/16/119
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 46/ 54 - kswapd:25% - mem(MB):(av/fr/sw) 274/19/121
+ 0.2s - cpu%:(ac/id) 74/ 26 - kswapd:46% - mem(MB):(av/fr/sw) 278/25/127
+ 0.3s - cpu%:(ac/id) 61/ 39 - kswapd:50% - mem(MB):(av/fr/sw) 283/35/133
+ 0.4s - cpu%:(ac/id) 67/ 33 - kswapd:45% - mem(MB):(av/fr/sw) 288/41/139
+ 0.5s - cpu%:(ac/id) 62/ 38 - kswapd:50% - mem(MB):(av/fr/sw) 292/54/145
+ 0.6s - cpu%:(ac/id) 72/ 28 - kswapd:46% - mem(MB):(av/fr/sw) 298/59/152
+ 0.7s - cpu%:(ac/id) 66/ 34 - kswapd:48% - mem(MB):(av/fr/sw) 303/70/157
+ 0.8s - cpu%:(ac/id) 63/ 37 - kswapd:51% - mem(MB):(av/fr/sw) 303/83/157
+ 0.9s - cpu%:(ac/id) 60/ 40 - kswapd:52% - mem(MB):(av/fr/sw) 306/86/162
+ 1.0s - cpu%:(ac/id) 69/ 31 - kswapd:50% - mem(MB):(av/fr/sw) 311/90/168
+ 1.1s - cpu%:(ac/id) 70/ 30 - kswapd:40% - mem(MB):(av/fr/sw) 315/94/174
+ 1.2s - cpu%:(ac/id) 68/ 32 - kswapd:46% - mem(MB):(av/fr/sw) 320/99/182
+ 1.3s - cpu%:(ac/id) 92/  8 - kswapd:51% - mem(MB):(av/fr/sw) 327/107/186
+ 1.4s - cpu%:(ac/id)100/  0 - kswapd:45% - mem(MB):(av/fr/sw) 329/114/188
+ 1.5s - cpu%:(ac/id) 92/  8 - kswapd:44% - mem(MB):(av/fr/sw) 331/130/190
+ 1.6s - cpu%:(ac/id) 74/ 26 - kswapd:51% - mem(MB):(av/fr/sw) 333/156/194
+ 1.7s - cpu%:(ac/id) 83/ 17 - kswapd:42% - mem(MB):(av/fr/sw) 336/165/198
+ 1.8s - cpu%:(ac/id) 24/ 76 - kswapd: 6% - mem(MB):(av/fr/sw) 337/166/199
+ 2.0s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 2.1s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 2.2s - cpu%:(ac/id) 31/ 69 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 2.3s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 2.4s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 2.5s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 2.6s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 2.7s - cpu%:(ac/id) 29/ 71 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 2.8s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 2.9s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 3.0s - cpu%:(ac/id)  9/ 91 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+ 3.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 337/166/199
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.tizen.tv-viewer"
+Wait until process CPU usage < 50
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 87/ 13 - kswapd: 0% - mem(MB):(av/fr/sw) 321/150/199
+ 0.2s - cpu%:(ac/id) 96/  4 - kswapd: 0% - mem(MB):(av/fr/sw) 314/142/198
+ 0.3s - cpu%:(ac/id) 99/  1 - kswapd: 0% - mem(MB):(av/fr/sw) 320/146/198
+ 0.4s - cpu%:(ac/id) 78/ 22 - kswapd: 0% - mem(MB):(av/fr/sw) 320/142/198
+ 0.6s - cpu%:(ac/id) 97/  3 - kswapd: 0% - mem(MB):(av/fr/sw) 319/140/198
+ 0.7s - cpu%:(ac/id) 91/  9 - kswapd: 0% - mem(MB):(av/fr/sw) 319/139/197
+ 0.8s - cpu%:(ac/id) 59/ 41 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 0.9s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 1.0s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 1.1s - cpu%:(ac/id) 71/ 29 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 1.2s - cpu%:(ac/id) 64/ 36 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 1.3s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 1.4s - cpu%:(ac/id) 41/ 59 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 1.5s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 1.6s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 1.7s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 1.8s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 1.9s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 2.0s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 2.1s - cpu%:(ac/id) 10/ 90 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 2.2s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 2.3s - cpu%:(ac/id) 54/ 46 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 2.4s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 2.5s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 2.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 2.7s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 2.8s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 2.9s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 3.0s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 3.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 3.2s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 3.3s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 3.4s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 3.5s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 3.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 3.7s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 3.8s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 319/138/197
+ 3.9s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 4.0s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 4.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 4.2s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 4.3s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 4.4s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 4.5s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 4.6s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 4.7s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 4.8s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 4.9s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+ 5.0s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 319/137/197
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 41/ 59 - kswapd:30% - mem(MB):(av/fr/sw) 321/148/200
+ 0.2s - cpu%:(ac/id) 57/ 43 - kswapd:52% - mem(MB):(av/fr/sw) 324/161/205
+ 0.3s - cpu%:(ac/id) 57/ 43 - kswapd:38% - mem(MB):(av/fr/sw) 331/189/206
+ 0.4s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 0.5s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 0.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 0.7s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 0.8s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 0.9s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 1.0s - cpu%:(ac/id) 10/ 90 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 1.1s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 1.2s - cpu%:(ac/id) 10/ 90 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 1.3s - cpu%:(ac/id)  7/ 93 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 1.4s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 1.5s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 1.6s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 1.7s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 1.8s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 1.9s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 2.0s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 2.1s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 2.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 2.3s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 2.4s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 2.5s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 2.6s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 2.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 2.8s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 3.0s - cpu%:(ac/id) 10/ 90 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+ 3.1s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 331/189/206
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.volt.apps"
+Wait until process CPU usage < 30
+ 0.1s - cpu%:(ac/id) 54/ 46 - proc: 31% - kswapd: 0% - mem(MB):(av/fr/sw) 325/149/206
+ 0.2s - cpu%:(ac/id) 60/ 40 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 324/148/206
+ 0.3s - cpu%:(ac/id) 60/ 40 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 323/146/206
+ 0.4s - cpu%:(ac/id) 53/ 47 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 318/140/206
+ 0.5s - cpu%:(ac/id) 58/ 42 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 319/141/206
+ 0.6s - cpu%:(ac/id) 67/ 33 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 316/138/206
+ 0.7s - cpu%:(ac/id) 65/ 35 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 315/137/206
+ 0.8s - cpu%:(ac/id) 72/ 28 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 315/137/206
+ 0.9s - cpu%:(ac/id) 65/ 35 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 315/137/206
+ 1.0s - cpu%:(ac/id) 65/ 35 - proc: 51% - kswapd: 0% - mem(MB):(av/fr/sw) 314/136/206
+ 1.1s - cpu%:(ac/id) 63/ 37 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 314/136/206
+ 1.2s - cpu%:(ac/id) 67/ 33 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 314/135/206
+ 1.3s - cpu%:(ac/id) 66/ 34 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 313/135/206
+ 1.4s - cpu%:(ac/id) 63/ 37 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 312/133/206
+ 1.5s - cpu%:(ac/id) 70/ 30 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 310/131/206
+ 1.6s - cpu%:(ac/id) 67/ 33 - proc: 49% - kswapd: 0% - mem(MB):(av/fr/sw) 309/131/206
+ 1.7s - cpu%:(ac/id) 65/ 35 - proc: 49% - kswapd: 0% - mem(MB):(av/fr/sw) 309/130/206
+ 1.8s - cpu%:(ac/id) 66/ 34 - proc: 51% - kswapd: 0% - mem(MB):(av/fr/sw) 309/130/206
+ 1.9s - cpu%:(ac/id) 66/ 34 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 307/128/206
+ 2.0s - cpu%:(ac/id) 64/ 36 - proc: 51% - kswapd: 0% - mem(MB):(av/fr/sw) 306/127/206
+ 2.1s - cpu%:(ac/id) 63/ 37 - proc: 51% - kswapd: 0% - mem(MB):(av/fr/sw) 305/126/206
+ 2.2s - cpu%:(ac/id) 66/ 34 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 305/126/206
+ 2.4s - cpu%:(ac/id) 69/ 31 - proc: 51% - kswapd: 0% - mem(MB):(av/fr/sw) 304/125/206
+ 2.5s - cpu%:(ac/id) 69/ 31 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 304/124/206
+ 2.6s - cpu%:(ac/id) 91/  9 - proc: 30% - kswapd: 0% - mem(MB):(av/fr/sw) 289/109/206
+ 2.7s - cpu%:(ac/id)100/  0 - proc: 25% - kswapd: 0% - mem(MB):(av/fr/sw) 285/105/206
+ 2.8s - cpu%:(ac/id)100/  0 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 285/104/206
+ 2.9s - cpu%:(ac/id)100/  0 - proc: 39% - kswapd: 0% - mem(MB):(av/fr/sw) 283/100/206
+ 3.1s - cpu%:(ac/id)100/  0 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 279/95/206
+ 3.2s - cpu%:(ac/id)100/  0 - proc: 32% - kswapd: 0% - mem(MB):(av/fr/sw) 277/93/205
+ 3.3s - cpu%:(ac/id) 98/  2 - proc: 30% - kswapd: 0% - mem(MB):(av/fr/sw) 277/93/205
+ 3.4s - cpu%:(ac/id) 95/  5 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 277/93/205
+ 3.5s - cpu%:(ac/id) 96/  4 - proc: 34% - kswapd: 0% - mem(MB):(av/fr/sw) 277/93/205
+ 3.6s - cpu%:(ac/id) 91/  9 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 277/93/205
+ 3.7s - cpu%:(ac/id) 63/ 37 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 276/91/205
+ 3.8s - cpu%:(ac/id) 70/ 30 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 276/91/205
+ 3.9s - cpu%:(ac/id) 78/ 22 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 276/91/205
+ 4.0s - cpu%:(ac/id) 76/ 24 - proc: 57% - kswapd: 0% - mem(MB):(av/fr/sw) 274/89/205
+ 4.1s - cpu%:(ac/id) 53/ 47 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 274/88/205
+ 4.2s - cpu%:(ac/id) 72/ 28 - proc: 34% - kswapd: 0% - mem(MB):(av/fr/sw) 273/87/205
+ 4.3s - cpu%:(ac/id) 60/ 40 - proc: 49% - kswapd: 0% - mem(MB):(av/fr/sw) 273/87/205
+ 4.4s - cpu%:(ac/id) 62/ 38 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 273/86/205
+ 4.5s - cpu%:(ac/id) 71/ 29 - proc: 49% - kswapd: 0% - mem(MB):(av/fr/sw) 272/86/205
+ 4.6s - cpu%:(ac/id) 71/ 29 - proc: 39% - kswapd: 0% - mem(MB):(av/fr/sw) 272/85/205
+ 4.7s - cpu%:(ac/id) 92/  8 - proc: 18% - kswapd: 0% - mem(MB):(av/fr/sw) 271/84/205
+ 4.8s - cpu%:(ac/id) 96/  4 - proc: 16% - kswapd: 0% - mem(MB):(av/fr/sw) 270/82/205
+ 5.0s - cpu%:(ac/id)100/  0 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 269/80/205
+ 5.1s - cpu%:(ac/id)100/  0 - proc: 65% - kswapd: 0% - mem(MB):(av/fr/sw) 268/79/205
+ 5.2s - cpu%:(ac/id) 79/ 21 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 260/71/205
+ 5.3s - cpu%:(ac/id) 70/ 30 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 260/70/205
+ 5.4s - cpu%:(ac/id) 96/  4 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 259/68/205
+ 5.5s - cpu%:(ac/id) 70/ 30 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 258/68/205
+ 5.6s - cpu%:(ac/id) 71/ 29 - proc: 49% - kswapd: 0% - mem(MB):(av/fr/sw) 257/67/205
+ 5.7s - cpu%:(ac/id)100/  0 - proc: 73% - kswapd: 0% - mem(MB):(av/fr/sw) 241/48/205
+ 5.8s - cpu%:(ac/id) 96/  4 - proc: 68% - kswapd: 0% - mem(MB):(av/fr/sw) 254/61/205
+ 5.9s - cpu%:(ac/id) 87/ 13 - proc: 57% - kswapd: 0% - mem(MB):(av/fr/sw) 262/69/205
+ 6.0s - cpu%:(ac/id) 60/ 40 - proc: 51% - kswapd: 0% - mem(MB):(av/fr/sw) 262/69/205
+ 6.1s - cpu%:(ac/id) 59/ 41 - proc: 55% - kswapd: 0% - mem(MB):(av/fr/sw) 261/68/205
+ 6.2s - cpu%:(ac/id) 62/ 38 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 262/69/205
+ 6.3s - cpu%:(ac/id) 90/ 10 - proc: 76% - kswapd: 0% - mem(MB):(av/fr/sw) 269/77/205
+ 6.4s - cpu%:(ac/id) 80/ 20 - proc: 61% - kswapd: 0% - mem(MB):(av/fr/sw) 269/76/205
+ 6.5s - cpu%:(ac/id) 68/ 32 - proc: 61% - kswapd: 0% - mem(MB):(av/fr/sw) 269/76/205
+ 6.6s - cpu%:(ac/id) 87/ 13 - proc: 60% - kswapd: 0% - mem(MB):(av/fr/sw) 268/75/205
+ 6.7s - cpu%:(ac/id) 88/ 12 - proc: 75% - kswapd: 0% - mem(MB):(av/fr/sw) 267/75/205
+ 6.8s - cpu%:(ac/id) 72/ 28 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 267/74/205
+ 6.9s - cpu%:(ac/id) 71/ 29 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 266/73/205
+ 7.0s - cpu%:(ac/id) 64/ 36 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 264/71/205
+ 7.1s - cpu%:(ac/id) 96/  4 - proc: 78% - kswapd: 0% - mem(MB):(av/fr/sw) 262/68/205
+ 7.2s - cpu%:(ac/id) 96/  4 - proc: 68% - kswapd: 0% - mem(MB):(av/fr/sw) 260/66/205
+ 7.3s - cpu%:(ac/id) 65/ 35 - proc: 56% - kswapd: 0% - mem(MB):(av/fr/sw) 260/66/205
+ 7.4s - cpu%:(ac/id) 70/ 30 - proc: 59% - kswapd: 0% - mem(MB):(av/fr/sw) 258/63/205
+ 7.5s - cpu%:(ac/id) 90/ 10 - proc: 73% - kswapd: 0% - mem(MB):(av/fr/sw) 259/63/205
+ 7.6s - cpu%:(ac/id) 78/ 22 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 259/63/205
+ 7.7s - cpu%:(ac/id) 89/ 11 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 255/58/205
+ 7.8s - cpu%:(ac/id) 69/ 31 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 254/57/205
+ 7.9s - cpu%:(ac/id) 65/ 35 - proc: 12% - kswapd: 0% - mem(MB):(av/fr/sw) 254/57/205
+ 8.0s - cpu%:(ac/id) 65/ 35 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 253/55/205
+ 8.1s - cpu%:(ac/id) 90/ 10 - proc: 59% - kswapd: 0% - mem(MB):(av/fr/sw) 254/55/205
+ 8.2s - cpu%:(ac/id) 94/  6 - proc: 71% - kswapd: 0% - mem(MB):(av/fr/sw) 254/55/205
+ 8.3s - cpu%:(ac/id) 90/ 10 - proc: 75% - kswapd: 0% - mem(MB):(av/fr/sw) 252/53/205
+ 8.4s - cpu%:(ac/id) 90/ 10 - proc: 69% - kswapd: 0% - mem(MB):(av/fr/sw) 252/53/205
+ 8.5s - cpu%:(ac/id) 86/ 14 - proc: 64% - kswapd: 0% - mem(MB):(av/fr/sw) 251/52/205
+ 8.6s - cpu%:(ac/id) 62/ 38 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 250/51/205
+ 8.8s - cpu%:(ac/id) 98/  2 - proc: 81% - kswapd: 0% - mem(MB):(av/fr/sw) 247/48/205
+ 8.9s - cpu%:(ac/id)100/  0 - proc: 65% - kswapd: 0% - mem(MB):(av/fr/sw) 246/47/205
+ 9.0s - cpu%:(ac/id) 69/ 31 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 245/46/205
+ 9.1s - cpu%:(ac/id) 94/  6 - proc: 70% - kswapd: 0% - mem(MB):(av/fr/sw) 243/44/205
+ 9.2s - cpu%:(ac/id) 71/ 29 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 243/44/205
+ 9.3s - cpu%:(ac/id) 90/ 10 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 243/44/205
+ 9.4s - cpu%:(ac/id)100/  0 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 243/44/205
+ 9.5s - cpu%:(ac/id) 96/  4 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 243/43/205
+ 9.6s - cpu%:(ac/id) 98/  2 - proc: 51% - kswapd: 0% - mem(MB):(av/fr/sw) 242/42/205
+ 9.7s - cpu%:(ac/id)100/  0 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 242/42/205
+ 9.8s - cpu%:(ac/id)100/  0 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 242/42/205
+ 9.9s - cpu%:(ac/id) 98/  2 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 242/40/205
+10.0s - cpu%:(ac/id)100/  0 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 241/40/205
+10.1s - cpu%:(ac/id) 96/  4 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 241/36/205
+10.2s - cpu%:(ac/id) 88/ 12 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 242/33/205
+10.3s - cpu%:(ac/id) 89/ 11 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 242/27/205
+10.4s - cpu%:(ac/id) 98/  2 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 242/27/205
+10.5s - cpu%:(ac/id)100/  0 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 242/27/205
+10.6s - cpu%:(ac/id) 82/ 18 - proc: 16% - kswapd: 0% - mem(MB):(av/fr/sw) 241/25/205
+10.7s - cpu%:(ac/id) 63/ 37 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 240/25/205
+10.8s - cpu%:(ac/id) 65/ 35 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 240/24/205
+10.9s - cpu%:(ac/id) 58/ 42 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 239/24/205
+11.0s - cpu%:(ac/id) 42/ 58 - proc: 12% - kswapd: 0% - mem(MB):(av/fr/sw) 239/23/205
+11.1s - cpu%:(ac/id) 36/ 64 - proc: 16% - kswapd: 0% - mem(MB):(av/fr/sw) 239/23/205
+11.2s - cpu%:(ac/id) 35/ 65 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 239/23/205
+11.3s - cpu%:(ac/id) 40/ 60 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+11.4s - cpu%:(ac/id) 16/ 84 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+11.5s - cpu%:(ac/id) 24/ 76 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+11.6s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+11.7s - cpu%:(ac/id) 18/ 82 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+11.8s - cpu%:(ac/id) 16/ 84 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+11.9s - cpu%:(ac/id) 25/ 75 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+12.0s - cpu%:(ac/id) 34/ 66 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+12.1s - cpu%:(ac/id) 21/ 79 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+12.2s - cpu%:(ac/id) 23/ 77 - proc: 16% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+12.3s - cpu%:(ac/id) 41/ 59 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+12.4s - cpu%:(ac/id) 24/ 76 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+12.6s - cpu%:(ac/id) 19/ 81 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+12.7s - cpu%:(ac/id) 24/ 76 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+12.8s - cpu%:(ac/id) 12/ 88 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 238/23/205
+12.9s - cpu%:(ac/id) 20/ 80 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/22/205
+13.0s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/22/205
+13.1s - cpu%:(ac/id) 21/ 79 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 238/22/205
+13.2s - cpu%:(ac/id) 45/ 55 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/20/205
+13.3s - cpu%:(ac/id) 26/ 74 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/19/205
+13.4s - cpu%:(ac/id) 29/ 71 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 238/17/205
+13.5s - cpu%:(ac/id) 16/ 84 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/17/205
+13.6s - cpu%:(ac/id) 19/ 81 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 238/17/205
+13.7s - cpu%:(ac/id) 12/ 88 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/17/205
+org.volt.apps is stablised at 10.6(s)
+
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 59/ 41 - kswapd: 0% - mem(MB):(av/fr/sw) 241/20/205
+ 0.2s - cpu%:(ac/id) 35/ 65 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 0.3s - cpu%:(ac/id) 27/ 73 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 0.4s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 0.5s - cpu%:(ac/id) 38/ 62 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 0.6s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 0.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 0.8s - cpu%:(ac/id)  9/ 91 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 0.9s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 1.0s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 1.1s - cpu%:(ac/id) 63/ 37 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 1.2s - cpu%:(ac/id) 46/ 54 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 1.3s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 1.4s - cpu%:(ac/id) 45/ 55 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 1.5s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 1.6s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 1.7s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 1.8s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 1.9s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 2.0s - cpu%:(ac/id) 28/ 72 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 2.1s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 2.2s - cpu%:(ac/id) 56/ 44 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 2.3s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 2.4s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 2.5s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 2.6s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 2.7s - cpu%:(ac/id) 45/ 55 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 2.9s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 3.0s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 3.1s - cpu%:(ac/id) 29/ 71 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 3.2s - cpu%:(ac/id) 40/ 60 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 3.3s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 3.4s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 3.5s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 3.6s - cpu%:(ac/id) 33/ 67 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 3.7s - cpu%:(ac/id) 31/ 69 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 3.8s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 3.9s - cpu%:(ac/id) 40/ 60 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 4.0s - cpu%:(ac/id) 29/ 71 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 4.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 4.2s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 4.3s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 4.4s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 4.5s - cpu%:(ac/id) 61/ 39 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 4.6s - cpu%:(ac/id) 47/ 53 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 4.7s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 4.8s - cpu%:(ac/id) 48/ 52 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 4.9s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 5.0s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+ 5.1s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 241/18/205
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 59/ 41 - kswapd:31% - mem(MB):(av/fr/sw) 242/20/208
+ 0.2s - cpu%:(ac/id) 60/ 40 - kswapd:51% - mem(MB):(av/fr/sw) 244/23/212
+ 0.3s - cpu%:(ac/id) 68/ 32 - kswapd:47% - mem(MB):(av/fr/sw) 246/28/215
+ 0.4s - cpu%:(ac/id) 62/ 38 - kswapd:52% - mem(MB):(av/fr/sw) 247/29/218
+ 0.5s - cpu%:(ac/id) 61/ 39 - kswapd:54% - mem(MB):(av/fr/sw) 249/31/224
+ 0.6s - cpu%:(ac/id) 62/ 38 - kswapd:50% - mem(MB):(av/fr/sw) 251/37/227
+ 0.7s - cpu%:(ac/id) 62/ 38 - kswapd:50% - mem(MB):(av/fr/sw) 254/41/233
+ 0.8s - cpu%:(ac/id) 61/ 39 - kswapd:54% - mem(MB):(av/fr/sw) 256/43/239
+ 0.9s - cpu%:(ac/id) 69/ 31 - kswapd:49% - mem(MB):(av/fr/sw) 258/44/244
+ 1.0s - cpu%:(ac/id) 62/ 38 - kswapd:49% - mem(MB):(av/fr/sw) 261/56/250
+ 1.1s - cpu%:(ac/id) 79/ 21 - kswapd:45% - mem(MB):(av/fr/sw) 264/60/254
+ 1.2s - cpu%:(ac/id) 66/ 34 - kswapd:46% - mem(MB):(av/fr/sw) 267/63/260
+ 1.3s - cpu%:(ac/id) 62/ 38 - kswapd:50% - mem(MB):(av/fr/sw) 270/66/265
+ 1.4s - cpu%:(ac/id) 65/ 35 - kswapd:49% - mem(MB):(av/fr/sw) 273/69/271
+ 1.5s - cpu%:(ac/id) 59/ 41 - kswapd:54% - mem(MB):(av/fr/sw) 277/73/276
+ 1.7s - cpu%:(ac/id) 64/ 36 - kswapd:50% - mem(MB):(av/fr/sw) 279/75/281
+ 1.8s - cpu%:(ac/id) 70/ 30 - kswapd:54% - mem(MB):(av/fr/sw) 284/83/287
+ 1.9s - cpu%:(ac/id) 94/  6 - kswapd:48% - mem(MB):(av/fr/sw) 285/95/290
+ 2.0s - cpu%:(ac/id)100/  0 - kswapd:38% - mem(MB):(av/fr/sw) 288/98/293
+ 2.1s - cpu%:(ac/id)100/  0 - kswapd:46% - mem(MB):(av/fr/sw) 291/109/299
+ 2.2s - cpu%:(ac/id)100/  0 - kswapd:46% - mem(MB):(av/fr/sw) 293/124/301
+ 2.3s - cpu%:(ac/id)100/  0 - kswapd:44% - mem(MB):(av/fr/sw) 296/131/307
+ 2.4s - cpu%:(ac/id)100/  0 - kswapd:48% - mem(MB):(av/fr/sw) 300/143/312
+ 2.5s - cpu%:(ac/id) 85/ 15 - kswapd:31% - mem(MB):(av/fr/sw) 300/163/312
+ 2.6s - cpu%:(ac/id) 62/ 38 - kswapd: 0% - mem(MB):(av/fr/sw) 300/163/312
+ 2.7s - cpu%:(ac/id) 72/ 28 - kswapd: 0% - mem(MB):(av/fr/sw) 300/163/312
+ 2.8s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 300/163/312
+ 2.9s - cpu%:(ac/id) 64/ 36 - kswapd: 0% - mem(MB):(av/fr/sw) 300/163/312
+ 3.0s - cpu%:(ac/id) 73/ 27 - kswapd: 0% - mem(MB):(av/fr/sw) 300/163/312
+ 3.1s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 300/163/312
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.tizen.tv-viewer"
+Wait until process CPU usage < 50
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 284/147/312
+ 0.2s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 284/146/312
+ 0.3s - cpu%:(ac/id) 99/  1 - kswapd: 0% - mem(MB):(av/fr/sw) 284/145/312
+ 0.4s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 284/144/312
+ 0.5s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 283/143/312
+ 0.6s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 288/146/312
+ 0.8s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 0.9s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 1.0s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 287/144/311
+ 1.1s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 287/144/311
+ 1.2s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 287/144/311
+ 1.3s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 287/144/311
+ 1.4s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 287/144/311
+ 1.5s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 287/144/311
+ 1.6s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 287/144/311
+ 1.7s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 287/144/311
+ 1.8s - cpu%:(ac/id) 90/ 10 - kswapd: 0% - mem(MB):(av/fr/sw) 287/144/311
+ 1.9s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 287/144/311
+ 2.0s - cpu%:(ac/id) 71/ 29 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 2.1s - cpu%:(ac/id) 71/ 29 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 2.2s - cpu%:(ac/id) 75/ 25 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 2.3s - cpu%:(ac/id) 72/ 28 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 2.4s - cpu%:(ac/id) 77/ 23 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 2.5s - cpu%:(ac/id) 76/ 24 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 2.6s - cpu%:(ac/id) 76/ 24 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 2.7s - cpu%:(ac/id) 45/ 55 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 2.8s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 2.9s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 3.0s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 3.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 3.2s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 3.3s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 3.4s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 3.5s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 3.6s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 3.7s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 3.8s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 3.9s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 4.0s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 4.1s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 4.2s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 4.3s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 4.4s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 4.5s - cpu%:(ac/id) 28/ 72 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 4.6s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 4.7s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 4.8s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 5.0s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+ 5.1s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 286/144/311
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 66/ 34 - kswapd:36% - mem(MB):(av/fr/sw) 287/146/313
+ 0.2s - cpu%:(ac/id) 65/ 35 - kswapd:47% - mem(MB):(av/fr/sw) 289/152/316
+ 0.3s - cpu%:(ac/id) 37/ 63 - kswapd:20% - mem(MB):(av/fr/sw) 291/158/316
+ 0.4s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 0.5s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 0.6s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 0.7s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 0.8s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 0.9s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 1.0s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 1.1s - cpu%:(ac/id)  7/ 93 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 1.2s - cpu%:(ac/id)  9/ 91 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 1.3s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 1.4s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 1.5s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 1.6s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 1.7s - cpu%:(ac/id)  9/ 91 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 1.8s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 1.9s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 2.0s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 2.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 2.2s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 2.3s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 2.4s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 2.5s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 2.6s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 2.7s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 2.8s - cpu%:(ac/id)  9/ 91 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 2.9s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+ 3.0s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 291/158/316
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.volt.mycontents"
+Wait until process CPU usage < 30
+ 0.1s - cpu%:(ac/id) 61/ 39 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 284/147/316
+ 0.2s - cpu%:(ac/id) 70/ 30 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 283/145/316
+ 0.3s - cpu%:(ac/id) 66/ 34 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 281/143/316
+ 0.4s - cpu%:(ac/id) 62/ 38 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 280/142/316
+ 0.5s - cpu%:(ac/id) 60/ 40 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 279/141/316
+ 0.6s - cpu%:(ac/id) 60/ 40 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 278/140/316
+ 0.7s - cpu%:(ac/id) 65/ 35 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 276/137/316
+ 0.8s - cpu%:(ac/id) 77/ 23 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 274/133/316
+ 0.9s - cpu%:(ac/id) 98/  2 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 272/129/316
+ 1.0s - cpu%:(ac/id) 84/ 16 - proc: 39% - kswapd: 0% - mem(MB):(av/fr/sw) 272/128/316
+ 1.1s - cpu%:(ac/id) 64/ 36 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 272/129/316
+ 1.2s - cpu%:(ac/id) 67/ 33 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 271/128/316
+ 1.3s - cpu%:(ac/id) 69/ 31 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 271/128/316
+ 1.4s - cpu%:(ac/id) 81/ 19 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 271/127/316
+ 1.5s - cpu%:(ac/id) 61/ 39 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 271/127/316
+ 1.6s - cpu%:(ac/id) 52/ 48 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 271/123/316
+ 1.7s - cpu%:(ac/id) 80/ 20 - proc: 63% - kswapd: 0% - mem(MB):(av/fr/sw) 268/118/316
+ 1.8s - cpu%:(ac/id) 98/  2 - proc: 83% - kswapd: 0% - mem(MB):(av/fr/sw) 264/114/316
+ 1.9s - cpu%:(ac/id) 84/ 16 - proc: 67% - kswapd: 0% - mem(MB):(av/fr/sw) 263/113/316
+ 2.1s - cpu%:(ac/id) 64/ 36 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 262/112/316
+ 2.2s - cpu%:(ac/id) 68/ 32 - proc: 51% - kswapd: 0% - mem(MB):(av/fr/sw) 242/92/316
+ 2.3s - cpu%:(ac/id) 64/ 36 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 244/94/316
+ 2.4s - cpu%:(ac/id) 96/  4 - proc: 19% - kswapd: 0% - mem(MB):(av/fr/sw) 236/86/316
+ 2.5s - cpu%:(ac/id) 98/  2 - proc: 23% - kswapd: 0% - mem(MB):(av/fr/sw) 236/86/316
+ 2.6s - cpu%:(ac/id) 94/  6 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 237/86/316
+ 2.7s - cpu%:(ac/id) 91/  9 - proc: 23% - kswapd: 0% - mem(MB):(av/fr/sw) 236/85/316
+ 2.8s - cpu%:(ac/id) 98/  2 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 235/84/316
+ 2.9s - cpu%:(ac/id) 96/  4 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 235/83/316
+ 3.0s - cpu%:(ac/id) 69/ 31 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 234/83/316
+ 3.1s - cpu%:(ac/id) 66/ 34 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 233/82/316
+ 3.2s - cpu%:(ac/id) 69/ 31 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 232/80/316
+ 3.3s - cpu%:(ac/id) 70/ 30 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 231/79/316
+ 3.4s - cpu%:(ac/id) 59/ 41 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 230/78/316
+ 3.5s - cpu%:(ac/id) 61/ 39 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 227/76/316
+ 3.6s - cpu%:(ac/id) 62/ 38 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 227/76/316
+ 3.7s - cpu%:(ac/id) 64/ 36 - proc: 55% - kswapd: 0% - mem(MB):(av/fr/sw) 227/75/316
+ 3.8s - cpu%:(ac/id) 58/ 42 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 226/75/316
+ 3.9s - cpu%:(ac/id) 59/ 41 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 226/74/316
+ 4.0s - cpu%:(ac/id) 67/ 33 - proc: 49% - kswapd: 0% - mem(MB):(av/fr/sw) 225/74/316
+ 4.1s - cpu%:(ac/id) 71/ 29 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 225/73/316
+ 4.2s - cpu%:(ac/id) 67/ 33 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 224/72/316
+ 4.3s - cpu%:(ac/id) 65/ 35 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 223/72/316
+ 4.4s - cpu%:(ac/id) 58/ 42 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 223/71/316
+ 4.5s - cpu%:(ac/id) 65/ 35 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 223/71/316
+ 4.6s - cpu%:(ac/id) 69/ 31 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 222/71/316
+ 4.7s - cpu%:(ac/id) 65/ 35 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 222/70/316
+ 4.8s - cpu%:(ac/id) 63/ 37 - proc: 49% - kswapd: 0% - mem(MB):(av/fr/sw) 219/67/316
+ 4.9s - cpu%:(ac/id) 60/ 40 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 219/67/316
+ 5.0s - cpu%:(ac/id) 63/ 37 - proc: 54% - kswapd: 0% - mem(MB):(av/fr/sw) 218/67/316
+ 5.1s - cpu%:(ac/id) 69/ 31 - proc: 49% - kswapd: 0% - mem(MB):(av/fr/sw) 218/67/316
+ 5.3s - cpu%:(ac/id) 63/ 37 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 218/67/316
+ 5.4s - cpu%:(ac/id) 63/ 37 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 218/66/316
+ 5.5s - cpu%:(ac/id) 62/ 38 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 218/65/316
+ 5.6s - cpu%:(ac/id) 63/ 37 - proc:  6% - kswapd: 0% - mem(MB):(av/fr/sw) 218/63/316
+ 5.7s - cpu%:(ac/id) 63/ 37 - proc: 25% - kswapd: 0% - mem(MB):(av/fr/sw) 218/63/316
+ 5.8s - cpu%:(ac/id) 63/ 37 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 218/63/316
+ 5.9s - cpu%:(ac/id) 65/ 35 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 232/78/316
+ 6.0s - cpu%:(ac/id) 15/ 85 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 233/78/316
+ 6.1s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 233/78/316
+ 6.2s - cpu%:(ac/id) 19/ 81 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 233/78/316
+ 6.3s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 233/78/316
+ 6.4s - cpu%:(ac/id) 11/ 89 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 233/78/316
+ 6.5s - cpu%:(ac/id) 19/ 81 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 233/78/316
+ 6.6s - cpu%:(ac/id) 36/ 64 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 6.7s - cpu%:(ac/id) 23/ 77 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 6.8s - cpu%:(ac/id) 14/ 86 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 6.9s - cpu%:(ac/id) 22/ 78 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 7.0s - cpu%:(ac/id) 13/ 87 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 7.1s - cpu%:(ac/id) 11/ 89 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 7.2s - cpu%:(ac/id) 25/ 75 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 7.3s - cpu%:(ac/id) 13/ 87 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 7.4s - cpu%:(ac/id) 17/ 83 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 7.5s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 7.6s - cpu%:(ac/id) 16/ 84 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 7.7s - cpu%:(ac/id) 16/ 84 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 7.8s - cpu%:(ac/id) 14/ 86 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 7.9s - cpu%:(ac/id) 15/ 85 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 8.0s - cpu%:(ac/id) 18/ 82 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 8.1s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 8.2s - cpu%:(ac/id) 20/ 80 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 8.3s - cpu%:(ac/id) 25/ 75 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 8.4s - cpu%:(ac/id)  9/ 91 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 8.5s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 8.6s - cpu%:(ac/id) 14/ 86 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 232/77/316
+ 8.7s - cpu%:(ac/id) 25/ 75 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 8.8s - cpu%:(ac/id) 14/ 86 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 8.9s - cpu%:(ac/id) 14/ 86 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 9.0s - cpu%:(ac/id) 13/ 87 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+org.volt.mycontents is stablised at 6.0(s)
+
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 0.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 0.3s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 0.4s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 0.5s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 0.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 0.7s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 0.8s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 0.9s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 1.0s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 1.1s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 1.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 1.3s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 1.4s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 233/77/316
+ 1.5s - cpu%:(ac/id) 33/ 67 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 1.6s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 1.7s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 1.8s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 1.9s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 2.0s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 2.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 2.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 2.3s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 2.4s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 2.5s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 2.6s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 2.7s - cpu%:(ac/id)  9/ 91 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 2.8s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 2.9s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 3.0s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 3.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 3.3s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 3.4s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 3.5s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 3.6s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 3.7s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 3.8s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 3.9s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 4.0s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 4.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 4.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 4.3s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 4.4s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 4.5s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 4.6s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 4.7s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 4.8s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 4.9s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 5.0s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+ 5.1s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 234/72/316
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 55/ 45 - kswapd:37% - mem(MB):(av/fr/sw) 235/74/320
+ 0.2s - cpu%:(ac/id) 63/ 37 - kswapd:46% - mem(MB):(av/fr/sw) 239/79/326
+ 0.3s - cpu%:(ac/id) 62/ 38 - kswapd:45% - mem(MB):(av/fr/sw) 242/84/331
+ 0.4s - cpu%:(ac/id) 66/ 34 - kswapd:51% - mem(MB):(av/fr/sw) 246/92/336
+ 0.5s - cpu%:(ac/id) 67/ 33 - kswapd:50% - mem(MB):(av/fr/sw) 251/97/344
+ 0.6s - cpu%:(ac/id) 66/ 34 - kswapd:49% - mem(MB):(av/fr/sw) 255/101/350
+ 0.7s - cpu%:(ac/id) 69/ 31 - kswapd:51% - mem(MB):(av/fr/sw) 260/112/356
+ 0.8s - cpu%:(ac/id) 73/ 27 - kswapd:46% - mem(MB):(av/fr/sw) 263/118/362
+ 0.9s - cpu%:(ac/id) 66/ 34 - kswapd:53% - mem(MB):(av/fr/sw) 268/122/368
+ 1.0s - cpu%:(ac/id) 61/ 39 - kswapd:48% - mem(MB):(av/fr/sw) 272/126/373
+ 1.1s - cpu%:(ac/id) 63/ 37 - kswapd:50% - mem(MB):(av/fr/sw) 277/132/379
+ 1.2s - cpu%:(ac/id) 67/ 33 - kswapd:46% - mem(MB):(av/fr/sw) 280/142/383
+ 1.3s - cpu%:(ac/id) 51/ 49 - kswapd:33% - mem(MB):(av/fr/sw) 282/144/386
+ 1.4s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 1.5s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 1.6s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 1.7s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 1.8s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 1.9s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 2.0s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 2.1s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 2.2s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 2.3s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 2.5s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 2.6s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 2.7s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 2.8s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 2.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 3.0s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+ 3.1s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 282/144/386
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.tizen.tv-viewer"
+Wait until process CPU usage < 50
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 96/  4 - kswapd: 0% - mem(MB):(av/fr/sw) 266/128/386
+ 0.2s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 265/128/386
+ 0.3s - cpu%:(ac/id) 91/  9 - kswapd: 0% - mem(MB):(av/fr/sw) 265/128/386
+ 0.4s - cpu%:(ac/id) 84/ 16 - kswapd: 0% - mem(MB):(av/fr/sw) 265/127/386
+ 0.5s - cpu%:(ac/id) 66/ 34 - kswapd: 0% - mem(MB):(av/fr/sw) 265/127/386
+ 0.6s - cpu%:(ac/id) 68/ 32 - kswapd: 0% - mem(MB):(av/fr/sw) 265/127/386
+ 0.7s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 265/127/386
+ 0.8s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 265/127/386
+ 0.9s - cpu%:(ac/id) 56/ 44 - kswapd: 0% - mem(MB):(av/fr/sw) 265/127/386
+ 1.0s - cpu%:(ac/id) 30/ 70 - kswapd: 0% - mem(MB):(av/fr/sw) 266/127/386
+ 1.1s - cpu%:(ac/id) 75/ 25 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 1.2s - cpu%:(ac/id) 46/ 54 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 1.3s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 1.4s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 1.6s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 1.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 1.8s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 1.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 2.0s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 2.1s - cpu%:(ac/id) 62/ 38 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 2.2s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 2.3s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 2.4s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 2.5s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 2.6s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 2.7s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 2.8s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 2.9s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 3.0s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 3.1s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 3.2s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 3.3s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 3.4s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 3.5s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 3.6s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 3.7s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 3.8s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 3.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 4.0s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 4.1s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 4.2s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 4.3s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 4.4s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 4.5s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 4.6s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 4.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 4.8s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 4.9s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+ 5.0s - cpu%:(ac/id) 55/ 45 - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/385
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id)100/  0 - kswapd:36% - mem(MB):(av/fr/sw) 269/137/386
+ 0.2s - cpu%:(ac/id) 63/ 37 - kswapd:43% - mem(MB):(av/fr/sw) 271/146/389
+ 0.3s - cpu%:(ac/id) 64/ 36 - kswapd:46% - mem(MB):(av/fr/sw) 274/150/394
+ 0.4s - cpu%:(ac/id) 60/ 40 - kswapd:48% - mem(MB):(av/fr/sw) 277/153/399
+ 0.5s - cpu%:(ac/id) 64/ 36 - kswapd:44% - mem(MB):(av/fr/sw) 280/157/404
+ 0.6s - cpu%:(ac/id) 17/ 83 - kswapd: 4% - mem(MB):(av/fr/sw) 280/158/404
+ 0.7s - cpu%:(ac/id) 32/ 68 - kswapd: 0% - mem(MB):(av/fr/sw) 280/158/404
+ 0.8s - cpu%:(ac/id) 58/ 42 - kswapd: 0% - mem(MB):(av/fr/sw) 280/158/404
+ 0.9s - cpu%:(ac/id) 57/ 43 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 1.0s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 1.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 1.2s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 1.3s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 1.4s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 1.5s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 1.6s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 1.7s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 1.8s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 1.9s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 2.0s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 2.1s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 2.2s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 2.3s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 2.4s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 2.5s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 2.6s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 2.7s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 2.8s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 2.9s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+ 3.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 281/160/404
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.volt.search-all"
+Wait until process CPU usage < 30
+ 0.1s - cpu%:(ac/id) 69/ 31 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 275/146/404
+ 0.2s - cpu%:(ac/id) 64/ 36 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 273/144/404
+ 0.3s - cpu%:(ac/id) 70/ 30 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 272/143/404
+ 0.4s - cpu%:(ac/id) 65/ 35 - proc: 51% - kswapd: 0% - mem(MB):(av/fr/sw) 270/141/404
+ 0.5s - cpu%:(ac/id) 65/ 35 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 269/140/404
+ 0.6s - cpu%:(ac/id) 68/ 32 - proc: 51% - kswapd: 0% - mem(MB):(av/fr/sw) 268/139/404
+ 0.7s - cpu%:(ac/id) 67/ 33 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 267/138/404
+ 0.8s - cpu%:(ac/id) 70/ 30 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 267/138/404
+ 0.9s - cpu%:(ac/id) 68/ 32 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 267/138/404
+ 1.0s - cpu%:(ac/id) 84/ 16 - proc: 65% - kswapd: 0% - mem(MB):(av/fr/sw) 263/132/404
+ 1.1s - cpu%:(ac/id) 98/  2 - proc: 83% - kswapd: 0% - mem(MB):(av/fr/sw) 260/129/404
+ 1.2s - cpu%:(ac/id) 62/ 38 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 259/128/404
+ 1.3s - cpu%:(ac/id) 65/ 35 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 259/126/404
+ 1.4s - cpu%:(ac/id) 63/ 37 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 259/126/404
+ 1.5s - cpu%:(ac/id) 96/  4 - proc: 74% - kswapd: 0% - mem(MB):(av/fr/sw) 248/115/404
+ 1.6s - cpu%:(ac/id) 98/  2 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 246/113/404
+ 1.8s - cpu%:(ac/id) 100/  0 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 239/107/404
+ 1.9s - cpu%:(ac/id) 100/  0 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 239/106/404
+ 2.0s - cpu%:(ac/id) 100/  0 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 239/106/404
+ 2.1s - cpu%:(ac/id) 100/  0 - proc: 17% - kswapd: 0% - mem(MB):(av/fr/sw) 238/105/404
+ 2.2s - cpu%:(ac/id) 100/  0 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 237/103/404
+ 2.3s - cpu%:(ac/id) 100/  0 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 234/101/404
+ 2.4s - cpu%:(ac/id) 98/  2 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 237/103/404
+ 2.5s - cpu%:(ac/id) 100/  0 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 235/101/404
+ 2.6s - cpu%:(ac/id) 100/  0 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 236/102/404
+ 2.7s - cpu%:(ac/id) 94/  6 - proc: 39% - kswapd: 0% - mem(MB):(av/fr/sw) 236/102/404
+ 2.8s - cpu%:(ac/id) 80/ 20 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 236/102/404
+ 2.9s - cpu%:(ac/id) 80/ 20 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 235/101/404
+ 3.0s - cpu%:(ac/id) 84/ 16 - proc: 60% - kswapd: 0% - mem(MB):(av/fr/sw) 235/101/404
+ 3.1s - cpu%:(ac/id) 90/ 10 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 234/100/404
+ 3.2s - cpu%:(ac/id) 66/ 34 - proc: 24% - kswapd: 0% - mem(MB):(av/fr/sw) 234/100/404
+ 3.3s - cpu%:(ac/id) 82/ 18 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 229/91/404
+ 3.5s - cpu%:(ac/id) 96/  4 - proc: 67% - kswapd: 0% - mem(MB):(av/fr/sw) 233/95/404
+ 3.6s - cpu%:(ac/id) 98/  2 - proc: 18% - kswapd: 0% - mem(MB):(av/fr/sw) 231/91/404
+ 3.7s - cpu%:(ac/id) 100/  0 - proc: 26% - kswapd: 0% - mem(MB):(av/fr/sw) 229/89/403
+ 3.8s - cpu%:(ac/id) 79/ 21 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 229/83/402
+ 3.9s - cpu%:(ac/id) 98/  2 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 227/80/402
+ 4.0s - cpu%:(ac/id) 100/  0 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 225/77/402
+ 4.1s - cpu%:(ac/id) 96/  4 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 224/76/402
+ 4.2s - cpu%:(ac/id) 63/ 37 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 223/72/401
+ 4.3s - cpu%:(ac/id) 59/ 41 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 222/71/401
+ 4.4s - cpu%:(ac/id) 76/ 24 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 214/62/401
+ 4.5s - cpu%:(ac/id) 70/ 30 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 209/56/401
+ 4.6s - cpu%:(ac/id) 78/ 22 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 208/56/401
+ 4.7s - cpu%:(ac/id) 79/ 21 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 208/54/401
+ 4.8s - cpu%:(ac/id) 63/ 37 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 207/52/401
+ 4.9s - cpu%:(ac/id) 70/ 30 - proc:  4% - kswapd: 0% - mem(MB):(av/fr/sw) 207/52/401
+ 5.0s - cpu%:(ac/id) 62/ 38 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 207/52/401
+ 5.1s - cpu%:(ac/id) 85/ 15 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 206/51/401
+ 5.2s - cpu%:(ac/id) 60/ 40 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/49/400
+ 5.3s - cpu%:(ac/id) 67/ 33 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 5.4s - cpu%:(ac/id) 26/ 74 - proc:  4% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 5.5s - cpu%:(ac/id) 13/ 87 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 5.6s - cpu%:(ac/id) 38/ 62 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 5.7s - cpu%:(ac/id) 25/ 75 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 5.8s - cpu%:(ac/id) 15/ 85 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 5.9s - cpu%:(ac/id) 31/ 69 - proc:  6% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 6.0s - cpu%:(ac/id) 20/ 80 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 6.1s - cpu%:(ac/id) 17/ 83 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 6.2s - cpu%:(ac/id) 19/ 81 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 6.3s - cpu%:(ac/id) 22/ 78 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 6.4s - cpu%:(ac/id) 22/ 78 - proc:  4% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 6.5s - cpu%:(ac/id) 29/ 71 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 6.6s - cpu%:(ac/id) 20/ 80 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 6.7s - cpu%:(ac/id) 20/ 80 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 6.8s - cpu%:(ac/id) 20/ 80 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 6.9s - cpu%:(ac/id) 25/ 75 - proc:  4% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 7.0s - cpu%:(ac/id) 17/ 83 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 7.2s - cpu%:(ac/id) 15/ 85 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 7.3s - cpu%:(ac/id) 21/ 79 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+org.volt.search-all is stablised at 4.2(s)
+
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 0.2s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 0.3s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 0.4s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 0.5s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 0.6s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 0.7s - cpu%:(ac/id) 27/ 73 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 0.8s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 0.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 1.0s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 1.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 1.2s - cpu%:(ac/id) 29/ 71 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 1.3s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 1.4s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 1.5s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 1.6s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 1.7s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 1.8s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 1.9s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 2.0s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 2.1s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 2.2s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 2.3s - cpu%:(ac/id) 27/ 73 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 2.4s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 2.5s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 2.6s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 2.7s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 2.9s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 3.0s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 3.1s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 3.2s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 3.3s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 3.4s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 3.5s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 3.6s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 3.7s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 3.8s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 3.9s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 4.0s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 4.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 4.2s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 4.3s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 4.4s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 4.5s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 4.6s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 4.7s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 4.8s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 4.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 5.0s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 5.1s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 205/48/400
+ 0.2s - cpu%:(ac/id) 57/ 43 - kswapd:41% - mem(MB):(av/fr/sw) 208/52/405
+ 0.3s - cpu%:(ac/id) 59/ 41 - kswapd:52% - mem(MB):(av/fr/sw) 211/58/411
+ 0.4s - cpu%:(ac/id) 61/ 39 - kswapd:44% - mem(MB):(av/fr/sw) 214/63/414
+ 0.5s - cpu%:(ac/id) 67/ 33 - kswapd:40% - mem(MB):(av/fr/sw) 216/64/418
+ 0.6s - cpu%:(ac/id) 61/ 39 - kswapd:47% - mem(MB):(av/fr/sw) 219/73/422
+ 0.7s - cpu%:(ac/id) 65/ 35 - kswapd:43% - mem(MB):(av/fr/sw) 222/76/427
+ 0.8s - cpu%:(ac/id) 72/ 28 - kswapd:49% - mem(MB):(av/fr/sw) 226/80/434
+ 0.9s - cpu%:(ac/id) 68/ 32 - kswapd:45% - mem(MB):(av/fr/sw) 230/83/441
+ 1.0s - cpu%:(ac/id) 68/ 32 - kswapd:48% - mem(MB):(av/fr/sw) 233/86/447
+ 1.1s - cpu%:(ac/id) 65/ 35 - kswapd:52% - mem(MB):(av/fr/sw) 238/97/452
+ 1.2s - cpu%:(ac/id) 71/ 29 - kswapd:45% - mem(MB):(av/fr/sw) 241/102/456
+ 1.3s - cpu%:(ac/id) 62/ 38 - kswapd:50% - mem(MB):(av/fr/sw) 244/111/461
+ 1.4s - cpu%:(ac/id) 69/ 31 - kswapd:50% - mem(MB):(av/fr/sw) 246/116/463
+ 1.5s - cpu%:(ac/id) 68/ 32 - kswapd:50% - mem(MB):(av/fr/sw) 247/119/465
+ 1.6s - cpu%:(ac/id) 61/ 39 - kswapd:52% - mem(MB):(av/fr/sw) 250/124/470
+ 1.7s - cpu%:(ac/id) 64/ 36 - kswapd:49% - mem(MB):(av/fr/sw) 252/139/474
+ 1.8s - cpu%:(ac/id) 59/ 41 - kswapd:52% - mem(MB):(av/fr/sw) 254/148/477
+ 1.9s - cpu%:(ac/id) 57/ 43 - kswapd:25% - mem(MB):(av/fr/sw) 255/156/479
+ 2.1s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+ 2.2s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+ 2.3s - cpu%:(ac/id)  9/ 91 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+ 2.4s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+ 2.5s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+ 2.6s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+ 2.7s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+ 2.8s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+ 2.9s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+ 3.0s - cpu%:(ac/id) 31/ 69 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+ 3.1s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 255/156/479
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.tizen.tv-viewer"
+Wait until process CPU usage < 50
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 96/  4 - kswapd: 0% - mem(MB):(av/fr/sw) 256/156/479
+ 0.2s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 256/155/479
+ 0.3s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 253/151/479
+ 0.4s - cpu%:(ac/id) 96/  4 - kswapd: 0% - mem(MB):(av/fr/sw) 255/153/478
+ 0.5s - cpu%:(ac/id) 95/  5 - kswapd: 0% - mem(MB):(av/fr/sw) 255/152/478
+ 0.7s - cpu%:(ac/id) 96/  4 - kswapd: 0% - mem(MB):(av/fr/sw) 257/154/477
+ 0.8s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 257/152/477
+ 0.9s - cpu%:(ac/id) 66/ 34 - kswapd: 0% - mem(MB):(av/fr/sw) 257/151/477
+ 1.0s - cpu%:(ac/id) 72/ 28 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 1.1s - cpu%:(ac/id) 82/ 18 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 1.2s - cpu%:(ac/id) 78/ 22 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 1.3s - cpu%:(ac/id) 52/ 48 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 1.4s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 1.5s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 1.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 1.7s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 1.8s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 1.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 2.0s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 2.1s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 2.2s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 2.3s - cpu%:(ac/id) 59/ 41 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 2.4s - cpu%:(ac/id) 27/ 73 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 2.5s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 2.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 2.7s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 2.8s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 2.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 3.0s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 3.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 3.2s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 3.3s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 3.4s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 3.5s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 3.6s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 3.7s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 3.8s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 3.9s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 4.0s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 4.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 4.2s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 4.3s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 4.4s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 4.5s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 4.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 258/151/477
+ 4.7s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 257/151/477
+ 4.8s - cpu%:(ac/id) 29/ 71 - kswapd: 0% - mem(MB):(av/fr/sw) 257/148/477
+ 4.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 257/148/477
+ 5.0s - cpu%:(ac/id) 28/ 72 - kswapd: 0% - mem(MB):(av/fr/sw) 257/148/477
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 257/148/477
+ 0.2s - cpu%:(ac/id) 54/ 46 - kswapd:36% - mem(MB):(av/fr/sw) 259/156/481
+ 0.3s - cpu%:(ac/id) 65/ 35 - kswapd:48% - mem(MB):(av/fr/sw) 262/172/484
+ 0.4s - cpu%:(ac/id) 38/ 62 - kswapd:26% - mem(MB):(av/fr/sw) 263/175/486
+ 0.5s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 263/175/486
+ 0.6s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 263/175/486
+ 0.7s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 263/175/486
+ 0.8s - cpu%:(ac/id) 40/ 60 - kswapd: 0% - mem(MB):(av/fr/sw) 263/172/486
+ 0.9s - cpu%:(ac/id) 41/ 59 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 1.0s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 1.1s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 1.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 1.3s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 1.4s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 1.5s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 1.6s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 1.7s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 1.8s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 1.9s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 2.0s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 2.1s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 2.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 2.3s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 2.4s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 2.5s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 2.6s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 2.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 2.8s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 3.0s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+ 3.1s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 268/171/486
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.tizen.schedule-manager"
+Wait until process CPU usage < 30
+ 0.1s - cpu%:(ac/id) 59/ 41 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 261/146/485
+ 0.2s - cpu%:(ac/id) 58/ 42 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 261/145/485
+ 0.3s - cpu%:(ac/id) 62/ 38 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 260/144/485
+ 0.4s - cpu%:(ac/id) 61/ 39 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 260/144/485
+ 0.5s - cpu%:(ac/id) 59/ 41 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 260/142/485
+ 0.6s - cpu%:(ac/id) 55/ 45 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 259/142/485
+ 0.7s - cpu%:(ac/id) 54/ 46 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 259/139/485
+ 0.8s - cpu%:(ac/id) 63/ 37 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 259/138/485
+ 0.9s - cpu%:(ac/id) 65/ 35 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 258/136/485
+ 1.0s - cpu%:(ac/id) 62/ 38 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 256/133/485
+ 1.1s - cpu%:(ac/id) 67/ 33 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 244/120/485
+ 1.2s - cpu%:(ac/id) 73/ 27 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 240/116/485
+ 1.4s - cpu%:(ac/id)100/  0 - proc: 14% - kswapd: 0% - mem(MB):(av/fr/sw) 223/99/485
+ 1.5s - cpu%:(ac/id)100/  0 - proc:  9% - kswapd: 0% - mem(MB):(av/fr/sw) 223/99/485
+ 1.6s - cpu%:(ac/id) 98/  2 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 223/99/485
+ 1.7s - cpu%:(ac/id)100/  0 - proc:  3% - kswapd: 0% - mem(MB):(av/fr/sw) 222/97/485
+ 1.8s - cpu%:(ac/id)100/  0 - proc: 15% - kswapd: 0% - mem(MB):(av/fr/sw) 222/96/485
+ 1.9s - cpu%:(ac/id)100/  0 - proc: 25% - kswapd: 0% - mem(MB):(av/fr/sw) 222/96/485
+ 2.0s - cpu%:(ac/id) 98/  2 - proc: 21% - kswapd: 0% - mem(MB):(av/fr/sw) 222/95/485
+ 2.1s - cpu%:(ac/id) 98/  2 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 2.2s - cpu%:(ac/id)100/  0 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 2.3s - cpu%:(ac/id) 98/  2 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 2.5s - cpu%:(ac/id) 80/ 20 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 2.6s - cpu%:(ac/id) 74/ 26 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 2.7s - cpu%:(ac/id) 74/ 26 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 2.8s - cpu%:(ac/id) 70/ 30 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 2.9s - cpu%:(ac/id) 64/ 36 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 3.0s - cpu%:(ac/id) 77/ 23 - proc: 23% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 3.1s - cpu%:(ac/id) 75/ 25 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 3.2s - cpu%:(ac/id) 71/ 29 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 3.3s - cpu%:(ac/id) 39/ 61 - proc: 18% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 3.4s - cpu%:(ac/id) 15/ 85 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 3.5s - cpu%:(ac/id) 20/ 80 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 3.6s - cpu%:(ac/id) 12/ 88 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 3.7s - cpu%:(ac/id) 17/ 83 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 3.8s - cpu%:(ac/id) 13/ 87 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 3.9s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 4.0s - cpu%:(ac/id) 17/ 83 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 4.1s - cpu%:(ac/id) 16/ 84 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 4.2s - cpu%:(ac/id) 25/ 75 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 4.3s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 4.4s - cpu%:(ac/id) 22/ 78 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/111/485
+ 4.5s - cpu%:(ac/id) 21/ 79 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 4.6s - cpu%:(ac/id) 31/ 69 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 4.7s - cpu%:(ac/id) 15/ 85 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 4.8s - cpu%:(ac/id) 17/ 83 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 4.9s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 5.0s - cpu%:(ac/id) 24/ 76 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 5.1s - cpu%:(ac/id) 21/ 79 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 5.2s - cpu%:(ac/id) 23/ 77 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 5.3s - cpu%:(ac/id) 15/ 85 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 5.4s - cpu%:(ac/id) 21/ 79 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 5.5s - cpu%:(ac/id) 20/ 80 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 5.6s - cpu%:(ac/id) 20/ 80 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 5.7s - cpu%:(ac/id) 16/ 84 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 5.8s - cpu%:(ac/id) 19/ 81 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 5.9s - cpu%:(ac/id) 19/ 81 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 6.0s - cpu%:(ac/id) 22/ 78 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 6.1s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 6.2s - cpu%:(ac/id) 17/ 83 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 6.3s - cpu%:(ac/id) 11/ 89 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+org.tizen.schedule-manager is stablised at 3.3(s)
+
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 0.2s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 0.3s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 0.4s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 0.5s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 0.6s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 0.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 0.8s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 0.9s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 1.0s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 1.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 1.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 1.3s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 1.4s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 1.5s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 1.6s - cpu%:(ac/id) 52/ 48 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 1.7s - cpu%:(ac/id) 62/ 38 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 1.8s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 1.9s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 2.0s - cpu%:(ac/id) 59/ 41 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 2.1s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 2.2s - cpu%:(ac/id) 64/ 36 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 2.3s - cpu%:(ac/id) 63/ 37 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 2.4s - cpu%:(ac/id) 62/ 38 - kswapd: 0% - mem(MB):(av/fr/sw) 237/110/485
+ 2.5s - cpu%:(ac/id) 94/  6 - kswapd: 0% - mem(MB):(av/fr/sw) 236/105/485
+ 2.6s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 235/102/484
+ 2.7s - cpu%:(ac/id) 60/ 40 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 2.8s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 2.9s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 3.1s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 3.2s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 3.3s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 3.4s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 3.5s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 3.6s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 3.7s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 3.8s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 3.9s - cpu%:(ac/id) 29/ 71 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 4.0s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 4.1s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 4.2s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 4.3s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 4.4s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 4.5s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 4.6s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 4.7s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 4.8s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 4.9s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 5.0s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+ 5.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 242/107/484
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 62/ 38 - kswapd:47% - mem(MB):(av/fr/sw) 243/114/486
+ 0.2s - cpu%:(ac/id) 65/ 35 - kswapd:49% - mem(MB):(av/fr/sw) 244/118/488
+ 0.3s - cpu%:(ac/id) 64/ 36 - kswapd:49% - mem(MB):(av/fr/sw) 247/125/492
+ 0.4s - cpu%:(ac/id) 65/ 35 - kswapd:48% - mem(MB):(av/fr/sw) 250/130/496
+ 0.5s - cpu%:(ac/id) 68/ 32 - kswapd:48% - mem(MB):(av/fr/sw) 252/133/500
+ 0.6s - cpu%:(ac/id) 66/ 34 - kswapd:46% - mem(MB):(av/fr/sw) 255/137/504
+ 0.7s - cpu%:(ac/id) 66/ 34 - kswapd:49% - mem(MB):(av/fr/sw) 258/143/509
+ 0.8s - cpu%:(ac/id) 68/ 32 - kswapd:50% - mem(MB):(av/fr/sw) 261/150/514
+ 0.9s - cpu%:(ac/id) 61/ 39 - kswapd:41% - mem(MB):(av/fr/sw) 265/165/516
+ 1.0s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 266/165/516
+ 1.1s - cpu%:(ac/id)  9/ 91 - kswapd: 0% - mem(MB):(av/fr/sw) 266/165/516
+ 1.2s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 1.3s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 1.4s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 1.5s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 1.6s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 1.7s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 1.8s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 1.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 2.0s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 2.1s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 2.3s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 2.4s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 2.5s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 2.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 2.7s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 2.8s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 2.9s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 3.0s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+ 3.1s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 266/166/516
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.tizen.tv-viewer"
+Wait until process CPU usage < 50
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 88/ 12 - kswapd: 0% - mem(MB):(av/fr/sw) 243/142/516
+ 0.2s - cpu%:(ac/id) 90/ 10 - kswapd: 0% - mem(MB):(av/fr/sw) 250/149/516
+ 0.3s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 251/149/516
+ 0.4s - cpu%:(ac/id) 95/  5 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 0.5s - cpu%:(ac/id) 90/ 10 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 0.6s - cpu%:(ac/id) 62/ 38 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 0.7s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 0.8s - cpu%:(ac/id) 62/ 38 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 0.9s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 1.0s - cpu%:(ac/id) 66/ 34 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 1.1s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 1.2s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 1.3s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 1.4s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 1.5s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 1.7s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 1.8s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 1.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 2.0s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 2.1s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 2.2s - cpu%:(ac/id) 61/ 39 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 2.3s - cpu%:(ac/id) 31/ 69 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 2.4s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 2.5s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 2.6s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 2.7s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 2.8s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 2.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 3.0s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 3.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 3.2s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 3.3s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 3.4s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 3.5s - cpu%:(ac/id) 31/ 69 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 3.6s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 3.7s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 3.8s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 3.9s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 4.0s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/516
+ 4.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+ 4.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+ 4.3s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+ 4.4s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+ 4.5s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+ 4.6s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+ 4.7s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+ 4.8s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+ 4.9s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+ 5.0s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 251/148/515
+ 0.2s - cpu%:(ac/id) 66/ 34 - kswapd:44% - mem(MB):(av/fr/sw) 252/156/518
+ 0.3s - cpu%:(ac/id) 48/ 52 - kswapd:23% - mem(MB):(av/fr/sw) 254/161/518
+ 0.4s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 254/161/518
+ 0.5s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 254/161/518
+ 0.6s - cpu%:(ac/id) 28/ 72 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 0.7s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 0.8s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 0.9s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 1.0s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 1.1s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 1.2s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 1.3s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 1.4s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 1.5s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 1.6s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 1.7s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 1.8s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 1.9s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 2.0s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 2.1s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 2.2s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 2.3s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 2.4s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 254/161/518
+ 2.5s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 254/161/518
+ 2.6s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 2.7s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 2.9s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 3.0s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+ 3.1s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 255/161/518
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+Fork Launching... "/usr/bin/wascmd -r 9Ur5IzDKqV.TizenYouTube" pid:2814
+Wait until process CPU usage < 30
+launch app 9Ur5IzDKqV.TizenYouTube
+ 0.1s - cpu%:(ac/id) 61/ 39 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 254/160/518
+ 0.2s - cpu%:(ac/id) 58/ 42 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 253/156/517
+app_id[111299001912] launch start
+app_id[111299001912] resumed
+spend time for wascmd is [229]ms
+ 0.3s - cpu%:(ac/id) 66/ 34 - proc: 19% - kswapd: 0% - mem(MB):(av/fr/sw) 252/148/515
+ 0.4s - cpu%:(ac/id) 57/ 43 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 252/139/515
+ 0.5s - cpu%:(ac/id) 53/ 47 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 242/124/513
+ 0.7s - cpu%:(ac/id) 91/  9 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 240/114/511
+ 0.8s - cpu%:(ac/id) 99/  1 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 237/109/511
+ 0.9s - cpu%:(ac/id)100/  0 - proc: 31% - kswapd: 0% - mem(MB):(av/fr/sw) 235/106/510
+ 1.0s - cpu%:(ac/id)100/  0 - proc: 24% - kswapd: 0% - mem(MB):(av/fr/sw) 231/101/509
+ 1.1s - cpu%:(ac/id)100/  0 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 225/95/509
+ 1.3s - cpu%:(ac/id) 98/  2 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 223/93/508
+ 1.4s - cpu%:(ac/id)100/  0 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 220/90/508
+ 1.5s - cpu%:(ac/id) 94/  6 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 216/86/508
+ 1.6s - cpu%:(ac/id)100/  0 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 209/79/508
+ 1.7s - cpu%:(ac/id) 95/  5 - proc: 49% - kswapd: 0% - mem(MB):(av/fr/sw) 203/73/508
+ 1.8s - cpu%:(ac/id)100/  0 - proc: 64% - kswapd: 0% - mem(MB):(av/fr/sw) 181/51/508
+ 1.9s - cpu%:(ac/id) 96/  4 - proc: 58% - kswapd: 0% - mem(MB):(av/fr/sw) 172/41/508
+ 2.0s - cpu%:(ac/id)100/  0 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 170/39/508
+ 2.1s - cpu%:(ac/id) 69/ 31 - proc: 16% - kswapd: 0% - mem(MB):(av/fr/sw) 169/38/508
+ 2.2s - cpu%:(ac/id) 30/ 70 - proc:  4% - kswapd: 0% - mem(MB):(av/fr/sw) 170/39/508
+ 2.3s - cpu%:(ac/id) 23/ 77 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 172/41/508
+ 2.4s - cpu%:(ac/id) 31/ 69 - proc:  6% - kswapd: 0% - mem(MB):(av/fr/sw) 175/43/508
+ 2.5s - cpu%:(ac/id) 28/ 72 - proc:  6% - kswapd: 0% - mem(MB):(av/fr/sw) 180/48/508
+ 2.7s - cpu%:(ac/id) 25/ 75 - proc:  4% - kswapd: 0% - mem(MB):(av/fr/sw) 182/51/508
+ 2.8s - cpu%:(ac/id) 36/ 64 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 192/61/508
+ 2.9s - cpu%:(ac/id) 27/ 73 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 199/68/508
+ 3.0s - cpu%:(ac/id) 21/ 79 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 200/69/508
+ 3.1s - cpu%:(ac/id) 21/ 79 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 200/69/508
+ 3.2s - cpu%:(ac/id) 25/ 75 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 200/69/508
+ 3.3s - cpu%:(ac/id) 21/ 79 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 200/69/508
+ 3.4s - cpu%:(ac/id) 18/ 82 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 200/69/508
+ 3.5s - cpu%:(ac/id) 18/ 82 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 200/69/508
+ 3.6s - cpu%:(ac/id) 16/ 84 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 200/69/508
+ 3.7s - cpu%:(ac/id) 16/ 84 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 200/69/508
+ 3.8s - cpu%:(ac/id) 16/ 84 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 200/69/508
+ 3.9s - cpu%:(ac/id) 52/ 48 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 200/69/508
+ 4.0s - cpu%:(ac/id) 67/ 33 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 199/65/508
+ 4.1s - cpu%:(ac/id) 65/ 35 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 196/62/508
+ 4.2s - cpu%:(ac/id) 70/ 30 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 192/59/508
+ 4.3s - cpu%:(ac/id) 27/ 73 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.4s - cpu%:(ac/id) 13/ 87 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.5s - cpu%:(ac/id) 17/ 83 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.6s - cpu%:(ac/id) 19/ 81 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.7s - cpu%:(ac/id) 18/ 82 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.8s - cpu%:(ac/id) 18/ 82 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.9s - cpu%:(ac/id) 22/ 78 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 5.0s - cpu%:(ac/id) 18/ 82 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 5.1s - cpu%:(ac/id) 15/ 85 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 5.2s - cpu%:(ac/id) 22/ 78 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+/usr/bin/wascmd -r 9Ur5IzDKqV.TizenYouTube is stablised at 2.1(s)
+
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 0.2s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 0.3s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 0.4s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 0.5s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 0.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 0.7s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 0.8s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 0.9s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 1.0s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 1.1s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 1.2s - cpu%:(ac/id) 28/ 72 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 1.3s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 1.4s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 1.5s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 1.6s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 1.7s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 1.8s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 1.9s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 2.0s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 2.1s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 2.2s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 2.3s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 2.4s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 2.5s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 2.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 2.7s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 2.9s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 3.0s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 3.1s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 3.2s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 3.3s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 3.4s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 3.5s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 3.6s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 3.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 3.8s - cpu%:(ac/id) 27/ 73 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 3.9s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.0s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.1s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.2s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.3s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.4s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.5s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.7s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.8s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 4.9s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 5.0s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+ 5.1s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 192/58/508
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 60/ 40 - kswapd:49% - mem(MB):(av/fr/sw) 195/63/512
+ 0.2s - cpu%:(ac/id) 60/ 40 - kswapd:48% - mem(MB):(av/fr/sw) 199/68/517
+ 0.3s - cpu%:(ac/id) 67/ 33 - kswapd:52% - mem(MB):(av/fr/sw) 203/74/519
+ 0.4s - cpu%:(ac/id) 62/ 38 - kswapd:52% - mem(MB):(av/fr/sw) 207/78/525
+ 0.5s - cpu%:(ac/id) 61/ 39 - kswapd:52% - mem(MB):(av/fr/sw) 211/82/531
+ 0.6s - cpu%:(ac/id) 68/ 32 - kswapd:45% - mem(MB):(av/fr/sw) 213/90/535
+ 0.7s - cpu%:(ac/id) 67/ 33 - kswapd:43% - mem(MB):(av/fr/sw) 216/93/541
+ 0.8s - cpu%:(ac/id) 68/ 32 - kswapd:40% - mem(MB):(av/fr/sw) 219/96/546
+ 0.9s - cpu%:(ac/id) 62/ 38 - kswapd:44% - mem(MB):(av/fr/sw) 224/100/552
+ 1.0s - cpu%:(ac/id) 66/ 34 - kswapd:46% - mem(MB):(av/fr/sw) 226/102/557
+ 1.1s - cpu%:(ac/id) 67/ 33 - kswapd:49% - mem(MB):(av/fr/sw) 229/107/562
+ 1.2s - cpu%:(ac/id) 63/ 37 - kswapd:52% - mem(MB):(av/fr/sw) 231/115/566
+ 1.3s - cpu%:(ac/id) 65/ 35 - kswapd:54% - mem(MB):(av/fr/sw) 232/121/568
+ 1.4s - cpu%:(ac/id) 65/ 35 - kswapd:49% - mem(MB):(av/fr/sw) 235/124/572
+ 1.5s - cpu%:(ac/id) 73/ 27 - kswapd:45% - mem(MB):(av/fr/sw) 238/128/576
+ 1.6s - cpu%:(ac/id) 88/ 12 - kswapd:49% - mem(MB):(av/fr/sw) 239/135/578
+ 1.7s - cpu%:(ac/id) 88/ 12 - kswapd:50% - mem(MB):(av/fr/sw) 240/139/579
+ 1.8s - cpu%:(ac/id) 92/  8 - kswapd:42% - mem(MB):(av/fr/sw) 241/144/580
+ 1.9s - cpu%:(ac/id) 96/  4 - kswapd:49% - mem(MB):(av/fr/sw) 241/160/584
+ 2.0s - cpu%:(ac/id) 92/  8 - kswapd:45% - mem(MB):(av/fr/sw) 242/164/586
+ 2.1s - cpu%:(ac/id) 65/ 35 - kswapd: 6% - mem(MB):(av/fr/sw) 241/164/586
+ 2.2s - cpu%:(ac/id)100/  0 - kswapd:44% - mem(MB):(av/fr/sw) 243/173/589
+ 2.3s - cpu%:(ac/id)100/  0 - kswapd:42% - mem(MB):(av/fr/sw) 244/187/590
+ 2.5s - cpu%:(ac/id) 62/ 38 - kswapd: 4% - mem(MB):(av/fr/sw) 244/188/590
+ 2.6s - cpu%:(ac/id) 51/ 49 - kswapd: 0% - mem(MB):(av/fr/sw) 245/186/590
+ 2.7s - cpu%:(ac/id) 45/ 55 - kswapd: 0% - mem(MB):(av/fr/sw) 243/180/588
+ 2.8s - cpu%:(ac/id) 51/ 49 - kswapd: 0% - mem(MB):(av/fr/sw) 242/175/587
+ 2.9s - cpu%:(ac/id) 55/ 45 - kswapd: 0% - mem(MB):(av/fr/sw) 241/171/587
+ 3.0s - cpu%:(ac/id) 77/ 23 - kswapd:21% - mem(MB):(av/fr/sw) 241/169/588
+ 3.1s - cpu%:(ac/id) 86/ 14 - kswapd:19% - mem(MB):(av/fr/sw) 242/166/589
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.tizen.tv-viewer"
+Wait until process CPU usage < 50
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 90/ 10 - kswapd:23% - mem(MB):(av/fr/sw) 245/165/592
+ 0.2s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 236/147/591
+ 0.3s - cpu%:(ac/id) 94/  6 - kswapd: 0% - mem(MB):(av/fr/sw) 234/139/590
+ 0.4s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 234/134/590
+ 0.5s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 234/128/590
+ 0.6s - cpu%:(ac/id) 88/ 12 - kswapd: 0% - mem(MB):(av/fr/sw) 233/123/590
+ 0.7s - cpu%:(ac/id) 94/  6 - kswapd: 0% - mem(MB):(av/fr/sw) 236/122/588
+ 0.8s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 239/122/588
+ 1.0s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 239/117/588
+ 1.1s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 232/108/581
+ 1.2s - cpu%:(ac/id) 92/  8 - kswapd: 0% - mem(MB):(av/fr/sw) 231/106/580
+ 1.3s - cpu%:(ac/id) 73/ 27 - kswapd: 0% - mem(MB):(av/fr/sw) 230/105/580
+ 1.4s - cpu%:(ac/id) 69/ 31 - kswapd: 0% - mem(MB):(av/fr/sw) 230/104/580
+ 1.5s - cpu%:(ac/id) 62/ 38 - kswapd: 0% - mem(MB):(av/fr/sw) 230/103/580
+ 1.6s - cpu%:(ac/id) 70/ 30 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 1.7s - cpu%:(ac/id) 59/ 41 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 1.8s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 1.9s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 2.0s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 2.1s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 2.2s - cpu%:(ac/id) 55/ 45 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 2.3s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 2.4s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 2.5s - cpu%:(ac/id)  7/ 93 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 2.6s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 230/102/580
+ 2.7s - cpu%:(ac/id) 49/ 51 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 2.8s - cpu%:(ac/id) 35/ 65 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 2.9s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 3.0s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 3.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 3.2s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 3.3s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 3.4s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 3.5s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 3.6s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 3.7s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 3.8s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 3.9s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 4.0s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 4.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 230/101/580
+ 4.2s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 230/100/580
+ 4.3s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 230/100/580
+ 4.4s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 230/100/580
+ 4.5s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 230/100/580
+ 4.6s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 230/100/580
+ 4.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 230/100/580
+ 4.9s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 230/100/580
+ 5.0s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 230/100/580
+ 5.1s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 230/100/580
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 40/ 60 - kswapd:26% - mem(MB):(av/fr/sw) 234/104/581
+ 0.2s - cpu%:(ac/id) 67/ 33 - kswapd:46% - mem(MB):(av/fr/sw) 240/110/586
+ 0.3s - cpu%:(ac/id) 66/ 34 - kswapd:50% - mem(MB):(av/fr/sw) 244/114/590
+ 0.4s - cpu%:(ac/id) 71/ 29 - kswapd:45% - mem(MB):(av/fr/sw) 250/120/593
+ 0.5s - cpu%:(ac/id) 66/ 34 - kswapd:44% - mem(MB):(av/fr/sw) 253/125/597
+ 0.6s - cpu%:(ac/id) 69/ 31 - kswapd:50% - mem(MB):(av/fr/sw) 260/136/601
+ 0.7s - cpu%:(ac/id) 68/ 32 - kswapd:50% - mem(MB):(av/fr/sw) 270/152/602
+ 0.8s - cpu%:(ac/id) 59/ 41 - kswapd:52% - mem(MB):(av/fr/sw) 270/164/605
+ 0.9s - cpu%:(ac/id) 44/ 56 - kswapd:29% - mem(MB):(av/fr/sw) 271/175/607
+ 1.0s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 1.1s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 1.2s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 1.3s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 1.4s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 1.5s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 1.6s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 1.7s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 1.8s - cpu%:(ac/id) 14/ 86 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 1.9s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 2.0s - cpu%:(ac/id) 10/ 90 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 2.1s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 2.2s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 2.3s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 2.5s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 2.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 2.7s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 271/175/607
+ 2.8s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 272/175/607
+ 2.9s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 272/175/607
+ 3.0s - cpu%:(ac/id)  9/ 91 - kswapd: 0% - mem(MB):(av/fr/sw) 272/175/607
+ 3.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 272/175/607
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.tizen.ignition"
+Wait until process CPU usage < 30
+ 0.1s - cpu%:(ac/id) 63/ 37 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 268/153/606
+ 0.2s - cpu%:(ac/id) 59/ 41 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 268/150/606
+ 0.3s - cpu%:(ac/id) 62/ 38 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 268/145/606
+ 0.4s - cpu%:(ac/id) 60/ 40 - proc: 48% - kswapd: 0% - mem(MB):(av/fr/sw) 268/142/606
+ 0.5s - cpu%:(ac/id) 62/ 38 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 267/140/606
+ 0.6s - cpu%:(ac/id) 64/ 36 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 267/137/606
+ 0.7s - cpu%:(ac/id) 71/ 29 - proc: 39% - kswapd: 0% - mem(MB):(av/fr/sw) 267/132/606
+ 0.8s - cpu%:(ac/id) 66/ 34 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 267/128/606
+ 0.9s - cpu%:(ac/id) 59/ 41 - proc: 43% - kswapd: 0% - mem(MB):(av/fr/sw) 267/125/606
+ 1.0s - cpu%:(ac/id) 62/ 38 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 267/123/606
+ 1.1s - cpu%:(ac/id) 62/ 38 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 267/120/606
+ 1.2s - cpu%:(ac/id) 62/ 38 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 267/119/606
+ 1.3s - cpu%:(ac/id) 57/ 43 - proc: 39% - kswapd: 0% - mem(MB):(av/fr/sw) 267/117/606
+ 1.4s - cpu%:(ac/id) 47/ 53 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 267/114/606
+ 1.5s - cpu%:(ac/id) 60/ 40 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 267/114/606
+ 1.6s - cpu%:(ac/id) 62/ 38 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 267/113/606
+ 1.7s - cpu%:(ac/id) 65/ 35 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 267/113/606
+ 1.8s - cpu%:(ac/id) 65/ 35 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 267/113/606
+ 1.9s - cpu%:(ac/id) 64/ 36 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 267/113/606
+ 2.0s - cpu%:(ac/id) 62/ 38 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 266/113/606
+ 2.1s - cpu%:(ac/id) 62/ 38 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 266/110/606
+ 2.2s - cpu%:(ac/id) 57/ 43 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 267/110/606
+ 2.3s - cpu%:(ac/id) 66/ 34 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 266/108/606
+ 2.4s - cpu%:(ac/id) 59/ 41 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 266/107/606
+ 2.6s - cpu%:(ac/id) 69/ 31 - proc: 56% - kswapd: 0% - mem(MB):(av/fr/sw) 264/104/606
+ 2.7s - cpu%:(ac/id) 71/ 29 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 263/102/606
+ 2.8s - cpu%:(ac/id) 57/ 43 - proc: 39% - kswapd: 0% - mem(MB):(av/fr/sw) 262/100/606
+ 2.9s - cpu%:(ac/id) 66/ 34 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 262/99/606
+ 3.0s - cpu%:(ac/id) 62/ 38 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 262/99/606
+ 3.1s - cpu%:(ac/id) 65/ 35 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 246/83/606
+ 3.2s - cpu%:(ac/id) 60/ 40 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 244/81/606
+ 3.3s - cpu%:(ac/id) 61/ 39 - proc: 47% - kswapd: 0% - mem(MB):(av/fr/sw) 244/80/606
+ 3.4s - cpu%:(ac/id)100/  0 - proc: 82% - kswapd: 0% - mem(MB):(av/fr/sw) 243/79/606
+ 3.5s - cpu%:(ac/id) 92/  8 - proc: 57% - kswapd: 0% - mem(MB):(av/fr/sw) 227/62/606
+ 3.6s - cpu%:(ac/id)100/  0 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 225/60/606
+ 3.7s - cpu%:(ac/id)100/  0 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 225/59/606
+ 3.8s - cpu%:(ac/id)100/  0 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 225/58/606
+ 3.9s - cpu%:(ac/id)100/  0 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 225/58/606
+ 4.0s - cpu%:(ac/id)100/  0 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 224/54/606
+ 4.2s - cpu%:(ac/id)100/  0 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 222/51/605
+ 4.3s - cpu%:(ac/id)100/  0 - proc: 22% - kswapd: 0% - mem(MB):(av/fr/sw) 222/47/605
+ 4.4s - cpu%:(ac/id)100/  0 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 221/45/605
+ 4.5s - cpu%:(ac/id)100/  0 - proc: 31% - kswapd: 0% - mem(MB):(av/fr/sw) 220/42/605
+ 4.6s - cpu%:(ac/id)100/  0 - proc: 25% - kswapd: 0% - mem(MB):(av/fr/sw) 220/40/605
+ 4.7s - cpu%:(ac/id) 98/  2 - proc: 24% - kswapd: 0% - mem(MB):(av/fr/sw) 219/33/605
+ 4.8s - cpu%:(ac/id)100/  0 - proc: 24% - kswapd: 0% - mem(MB):(av/fr/sw) 219/26/605
+ 4.9s - cpu%:(ac/id)100/  0 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 219/23/605
+ 5.0s - cpu%:(ac/id)100/  0 - proc: 30% - kswapd: 0% - mem(MB):(av/fr/sw) 214/16/605
+ 5.1s - cpu%:(ac/id)100/  0 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 215/16/605
+ 5.2s - cpu%:(ac/id)100/  0 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 213/14/605
+ 5.3s - cpu%:(ac/id) 98/  2 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 211/11/605
+ 5.4s - cpu%:(ac/id) 96/  4 - proc: 45% - kswapd:10% - mem(MB):(av/fr/sw) 205/8/606
+ 5.5s - cpu%:(ac/id) 91/  9 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 217/17/606
+ 5.7s - cpu%:(ac/id) 98/  2 - proc: 66% - kswapd: 2% - mem(MB):(av/fr/sw) 206/5/606
+ 5.8s - cpu%:(ac/id)100/  0 - proc: 67% - kswapd:17% - mem(MB):(av/fr/sw) 202/9/606
+ 5.9s - cpu%:(ac/id)100/  0 - proc: 69% - kswapd:10% - mem(MB):(av/fr/sw) 200/9/606
+ 6.0s - cpu%:(ac/id)100/  0 - proc: 40% - kswapd:37% - mem(MB):(av/fr/sw) 199/12/607
+ 6.1s - cpu%:(ac/id) 75/ 25 - proc: 58% - kswapd: 0% - mem(MB):(av/fr/sw) 198/12/607
+ 6.2s - cpu%:(ac/id) 83/ 17 - proc: 60% - kswapd: 6% - mem(MB):(av/fr/sw) 195/12/607
+ 6.3s - cpu%:(ac/id) 86/ 14 - proc: 60% - kswapd: 0% - mem(MB):(av/fr/sw) 193/11/607
+ 6.4s - cpu%:(ac/id) 76/ 24 - proc: 57% - kswapd: 4% - mem(MB):(av/fr/sw) 193/12/607
+ 6.5s - cpu%:(ac/id) 94/  6 - proc: 30% - kswapd: 2% - mem(MB):(av/fr/sw) 191/10/607
+ 6.6s - cpu%:(ac/id) 98/  2 - proc: 36% - kswapd: 2% - mem(MB):(av/fr/sw) 192/11/607
+ 6.7s - cpu%:(ac/id)100/  0 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 191/10/607
+ 6.8s - cpu%:(ac/id) 98/  2 - proc: 33% - kswapd: 2% - mem(MB):(av/fr/sw) 191/12/607
+ 6.9s - cpu%:(ac/id) 98/  2 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 190/10/607
+ 7.0s - cpu%:(ac/id) 98/  2 - proc: 30% - kswapd: 4% - mem(MB):(av/fr/sw) 189/9/607
+ 7.1s - cpu%:(ac/id) 94/  6 - proc: 23% - kswapd:14% - mem(MB):(av/fr/sw) 188/10/607
+ 7.2s - cpu%:(ac/id) 91/  9 - proc: 24% - kswapd:15% - mem(MB):(av/fr/sw) 188/11/606
+ 7.3s - cpu%:(ac/id) 94/  6 - proc: 35% - kswapd: 2% - mem(MB):(av/fr/sw) 187/10/607
+ 7.4s - cpu%:(ac/id)100/  0 - proc: 23% - kswapd:15% - mem(MB):(av/fr/sw) 187/11/607
+ 7.5s - cpu%:(ac/id)100/  0 - proc: 34% - kswapd: 8% - mem(MB):(av/fr/sw) 186/11/608
+ 7.6s - cpu%:(ac/id)100/  0 - proc: 42% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/608
+ 7.7s - cpu%:(ac/id)100/  0 - proc: 41% - kswapd: 6% - mem(MB):(av/fr/sw) 185/10/608
+ 7.9s - cpu%:(ac/id)100/  0 - proc: 32% - kswapd:11% - mem(MB):(av/fr/sw) 186/11/609
+ 8.0s - cpu%:(ac/id)100/  0 - proc: 46% - kswapd: 2% - mem(MB):(av/fr/sw) 185/10/609
+ 8.1s - cpu%:(ac/id)100/  0 - proc: 35% - kswapd: 6% - mem(MB):(av/fr/sw) 185/10/610
+ 8.2s - cpu%:(ac/id)100/  0 - proc: 50% - kswapd: 2% - mem(MB):(av/fr/sw) 185/10/610
+ 8.3s - cpu%:(ac/id) 98/  2 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 196/21/610
+ 8.4s - cpu%:(ac/id) 96/  4 - proc: 44% - kswapd: 0% - mem(MB):(av/fr/sw) 197/21/610
+ 8.5s - cpu%:(ac/id)100/  0 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 197/21/610
+ 8.6s - cpu%:(ac/id) 91/  9 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 8.7s - cpu%:(ac/id) 92/  8 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 8.8s - cpu%:(ac/id) 96/  4 - proc: 49% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 8.9s - cpu%:(ac/id) 90/ 10 - proc: 31% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 9.0s - cpu%:(ac/id) 90/ 10 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 9.1s - cpu%:(ac/id)100/  0 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 9.2s - cpu%:(ac/id) 84/ 16 - proc: 24% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 9.3s - cpu%:(ac/id) 90/ 10 - proc: 24% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 9.4s - cpu%:(ac/id) 90/ 10 - proc: 23% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 9.5s - cpu%:(ac/id) 96/  4 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 9.6s - cpu%:(ac/id) 91/  9 - proc: 24% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 9.7s - cpu%:(ac/id) 98/  2 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 9.8s - cpu%:(ac/id) 98/  2 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 196/20/610
+ 9.9s - cpu%:(ac/id) 96/  4 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 196/19/610
+10.1s - cpu%:(ac/id) 85/ 15 - proc: 34% - kswapd: 0% - mem(MB):(av/fr/sw) 196/19/610
+10.2s - cpu%:(ac/id) 91/  9 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 195/18/609
+10.3s - cpu%:(ac/id) 87/ 13 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 195/17/609
+10.4s - cpu%:(ac/id) 82/ 18 - proc: 28% - kswapd: 0% - mem(MB):(av/fr/sw) 195/16/609
+10.5s - cpu%:(ac/id) 82/ 18 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 195/15/609
+10.6s - cpu%:(ac/id) 79/ 21 - proc: 25% - kswapd: 0% - mem(MB):(av/fr/sw) 195/15/609
+10.7s - cpu%:(ac/id) 89/ 11 - proc: 42% - kswapd: 9% - mem(MB):(av/fr/sw) 195/16/610
+10.8s - cpu%:(ac/id) 90/ 10 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 196/16/610
+10.9s - cpu%:(ac/id) 75/ 25 - proc: 30% - kswapd: 0% - mem(MB):(av/fr/sw) 196/15/610
+11.0s - cpu%:(ac/id) 78/ 22 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 196/15/610
+11.1s - cpu%:(ac/id) 81/ 19 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 195/14/610
+11.2s - cpu%:(ac/id) 94/  6 - proc: 25% - kswapd:14% - mem(MB):(av/fr/sw) 196/15/611
+11.4s - cpu%:(ac/id) 93/  7 - proc: 40% - kswapd: 5% - mem(MB):(av/fr/sw) 197/15/611
+11.5s - cpu%:(ac/id) 88/ 12 - proc: 37% - kswapd: 4% - mem(MB):(av/fr/sw) 197/15/612
+11.6s - cpu%:(ac/id) 96/  4 - proc: 22% - kswapd: 0% - mem(MB):(av/fr/sw) 197/15/612
+11.7s - cpu%:(ac/id) 91/  9 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 197/15/612
+11.8s - cpu%:(ac/id)100/  0 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 197/13/612
+11.9s - cpu%:(ac/id)100/  0 - proc: 45% - kswapd: 2% - mem(MB):(av/fr/sw) 197/12/612
+12.0s - cpu%:(ac/id)100/  0 - proc: 54% - kswapd: 6% - mem(MB):(av/fr/sw) 196/11/612
+12.1s - cpu%:(ac/id)100/  0 - proc: 64% - kswapd: 0% - mem(MB):(av/fr/sw) 196/11/612
+12.2s - cpu%:(ac/id)100/  0 - proc: 48% - kswapd: 8% - mem(MB):(av/fr/sw) 189/7/612
+12.3s - cpu%:(ac/id)100/  0 - proc: 50% - kswapd: 0% - mem(MB):(av/fr/sw) 189/6/612
+12.4s - cpu%:(ac/id)100/  0 - proc: 78% - kswapd: 0% - mem(MB):(av/fr/sw) 189/6/612
+12.5s - cpu%:(ac/id)100/  0 - proc: 62% - kswapd: 0% - mem(MB):(av/fr/sw) 189/6/612
+12.6s - cpu%:(ac/id) 98/  2 - proc: 42% - kswapd: 8% - mem(MB):(av/fr/sw) 188/6/613
+12.8s - cpu%:(ac/id) 96/  4 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+12.9s - cpu%:(ac/id) 92/  8 - proc: 22% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+13.0s - cpu%:(ac/id) 92/  8 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+13.1s - cpu%:(ac/id) 98/  2 - proc: 31% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+13.2s - cpu%:(ac/id) 88/ 12 - proc: 26% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+13.3s - cpu%:(ac/id) 65/ 35 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+13.4s - cpu%:(ac/id) 90/ 10 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+13.5s - cpu%:(ac/id)100/  0 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+13.6s - cpu%:(ac/id) 96/  4 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+13.7s - cpu%:(ac/id) 78/ 22 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+13.8s - cpu%:(ac/id) 96/  4 - proc: 37% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+13.9s - cpu%:(ac/id) 94/  6 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+14.0s - cpu%:(ac/id) 84/ 16 - proc: 26% - kswapd: 0% - mem(MB):(av/fr/sw) 188/6/613
+14.1s - cpu%:(ac/id) 87/ 13 - proc: 23% - kswapd: 2% - mem(MB):(av/fr/sw) 186/5/612
+14.2s - cpu%:(ac/id)100/  0 - proc: 12% - kswapd:19% - mem(MB):(av/fr/sw) 187/9/612
+14.3s - cpu%:(ac/id) 96/  4 - proc:  6% - kswapd:14% - mem(MB):(av/fr/sw) 187/12/612
+14.4s - cpu%:(ac/id) 94/  6 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 187/12/612
+14.5s - cpu%:(ac/id) 96/  4 - proc:  6% - kswapd: 4% - mem(MB):(av/fr/sw) 187/12/612
+14.6s - cpu%:(ac/id) 98/  2 - proc:  6% - kswapd: 6% - mem(MB):(av/fr/sw) 189/14/612
+14.7s - cpu%:(ac/id)100/  0 - proc:  8% - kswapd: 0% - mem(MB):(av/fr/sw) 189/14/612
+14.8s - cpu%:(ac/id) 98/  2 - proc:  9% - kswapd: 0% - mem(MB):(av/fr/sw) 189/14/612
+14.9s - cpu%:(ac/id) 67/ 33 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 189/14/612
+15.0s - cpu%:(ac/id) 69/ 31 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 189/14/612
+15.1s - cpu%:(ac/id) 98/  2 - proc:  6% - kswapd: 0% - mem(MB):(av/fr/sw) 189/14/612
+15.2s - cpu%:(ac/id) 96/  4 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 189/14/612
+15.3s - cpu%:(ac/id) 60/ 40 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 189/14/612
+15.4s - cpu%:(ac/id) 71/ 29 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 189/14/612
+15.5s - cpu%:(ac/id) 93/  7 - proc:  4% - kswapd: 0% - mem(MB):(av/fr/sw) 188/13/612
+15.6s - cpu%:(ac/id) 94/  6 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 188/12/611
+15.8s - cpu%:(ac/id) 96/  4 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 187/10/611
+15.9s - cpu%:(ac/id)100/  0 - proc:  2% - kswapd: 9% - mem(MB):(av/fr/sw) 185/10/609
+16.0s - cpu%:(ac/id) 93/  7 - proc:  0% - kswapd: 6% - mem(MB):(av/fr/sw) 186/10/609
+16.1s - cpu%:(ac/id) 65/ 35 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/609
+16.2s - cpu%:(ac/id) 62/ 38 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/609
+16.3s - cpu%:(ac/id) 66/ 34 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/609
+16.4s - cpu%:(ac/id) 64/ 36 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/609
+16.5s - cpu%:(ac/id) 65/ 35 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/609
+16.6s - cpu%:(ac/id) 67/ 33 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/609
+16.7s - cpu%:(ac/id) 63/ 37 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/609
+16.8s - cpu%:(ac/id) 67/ 33 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/609
+16.9s - cpu%:(ac/id) 64/ 36 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/609
+17.0s - cpu%:(ac/id) 64/ 36 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 186/10/609
+org.tizen.ignition is stablised at 14.0(s)
+
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 94/  6 - kswapd:22% - mem(MB):(av/fr/sw) 187/11/611
+ 0.2s - cpu%:(ac/id) 82/ 18 - kswapd: 0% - mem(MB):(av/fr/sw) 187/8/611
+ 0.3s - cpu%:(ac/id) 66/ 34 - kswapd:22% - mem(MB):(av/fr/sw) 187/10/612
+ 0.4s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 187/10/612
+ 0.5s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 187/10/612
+ 0.6s - cpu%:(ac/id) 23/ 77 - kswapd: 6% - mem(MB):(av/fr/sw) 187/10/612
+ 0.7s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 187/10/612
+ 0.8s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 187/10/612
+ 0.9s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 187/10/612
+ 1.0s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 1.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 1.2s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 1.3s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 1.4s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 1.5s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 1.6s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 1.7s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 1.8s - cpu%:(ac/id) 26/ 74 - kswapd: 2% - mem(MB):(av/fr/sw) 187/11/612
+ 1.9s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 2.0s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 2.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 2.2s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 2.3s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 2.4s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 2.6s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 2.7s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 2.8s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 2.9s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 3.0s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 3.1s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 3.2s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 3.3s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 3.4s - cpu%:(ac/id) 11/ 89 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 3.5s - cpu%:(ac/id) 12/ 88 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 3.6s - cpu%:(ac/id) 29/ 71 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 3.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 3.8s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 3.9s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 4.0s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 187/11/612
+ 4.1s - cpu%:(ac/id) 58/ 42 - kswapd: 0% - mem(MB):(av/fr/sw) 185/9/610
+ 4.2s - cpu%:(ac/id) 80/ 20 - kswapd:20% - mem(MB):(av/fr/sw) 187/13/611
+ 4.3s - cpu%:(ac/id) 31/ 69 - kswapd: 0% - mem(MB):(av/fr/sw) 187/13/611
+ 4.4s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 187/13/611
+ 4.5s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 187/13/611
+ 4.6s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 187/13/611
+ 4.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 187/13/611
+ 4.8s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 187/13/611
+ 4.9s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 187/13/611
+ 5.0s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 187/13/611
+ 5.1s - cpu%:(ac/id) 23/ 77 - kswapd: 0% - mem(MB):(av/fr/sw) 187/13/611
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 68/ 32 - kswapd:38% - mem(MB):(av/fr/sw) 190/21/615
+ 0.2s - cpu%:(ac/id) 62/ 38 - kswapd:47% - mem(MB):(av/fr/sw) 195/31/621
+ 0.3s - cpu%:(ac/id) 83/ 17 - kswapd:46% - mem(MB):(av/fr/sw) 198/34/624
+ 0.4s - cpu%:(ac/id)100/  0 - kswapd:38% - mem(MB):(av/fr/sw) 200/36/625
+ 0.5s - cpu%:(ac/id)100/  0 - kswapd:44% - mem(MB):(av/fr/sw) 204/51/628
+ 0.6s - cpu%:(ac/id)100/  0 - kswapd:40% - mem(MB):(av/fr/sw) 204/52/630
+ 0.7s - cpu%:(ac/id)100/  0 - kswapd:36% - mem(MB):(av/fr/sw) 207/58/631
+ 0.8s - cpu%:(ac/id) 98/  2 - kswapd:45% - mem(MB):(av/fr/sw) 206/70/631
+ 0.9s - cpu%:(ac/id)100/  0 - kswapd:44% - mem(MB):(av/fr/sw) 209/79/634
+ 1.0s - cpu%:(ac/id)100/  0 - kswapd:46% - mem(MB):(av/fr/sw) 212/82/639
+ 1.1s - cpu%:(ac/id) 96/  4 - kswapd:45% - mem(MB):(av/fr/sw) 214/84/644
+ 1.2s - cpu%:(ac/id)100/  0 - kswapd:46% - mem(MB):(av/fr/sw) 217/86/649
+ 1.3s - cpu%:(ac/id)100/  0 - kswapd:42% - mem(MB):(av/fr/sw) 221/91/654
+ 1.4s - cpu%:(ac/id)100/  0 - kswapd:40% - mem(MB):(av/fr/sw) 225/97/658
+ 1.5s - cpu%:(ac/id)100/  0 - kswapd:40% - mem(MB):(av/fr/sw) 226/117/659
+ 1.6s - cpu%:(ac/id)100/  0 - kswapd:35% - mem(MB):(av/fr/sw) 226/116/660
+ 1.7s - cpu%:(ac/id)100/  0 - kswapd:46% - mem(MB):(av/fr/sw) 226/135/661
+ 1.8s - cpu%:(ac/id)100/  0 - kswapd:44% - mem(MB):(av/fr/sw) 225/152/660
+ 1.9s - cpu%:(ac/id)100/  0 - kswapd:46% - mem(MB):(av/fr/sw) 226/165/662
+ 2.0s - cpu%:(ac/id) 96/  4 - kswapd: 6% - mem(MB):(av/fr/sw) 229/164/662
+ 2.1s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 230/164/662
+ 2.2s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 230/164/662
+ 2.3s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 230/164/662
+ 2.4s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 230/164/662
+ 2.5s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 230/164/662
+ 2.6s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 230/164/662
+ 2.7s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 230/164/662
+ 2.8s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 230/164/662
+ 2.9s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 229/162/662
+ 3.1s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 229/161/662
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+AUL Launching... "org.tizen.tv-viewer"
+Wait until process CPU usage < 50
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 46/ 54 - kswapd: 0% - mem(MB):(av/fr/sw) 220/148/661
+ 0.2s - cpu%:(ac/id) 72/ 28 - kswapd: 0% - mem(MB):(av/fr/sw) 220/145/661
+ 0.3s - cpu%:(ac/id) 94/  6 - kswapd: 0% - mem(MB):(av/fr/sw) 219/138/661
+ 0.4s - cpu%:(ac/id) 88/ 12 - kswapd: 0% - mem(MB):(av/fr/sw) 218/130/660
+ 0.5s - cpu%:(ac/id) 84/ 16 - kswapd: 0% - mem(MB):(av/fr/sw) 217/124/659
+ 0.6s - cpu%:(ac/id) 88/ 12 - kswapd: 0% - mem(MB):(av/fr/sw) 216/118/658
+ 0.7s - cpu%:(ac/id) 95/  5 - kswapd: 0% - mem(MB):(av/fr/sw) 214/114/657
+ 0.8s - cpu%:(ac/id) 73/ 27 - kswapd: 0% - mem(MB):(av/fr/sw) 212/110/656
+ 0.9s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 213/109/656
+ 1.0s - cpu%:(ac/id) 61/ 39 - kswapd: 0% - mem(MB):(av/fr/sw) 212/109/656
+ 1.1s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 212/109/656
+ 1.2s - cpu%:(ac/id) 63/ 37 - kswapd: 0% - mem(MB):(av/fr/sw) 212/109/656
+ 1.3s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 212/109/656
+ 1.4s - cpu%:(ac/id) 35/ 65 - kswapd: 0% - mem(MB):(av/fr/sw) 212/109/656
+ 1.5s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 212/109/656
+ 1.6s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 213/108/656
+ 1.8s - cpu%:(ac/id) 40/ 60 - kswapd: 0% - mem(MB):(av/fr/sw) 213/108/656
+ 1.9s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 213/108/656
+ 2.0s - cpu%:(ac/id) 41/ 59 - kswapd: 0% - mem(MB):(av/fr/sw) 213/108/656
+ 2.1s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 213/108/656
+ 2.2s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 213/108/656
+ 2.3s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 213/107/656
+ 2.4s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 213/107/656
+ 2.5s - cpu%:(ac/id) 57/ 43 - kswapd: 0% - mem(MB):(av/fr/sw) 212/107/656
+ 2.6s - cpu%:(ac/id) 40/ 60 - kswapd: 0% - mem(MB):(av/fr/sw) 212/107/656
+ 2.7s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 212/107/655
+ 2.8s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 212/107/655
+ 2.9s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 212/107/655
+ 3.0s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 212/107/655
+ 3.1s - cpu%:(ac/id) 56/ 44 - kswapd: 0% - mem(MB):(av/fr/sw) 212/105/655
+ 3.2s - cpu%:(ac/id) 46/ 54 - kswapd: 0% - mem(MB):(av/fr/sw) 212/105/655
+ 3.3s - cpu%:(ac/id) 42/ 58 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 3.4s - cpu%:(ac/id) 63/ 37 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 3.5s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 3.6s - cpu%:(ac/id) 62/ 38 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 3.7s - cpu%:(ac/id) 61/ 39 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 3.8s - cpu%:(ac/id) 64/ 36 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 3.9s - cpu%:(ac/id) 19/ 81 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 4.0s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 4.1s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 4.2s - cpu%:(ac/id) 25/ 75 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 4.3s - cpu%:(ac/id) 29/ 71 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 4.4s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 4.5s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 4.6s - cpu%:(ac/id) 24/ 76 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 4.7s - cpu%:(ac/id) 16/ 84 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 4.8s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 4.9s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+ 5.0s - cpu%:(ac/id) 15/ 85 - kswapd: 0% - mem(MB):(av/fr/sw) 212/104/655
+
+Write to /proc/sys/vm/extra_free_kbytes (150000)
+
+Sleep for 3000ms
+ 0.1s - cpu%:(ac/id) 46/ 54 - kswapd:35% - mem(MB):(av/fr/sw) 213/110/658
+ 0.2s - cpu%:(ac/id) 67/ 33 - kswapd:46% - mem(MB):(av/fr/sw) 214/112/660
+ 0.3s - cpu%:(ac/id) 67/ 33 - kswapd:49% - mem(MB):(av/fr/sw) 214/115/663
+ 0.4s - cpu%:(ac/id) 67/ 33 - kswapd:47% - mem(MB):(av/fr/sw) 218/119/668
+ 0.5s - cpu%:(ac/id) 67/ 33 - kswapd:47% - mem(MB):(av/fr/sw) 219/124/671
+ 0.6s - cpu%:(ac/id) 82/ 18 - kswapd:45% - mem(MB):(av/fr/sw) 223/132/675
+ 0.7s - cpu%:(ac/id) 67/ 33 - kswapd:46% - mem(MB):(av/fr/sw) 226/135/681
+ 0.8s - cpu%:(ac/id) 63/ 37 - kswapd:41% - mem(MB):(av/fr/sw) 229/137/686
+ 0.9s - cpu%:(ac/id) 63/ 37 - kswapd:43% - mem(MB):(av/fr/sw) 232/140/691
+ 1.0s - cpu%:(ac/id) 63/ 37 - kswapd:50% - mem(MB):(av/fr/sw) 234/142/696
+ 1.1s - cpu%:(ac/id) 64/ 36 - kswapd:56% - mem(MB):(av/fr/sw) 236/156/699
+ 1.2s - cpu%:(ac/id) 64/ 36 - kswapd:44% - mem(MB):(av/fr/sw) 239/162/705
+ 1.3s - cpu%:(ac/id) 26/ 74 - kswapd: 0% - mem(MB):(av/fr/sw) 239/162/705
+ 1.4s - cpu%:(ac/id) 17/ 83 - kswapd: 0% - mem(MB):(av/fr/sw) 239/162/705
+ 1.5s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 239/162/705
+ 1.6s - cpu%:(ac/id) 20/ 80 - kswapd: 0% - mem(MB):(av/fr/sw) 239/162/704
+ 1.7s - cpu%:(ac/id) 13/ 87 - kswapd: 0% - mem(MB):(av/fr/sw) 239/162/704
+ 1.8s - cpu%:(ac/id) 40/ 60 - kswapd: 0% - mem(MB):(av/fr/sw) 239/162/704
+ 1.9s - cpu%:(ac/id) 43/ 57 - kswapd: 0% - mem(MB):(av/fr/sw) 237/159/704
+ 2.0s - cpu%:(ac/id) 79/ 21 - kswapd:12% - mem(MB):(av/fr/sw) 237/158/704
+ 2.1s - cpu%:(ac/id) 75/ 25 - kswapd:21% - mem(MB):(av/fr/sw) 238/164/706
+ 2.2s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 238/163/706
+ 2.3s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 238/163/706
+ 2.5s - cpu%:(ac/id) 56/ 44 - kswapd: 0% - mem(MB):(av/fr/sw) 238/163/706
+ 2.6s - cpu%:(ac/id) 49/ 51 - kswapd: 0% - mem(MB):(av/fr/sw) 238/162/706
+ 2.7s - cpu%:(ac/id) 48/ 52 - kswapd: 0% - mem(MB):(av/fr/sw) 238/161/706
+ 2.8s - cpu%:(ac/id) 59/ 41 - kswapd: 0% - mem(MB):(av/fr/sw) 239/160/706
+ 2.9s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 238/160/706
+ 3.0s - cpu%:(ac/id) 81/ 19 - kswapd: 0% - mem(MB):(av/fr/sw) 239/160/706
+ 3.1s - cpu%:(ac/id) 88/ 12 - kswapd: 0% - mem(MB):(av/fr/sw) 239/160/706
+
+Write to /proc/sys/vm/extra_free_kbytes (0)
+
+Fork Launching... "/usr/bin/wascmd -r RN1MCdNq8t.Netflix" pid:3000
+Wait until process CPU usage < 30
+ 0.1s - cpu%:(ac/id) 94/  6 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 238/144/706
+launch app RN1MCdNq8t.Netflix
+ 0.2s - cpu%:(ac/id) 94/  6 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 237/142/705
+ 0.3s - cpu%:(ac/id) 90/ 10 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 235/137/703
+app_id[11101200001] launch start
+ 0.4s - cpu%:(ac/id) 96/  4 - proc: 14% - kswapd: 0% - mem(MB):(av/fr/sw) 234/134/703
+app_id[11101200001] launched
+spend time for wascmd is [315]ms
+ 0.5s - cpu%:(ac/id) 96/  4 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 235/131/703
+ 0.6s - cpu%:(ac/id) 94/  6 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 234/127/701
+ 0.7s - cpu%:(ac/id)100/  0 - proc: 30% - kswapd: 0% - mem(MB):(av/fr/sw) 232/123/700
+ 0.8s - cpu%:(ac/id)100/  0 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 230/118/698
+ 0.9s - cpu%:(ac/id)100/  0 - proc: 35% - kswapd: 0% - mem(MB):(av/fr/sw) 228/111/697
+ 1.0s - cpu%:(ac/id)100/  0 - proc: 19% - kswapd: 0% - mem(MB):(av/fr/sw) 227/108/696
+ 1.1s - cpu%:(ac/id)100/  0 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 227/108/696
+ 1.3s - cpu%:(ac/id) 97/  3 - proc: 39% - kswapd: 0% - mem(MB):(av/fr/sw) 227/107/696
+ 1.4s - cpu%:(ac/id) 98/  2 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 227/105/696
+ 1.5s - cpu%:(ac/id)100/  0 - proc: 52% - kswapd: 0% - mem(MB):(av/fr/sw) 226/105/696
+ 1.7s - cpu%:(ac/id) 98/  2 - proc: 53% - kswapd: 0% - mem(MB):(av/fr/sw) 215/90/695
+ 1.9s - cpu%:(ac/id) 99/  1 - proc: 15% - kswapd: 0% - mem(MB):(av/fr/sw) 208/83/695
+ 2.1s - cpu%:(ac/id)100/  0 - proc: 41% - kswapd: 0% - mem(MB):(av/fr/sw) 197/69/694
+ 2.3s - cpu%:(ac/id)100/  0 - proc: 40% - kswapd: 0% - mem(MB):(av/fr/sw) 190/62/694
+ 2.5s - cpu%:(ac/id)100/  0 - proc: 45% - kswapd: 0% - mem(MB):(av/fr/sw) 194/65/694
+ 2.6s - cpu%:(ac/id)100/  0 - proc: 46% - kswapd: 0% - mem(MB):(av/fr/sw) 194/65/694
+ 2.7s - cpu%:(ac/id)100/  0 - proc: 36% - kswapd: 0% - mem(MB):(av/fr/sw) 194/65/694
+ 2.8s - cpu%:(ac/id)100/  0 - proc: 29% - kswapd: 0% - mem(MB):(av/fr/sw) 194/63/694
+ 2.9s - cpu%:(ac/id)100/  0 - proc: 27% - kswapd: 0% - mem(MB):(av/fr/sw) 193/58/694
+ 3.0s - cpu%:(ac/id)100/  0 - proc: 33% - kswapd: 0% - mem(MB):(av/fr/sw) 193/50/694
+ 3.1s - cpu%:(ac/id)100/  0 - proc: 20% - kswapd: 0% - mem(MB):(av/fr/sw) 193/42/693
+ 3.2s - cpu%:(ac/id)100/  0 - proc: 38% - kswapd: 0% - mem(MB):(av/fr/sw) 188/31/688
+ 3.3s - cpu%:(ac/id)100/  0 - proc: 11% - kswapd:13% - mem(MB):(av/fr/sw) 184/27/688
+ 3.5s - cpu%:(ac/id)100/  0 - proc: 13% - kswapd:18% - mem(MB):(av/fr/sw) 195/40/688
+ 3.6s - cpu%:(ac/id)100/  0 - proc:  0% - kswapd:10% - mem(MB):(av/fr/sw) 195/40/688
+ 3.7s - cpu%:(ac/id) 94/  6 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 196/40/688
+ 3.8s - cpu%:(ac/id) 88/ 12 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 196/39/688
+ 3.9s - cpu%:(ac/id) 98/  2 - proc: 13% - kswapd: 0% - mem(MB):(av/fr/sw) 196/39/688
+ 4.0s - cpu%:(ac/id)100/  0 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 196/38/688
+ 4.1s - cpu%:(ac/id) 93/  7 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 196/38/688
+ 4.2s - cpu%:(ac/id) 73/ 27 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 196/39/688
+ 4.3s - cpu%:(ac/id) 73/ 27 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 196/39/688
+ 4.4s - cpu%:(ac/id) 67/ 33 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 196/39/688
+ 4.5s - cpu%:(ac/id) 59/ 41 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 196/38/688
+ 4.6s - cpu%:(ac/id) 50/ 50 - proc:  2% - kswapd: 0% - mem(MB):(av/fr/sw) 196/38/688
+ 4.7s - cpu%:(ac/id) 52/ 48 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 196/37/688
+ 4.8s - cpu%:(ac/id) 44/ 56 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 195/36/688
+ 4.9s - cpu%:(ac/id) 50/ 50 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 195/35/688
+ 5.0s - cpu%:(ac/id) 50/ 50 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 195/34/688
+ 5.1s - cpu%:(ac/id) 51/ 49 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/33/687
+ 5.2s - cpu%:(ac/id) 57/ 43 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 195/32/687
+ 5.3s - cpu%:(ac/id) 68/ 32 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/31/687
+ 5.4s - cpu%:(ac/id) 51/ 49 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 5.6s - cpu%:(ac/id) 87/ 13 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 5.7s - cpu%:(ac/id) 66/ 34 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 5.8s - cpu%:(ac/id) 68/ 32 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 5.9s - cpu%:(ac/id) 72/ 28 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 6.0s - cpu%:(ac/id) 65/ 35 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 6.1s - cpu%:(ac/id) 66/ 34 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 6.2s - cpu%:(ac/id) 64/ 36 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 6.3s - cpu%:(ac/id) 67/ 33 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 6.4s - cpu%:(ac/id) 57/ 43 - proc:  0% - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+/usr/bin/wascmd -r RN1MCdNq8t.Netflix is stablised at 3.3(s)
+
+
+Sleep for 5000ms
+ 0.1s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 0.2s - cpu%:(ac/id) 76/ 24 - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 0.3s - cpu%:(ac/id) 63/ 37 - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 0.4s - cpu%:(ac/id) 64/ 36 - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 0.5s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 0.6s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 0.7s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 0.8s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 194/30/687
+ 0.9s - cpu%:(ac/id) 74/ 26 - kswapd: 0% - mem(MB):(av/fr/sw) 196/33/687
+ 1.0s - cpu%:(ac/id) 65/ 35 - kswapd: 0% - mem(MB):(av/fr/sw) 196/33/686
+ 1.1s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 197/32/686
+ 1.2s - cpu%:(ac/id) 86/ 14 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 1.3s - cpu%:(ac/id) 68/ 32 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 1.4s - cpu%:(ac/id) 63/ 37 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 1.5s - cpu%:(ac/id) 66/ 34 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 1.6s - cpu%:(ac/id) 62/ 38 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 1.8s - cpu%:(ac/id) 60/ 40 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 1.9s - cpu%:(ac/id) 60/ 40 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 2.0s - cpu%:(ac/id) 58/ 42 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 2.1s - cpu%:(ac/id) 58/ 42 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 2.2s - cpu%:(ac/id) 80/ 20 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 2.3s - cpu%:(ac/id) 60/ 40 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 2.4s - cpu%:(ac/id) 63/ 37 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 2.5s - cpu%:(ac/id) 61/ 39 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 2.6s - cpu%:(ac/id) 60/ 40 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 2.7s - cpu%:(ac/id) 63/ 37 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 2.8s - cpu%:(ac/id) 69/ 31 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 2.9s - cpu%:(ac/id) 64/ 36 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 3.0s - cpu%:(ac/id) 68/ 32 - kswapd: 0% - mem(MB):(av/fr/sw) 196/30/686
+ 3.1s - cpu%:(ac/id) 72/ 28 - kswapd: 0% - mem(MB):(av/fr/sw) 196/29/686
+ 3.2s - cpu%:(ac/id) 78/ 22 - kswapd: 0% - mem(MB):(av/fr/sw) 196/29/686
+ 3.3s - cpu%:(ac/id) 62/ 38 - kswapd: 0% - mem(MB):(av/fr/sw) 196/28/686
+ 3.4s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 195/24/686
+ 3.5s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 194/23/686
+ 3.6s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 194/23/686
+ 3.7s - cpu%:(ac/id) 98/  2 - kswapd: 0% - mem(MB):(av/fr/sw) 192/21/686
+ 3.8s - cpu%:(ac/id) 96/  4 - kswapd: 8% - mem(MB):(av/fr/sw) 190/20/685
+ 3.9s - cpu%:(ac/id) 96/  4 - kswapd: 6% - mem(MB):(av/fr/sw) 190/19/685
+ 4.0s - cpu%:(ac/id)100/  0 - kswapd: 0% - mem(MB):(av/fr/sw) 185/13/685
+ 4.1s - cpu%:(ac/id) 82/ 18 - kswapd: 0% - mem(MB):(av/fr/sw) 186/14/685
+ 4.2s - cpu%:(ac/id) 71/ 29 - kswapd: 0% - mem(MB):(av/fr/sw) 186/14/685
+ 4.3s - cpu%:(ac/id) 67/ 33 - kswapd: 0% - mem(MB):(av/fr/sw) 186/14/685
+ 4.4s - cpu%:(ac/id) 71/ 29 - kswapd: 0% - mem(MB):(av/fr/sw) 186/14/685
+ 4.5s - cpu%:(ac/id) 63/ 37 - kswapd: 0% - mem(MB):(av/fr/sw) 190/17/685
+ 4.6s - cpu%:(ac/id) 18/ 82 - kswapd: 0% - mem(MB):(av/fr/sw) 190/17/685
+ 4.7s - cpu%:(ac/id) 21/ 79 - kswapd: 0% - mem(MB):(av/fr/sw) 190/17/685
+ 4.8s - cpu%:(ac/id) 22/ 78 - kswapd: 0% - mem(MB):(av/fr/sw) 190/17/685
+ 4.9s - cpu%:(ac/id) 50/ 50 - kswapd: 0% - mem(MB):(av/fr/sw) 190/17/685
+ 5.0s - cpu%:(ac/id) 33/ 67 - kswapd: 0% - mem(MB):(av/fr/sw) 189/17/680
