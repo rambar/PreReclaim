@@ -14,6 +14,7 @@ private:
 		S_LAUNCH_AUL_LAUNCH,
 		S_LAUNCH_SLEEP,
 		S_LAUNCH_PRE_RECLAIM,
+		S_LAUNCH_WAIT_STABLISED,
 	};
 	
 	enum MonitorType {
@@ -66,12 +67,15 @@ private:
 	void AddForkAndExec(string command, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized);
 	void AddSleep(long);
 	void AddPreReclaim(string);
+	void AddWaitStablised(const double usageBelow);
 	
 	void AddTestset(const LaunchType type, string sparam, long lparam, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized);
 
 	void PrintSystemUsageHeader();
 	void PrintSystemUsage(CPUUsage &, CPUUsage &, const MemInfo &);
 	bool AulLaunch(string);
+
+	void FillProcname(string &procname, string &sparam);
 };
 
 #endif

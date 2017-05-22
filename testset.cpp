@@ -123,6 +123,10 @@ void TestSet::AddPreReclaim(string value){
 	AddTestset(S_LAUNCH_PRE_RECLAIM, value, 0, S_MONITOR_UNDEFINED, 0, "", false);
 }
 
+void TestSet::AddWaitStablised(const double usageBelow) {
+	AddTestset(S_LAUNCH_WAIT_STABLISED, "", 0, S_MONITOR_CPU_TOTAL, usageBelow, "", true);
+}
+
 #if defined(TIZEN)
 bool TestSet::AulLaunch(string appid) {
 	bundle *b;
@@ -221,6 +225,9 @@ bool TestSet::LoadFromFile(string &filename) {
 		}
 
 		if(launchType == S_LAUNCH_FORK_AND_EXEC) {
+			//pre-test
+			AddWaitStablised(50);
+			
 			//test
 			AddForkAndExec(command, monitor, usageBelow, procname, waitStablized); 
 
@@ -228,6 +235,9 @@ bool TestSet::LoadFromFile(string &filename) {
 			AddSleep(3000);
 		}
 		else if(launchType == S_LAUNCH_AUL_LAUNCH) {
+			//pre-test
+			AddWaitStablised(50);
+			
 			//test
 			AddAulLaunch(command, monitor, usageBelow, procname, waitStablized); 
 
@@ -240,7 +250,7 @@ bool TestSet::LoadFromFile(string &filename) {
 				AddSleep(5000);
 				AddPreReclaim(Constants::ZERO);
 				AddSleep(1000);
-			}		
+			}
 		}
 	}
 
@@ -250,6 +260,20 @@ finish:
 	g_object_unref (parser);
 
 	return returnValue;
+}
+
+void TestSet::FillProcname(string &procname, string &sparam){
+	if(procname.length() == 0) {
+		istringstream ss(sparam);
+		string token;
+
+		ss >> token; //split " ";
+		ss.str(token);
+		
+		while(getline(ss, token, '/')); //split "/";
+		
+		procname = token.substr(0, 15);
+	}
 }
 
 bool TestSet::StartTest() {
@@ -266,6 +290,7 @@ bool TestSet::StartTest() {
 		CPUUsage kswapdUsage;
 		MemInfo memInfo;
 
+		//get parameters from testcase data struct
 		LaunchType type = (*it)->type;
 		string sparam = (*it)->sparam;
 		bool waitStablized = (*it)->waitStablized;
@@ -276,7 +301,14 @@ bool TestSet::StartTest() {
 		bool waitChild = false;
 		int childpid = -1;
 
+		//set kswapd pid
+		kswapdUsage.SetPID(kswapdPid);
+
 		if(type == S_LAUNCH_FORK_AND_EXEC) {
+			//tick first-time before launching application
+			userUsage.Tick();
+			kswapdUsage.Tick();
+		
 			childpid = launcher.forkAndExec(sparam, waitChild);
 			if(childpid == -1) {
 				logger << "Launch failed" << endl;
@@ -288,6 +320,10 @@ bool TestSet::StartTest() {
 				 << " CPU usage < " << usageBelow << endl;
 		}
 		else if(type == S_LAUNCH_AUL_LAUNCH) {
+			//tick first-time before launching application
+			userUsage.Tick();
+			kswapdUsage.Tick();
+			
 			AulLaunch(sparam);
 
 			logger << endl << "AUL Launching... \"" << sparam << "\"" << endl;
@@ -301,11 +337,13 @@ bool TestSet::StartTest() {
 			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_LTGRAY, "Sleep");
 
 			kswapdUsage.SetPID(kswapdPid);
-			//userUsage.SetProcName(procname);
 			userUsage.SetUsageMonitor(CPUUsage::S_USAGE_CPU_TOTAL);
 
 			PrintSystemUsageHeader();
 			while(true) {
+				this_thread::sleep_for(chrono::milliseconds(monitorPeriod));
+				if(userUsage.GetRunningTime() > (timeToSleep / 1000)) break;
+				
 				userUsage.Tick();
 				kswapdUsage.Tick();
 
@@ -313,9 +351,6 @@ bool TestSet::StartTest() {
 					memInfo.Read();	
 					PrintSystemUsage(userUsage, kswapdUsage, memInfo);
 				}
-				
-				this_thread::sleep_for(chrono::milliseconds(monitorPeriod));
-				if(userUsage.GetRunningTime() > (timeToSleep / 1000)) break;
 			}
 			
 			ANNOTATE_CHANNEL_END(50);
@@ -327,30 +362,24 @@ bool TestSet::StartTest() {
 			ANNOTATE_CHANNEL(50, sparam.c_str());
 			ANNOTATE_CHANNEL_END(50);
 		}
+		else if(type == S_LAUNCH_WAIT_STABLISED) {
+			logger << endl << "Wait stablised tot.cpu < " << usageBelow << endl;
+		}
 
 		if(waitStablized) {
-			if(procname.length() == 0) {
-				istringstream ss(sparam);
-				string token;
-
-				ss >> token; //split " ";
-				ss.str(token);
-				
-				while(getline(ss, token, '/')); //split "/";
-				
-				procname = token.substr(0, 15);
-			}
-
+			FillProcname(procname, sparam);
+			
 			//userUsage.SetPID(childpid);
 			userUsage.SetProcName(procname);
 			userUsage.SetUsageBelow(usageBelow);
 			userUsage.SetUsageMonitor(static_cast<CPUUsage::UsageMonitor>(monitor));
 
-			kswapdUsage.SetPID(kswapdPid);
-
 			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_BLUE, sparam.c_str());
 			PrintSystemUsageHeader();
+			
 			while(true) {
+				this_thread::sleep_for(chrono::milliseconds(monitorPeriod));
+				
 				userUsage.Tick();
 				kswapdUsage.Tick();
 				
@@ -364,8 +393,6 @@ bool TestSet::StartTest() {
 						break;
 					}
 				}
-
-				this_thread::sleep_for(chrono::milliseconds(monitorPeriod));
 			}
 			ANNOTATE_CHANNEL_END(50);
 		}

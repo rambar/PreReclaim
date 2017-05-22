@@ -116,7 +116,11 @@ bool CPUUsage::ReadProcStats() {
 	string line;
 	unsigned long utime, ktime;
 	
-	if(pid == -1) return false;
+	if(pid == -1) {
+		curProcTimes[S_UTIME] = -1;
+		curProcTimes[S_KTIME] = -1;
+		return false;
+	}
 
 	snprintf(path, PATH_MAX, PROCPID_PATH, pid);
 	ifstream fileStat(path);
@@ -154,8 +158,12 @@ void CPUUsage::CountUsage() {
 	
 	double user_time = curProcTimes[S_UTIME] - prevProcTimes[S_UTIME];
 	double sys_time = curProcTimes[S_KTIME] - prevProcTimes[S_KTIME];
-	
-	userActive = (100.f * (user_time + sys_time) / totalTime);
+
+	//user proc pid is yet to be set
+	if(prevProcTimes[S_UTIME] == -1)
+		userActive = 0.0f;
+	else
+		userActive = (100.f * (user_time + sys_time) / totalTime);
 }
 
 void CPUUsage::GetCPUUsage(double &cpuActive, double &cpuIdle) {
