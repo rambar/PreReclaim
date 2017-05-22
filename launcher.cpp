@@ -37,7 +37,7 @@ char** Launcher::TokenizeCommand(string &command) {
 
 unsigned int Launcher::forkAndExec(string &command, bool waitchild) {
 	if(command.length() == 0) {
-		error("No command to fork and execute\n");
+		logger << "No command to fork and execute" << endl;
 		return -1;
 	}
 	
@@ -65,12 +65,12 @@ unsigned int Launcher::forkAndExec(string &command, bool waitchild) {
 		while(true){
 			buf = options[i++];
 			if(buf == NULL) break;
-			cout << i-1 << " : " << buf << endl << flush;
+			logger << i-1 << " : " << buf << endl << flush;
 		}*/
 
 		execv(options[0], options); //only return when error occurs.
 
-		cout << "exec error: " << strerror(errno) << endl;
+		logger << "exec error: " << strerror(errno) << endl;
 		//delete [] options;
 		//delete options;
 		

@@ -36,13 +36,13 @@ const string TestSet::Constants::ZERO 				= "0";
 using namespace std;
 
 void TestSet::PrintSystemUsageHeader() {
-	cout << "time\t";
-	cout << "tot.cpu\t";
-	cout << "usr.cpu\t";
-	cout << "kswapd\t";
-	cout << "mem.av\t";
-	cout << "mem.fr\t";
-	cout << "mem.sw\n";
+	logger << "time\t";
+	logger << "tot.cpu\t";
+	logger << "usr.cpu\t";
+	logger << "kswapd\t";
+	logger << "mem.av\t";
+	logger << "mem.fr\t";
+	logger << "mem.sw\n";
 }
 
 void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const MemInfo &memInfo) {
@@ -53,53 +53,45 @@ void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const
 	userUsage.GetProcUsage(userActive);
 	kswapdUsage.GetProcUsage(kswapdActive);
 
-	cout.width(4);
-	cout.precision(1);
-	cout << left << userUsage.GetRunningTime();
-	cout << "\t";
+	logger.precision(1);
+	logger << left << userUsage.GetRunningTime();
+	logger << "\t";
 	
-	cout.setf(ios::fixed, ios::floatfield);
-	cout.width(4);
-	cout.precision(0);
-	cout << cpuActive;
-	cout << "\t";
+	logger.setf(ios::fixed, ios::floatfield);
+	logger.precision(0);
+	logger << cpuActive;
+	logger << "\t";
 
 	if(userUsage.GetUsageMonitor() == CPUUsage::S_USAGE_USER_PROC) {
 		if(userUsage.GetPID() == -1) {
-			cout << " \"" << userUsage.GetProcName() << "\" not found";
+			logger << " \"" << userUsage.GetProcName() << "\" not found";
 		}
 		else {
-			cout.setf(ios::fixed, ios::floatfield);
-			cout.width(3);
-			cout.precision(0);
-			cout << userActive;
-			cout << "\t";
+			logger.setf(ios::fixed, ios::floatfield);
+			logger.precision(0);
+			logger << userActive;
+			logger << "\t";
 		}
 	}
 	else{
-		cout << 0;
-		cout << "\t";
+		logger << 0;
+		logger << "\t";
 	}
 	
-	cout.setf(ios::fixed, ios::floatfield);
-	cout.width(3);
-	cout.precision(0);
-	cout << kswapdActive;
-	cout << "\t";
+	logger.precision(0);
+	logger << kswapdActive;
+	logger << "\t";
 
-	cout.width(4);
-	cout << KBtoMB(memInfo.available);
-	cout << "\t";
+	logger << KBtoMB(memInfo.available);
+	logger << "\t";
 	
-	cout.width(4);
-	cout << KBtoMB(memInfo.free);
-	cout << "\t";
+	logger << KBtoMB(memInfo.free);
+	logger << "\t";
 	
-	cout.width(4);
-	cout << KBtoMB(memInfo.swapused);
-	cout << "\t";
+	logger << KBtoMB(memInfo.swapused);
+	logger << "\t";
 	
-	cout << endl;
+	logger << endl;
 }
 
 void TestSet::AddTestset(const LaunchType type, string sparam, long lparam, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized) {
@@ -162,7 +154,7 @@ bool TestSet::LoadFromFile(string &filename) {
 	parser = json_parser_new ();
 	json_parser_load_from_file (parser, filename.c_str(), &error);
 	if (error) {
-		cout << "Unable to parse:" << error->message << endl; 
+		logger << "Unable to parse:" << error->message << endl; 
 		g_error_free (error);
 		goto finish;
 	}
@@ -264,7 +256,7 @@ bool TestSet::StartTest() {
 	// kswapd cpu usage measurement
 	int kswapdPid = Proc::FindProcessName(Constants::KSWAPD_NAME);
 	if(kswapdPid == -1) {
-		error("kswapd is not enabled\n");
+		logger << "kswapd is not enabled" << endl;
 		return 0;
 	}
 
@@ -287,25 +279,25 @@ bool TestSet::StartTest() {
 		if(type == S_LAUNCH_FORK_AND_EXEC) {
 			childpid = launcher.forkAndExec(sparam, waitChild);
 			if(childpid == -1) {
-				error("Launch failed\n");
+				logger << "Launch failed" << endl;
 				return 0;
-			}			
+			}
 
-			cout << endl << "Fork Launching... \"" << sparam << "\" pid:" << childpid << endl;
-			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "tot.cpu": "usr.cpu") 
+			logger << endl << "Fork Launching... \"" << sparam << "\" pid:" << childpid << endl;
+			logger << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "tot.cpu": "usr.cpu") 
 				 << " CPU usage < " << usageBelow << endl;
 		}
 		else if(type == S_LAUNCH_AUL_LAUNCH) {
 			AulLaunch(sparam);
 
-			cout << endl << "AUL Launching... \"" << sparam << "\"" << endl;
-			cout << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "tot.cpu": "usr.cpu") 
+			logger << endl << "AUL Launching... \"" << sparam << "\"" << endl;
+			logger << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "tot.cpu": "usr.cpu") 
 				 << " CPU usage < " << usageBelow << endl;
 		}
 		else if(type == S_LAUNCH_SLEEP) {
 			long timeToSleep = (*it)->lparam;
 
-			cout << endl << "Sleep for " << timeToSleep << "ms" << endl;
+			logger << endl << "Sleep for " << timeToSleep << "ms" << endl;
 			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_LTGRAY, "Sleep");
 
 			kswapdUsage.SetPID(kswapdPid);
@@ -329,7 +321,7 @@ bool TestSet::StartTest() {
 			ANNOTATE_CHANNEL_END(50);
 		}
 		else if(type == S_LAUNCH_PRE_RECLAIM) {			
-			cout << endl << "Pre-Reclaim: " << sparam << endl;
+			logger << endl << "Pre-Reclaim: " << sparam << endl;
 			Proc::WriteProc(Constants::EFM_PROC_PATH, sparam);				
 
 			ANNOTATE_CHANNEL(50, sparam.c_str());
@@ -348,7 +340,7 @@ bool TestSet::StartTest() {
 				
 				procname = token.substr(0, 15);
 			}
-				
+
 			//userUsage.SetPID(childpid);
 			userUsage.SetProcName(procname);
 			userUsage.SetUsageBelow(usageBelow);
@@ -367,8 +359,8 @@ bool TestSet::StartTest() {
 					PrintSystemUsage(userUsage, kswapdUsage, memInfo);
 
 					if(userUsage.IsUsageStable()) {
-						cout.precision(1);
-						cout << /*userUsage.GetProcName()*/ sparam << " is stablised at " << userUsage.StablisedAt() << "(s)" << endl << endl;
+						logger.precision(1);
+						logger << /*userUsage.GetProcName()*/ sparam << " is stablised at " << userUsage.StablisedAt() << "(s)" << endl << endl;
 						break;
 					}
 				}

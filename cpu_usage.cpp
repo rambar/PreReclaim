@@ -90,7 +90,7 @@ bool CPUUsage::ReadCPUStats() {
 	ifstream fileStat(PROCSTAT_PATH);
 
 	if(!fileStat.good()){
-		error("%s is not present\n", PROCSTAT_PATH);
+		logger << PROCSTAT_PATH << " is not present" << endl;
 		return false;
 	}
 	
@@ -122,7 +122,7 @@ bool CPUUsage::ReadProcStats() {
 	ifstream fileStat(path);
 
 	if(!fileStat.good()){
-		error("pid:%d is not present\n", pid);
+		logger << "pid:" << pid << " is not present" << endl;
 		return false;
 	}
 

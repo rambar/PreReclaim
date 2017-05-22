@@ -1,6 +1,6 @@
-#define warn(fmt, args ...) printf("[WARN]" fmt, ##args);
-#define info(fmt, args ...) printf("[INFO]" fmt, ##args);
-#define error(fmt, args ...) printf("[ERROR]" fmt, ##args);
+#include "logger.h"
+
+extern Logger logger;
 
 #define BtoMB(x)			((x)>>20)
 #define KBtoMB(x)			((x)>>10)

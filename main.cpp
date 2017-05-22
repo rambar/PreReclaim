@@ -1,4 +1,6 @@
 #include <iostream>
+#include <sstream>
+#include <time.h>
 
 #include "common.h"
 #include "testset.h"
@@ -12,6 +14,7 @@
 
 using namespace std;
 
+Logger logger;
 ANNOTATE_DEFINE;
 
 /*
@@ -35,6 +38,16 @@ void CreateTestJob(TestSet &testSet) {
 #endif
 */
 
+void GetTimeString(string& str) {
+	chrono::system_clock::time_point now = chrono::system_clock::now();
+	time_t rawtime = chrono::system_clock::to_time_t(now);
+	struct tm * timeinfo = localtime(&rawtime);
+	char buffer[80];
+
+	strftime(buffer, 80, "%Y%m%d_%H%M%S", timeinfo);
+	str = buffer;
+}
+
 int main(int argc, char *argv[]) {	
 	ANNOTATE_SETUP;
 
@@ -42,9 +55,9 @@ int main(int argc, char *argv[]) {
 	string filename;
 
 	if(argc == 1) {
-		cout << "usage: ./run_test -file [filename] -pr" << endl;
-		cout << "       -file : load testset from file" << endl;
-		cout << "       -pr   : do pre-reclaim" << endl;	
+		logger << "usage: ./run_test -file [filename] -pr" << endl;
+		logger << "       -file : load testset from file" << endl;
+		logger << "       -pr   : do pre-reclaim" << endl;	
 		return 0;
 	}
 	
@@ -57,7 +70,7 @@ int main(int argc, char *argv[]) {
 		else if(!arg.compare("-file")) {
 			if(p + 1 >= argc) {
 				//-file without filename
-				cout << "filename is not specified" << endl;
+				logger << "filename is not specified" << endl;
 				return 0;
 			}
 			filename = argv[++p];
@@ -65,12 +78,24 @@ int main(int argc, char *argv[]) {
 	}
 
 	if(filename.length() == 0) {
-		cout << "filename is not specified" << endl;
+		logger << "filename is not specified" << endl;
 		return 0;
 	}
 
+	stringstream ss;
+	if(testset.PreReclaimEnabled())
+		ss << "pr_enabled_";
+	else
+		ss << "pr_disabled_";
+
+	string currentTime;
+	GetTimeString(currentTime);
+	
+	ss << currentTime << ".txt";
+	logger.init(ss.str());
+
 	if(testset.LoadFromFile(filename) == false){
-		error("error loading json file (filename:%s)\n", filename.c_str());
+		logger << "error loading json file (filename:" << filename.c_str() << ")" << endl;
 		return 0;
 	}
 

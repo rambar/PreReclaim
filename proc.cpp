@@ -20,7 +20,7 @@ bool Proc::ReadProcessName(const int pid, string &name) {
 	ifstream fileStat(path);
 
 	if(!fileStat.good()){
-		error("pid:%d is not present\n", pid);
+		logger << "pid:" << pid << " is not present" << endl;
 		return false;
 	}
 	
@@ -66,7 +66,7 @@ bool Proc::WriteProc(const string path, const string value){
 	ofstream fileProc(path);
 
 	if(!fileProc.is_open()){
-		error("%s is not opened\n", path.c_str());
+		logger << path.c_str() << " is not opened" << endl;
 		return false;
 	}
 

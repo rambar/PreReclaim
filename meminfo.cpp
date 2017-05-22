@@ -13,7 +13,7 @@ bool MemInfo::Read() {
 	string line;
 
 	if(!fileStat.good()){
-		error("%s is not present\n", MEMINFO_PATH);
+		logger << MEMINFO_PATH << " is not present" << endl;
 		return false;
 	}
 
