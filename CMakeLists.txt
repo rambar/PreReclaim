@@ -1,7 +1,8 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 PROJECT("pre-reclaim" CXX)
 
-SET(SRCS testset.cpp
+SET(SRCS logger.cpp
+	 testset.cpp
 	 launcher.cpp
 	 proc.cpp
 	 cpu_usage.cpp
