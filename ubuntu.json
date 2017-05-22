@@ -1,22 +1,27 @@
 [
 	{
 		"launchType": "ForkAndExec",
-		"command": "/usr/bin/firefox google.com"
+		"command": "/usr/bin/firefox google.com",
+		"usageBelow": 30.0
 	},
 	{
 		"launchType": "ForkAndExec",
-		"command": "/usr/bin/firefox amazon.com"
+		"command": "/usr/bin/firefox amazon.com",
+		"usageBelow": 30.0
 	},
 	{
 		"launchType": "ForkAndExec",
-		"command": "/usr/bin/firefox ebay.com"
+		"command": "/usr/bin/firefox ebay.com",
+		"usageBelow": 30.0
 	},
 	{
 		"launchType": "ForkAndExec",
-		"command": "/usr/bin/firefox youtube.com"
+		"command": "/usr/bin/firefox youtube.com",
+		"usageBelow": 30.0
 	},
 	{
 		"launchType": "ForkAndExec",
-		"command": "/usr/bin/firefox naver.com"
+		"command": "/usr/bin/firefox naver.com",
+		"usageBelow": 30.0
 	}
 ]
