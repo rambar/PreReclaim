@@ -3,4 +3,5 @@ sys_stat
 backup
 run_test
 json-glib-1.0.4
-pr_*
+python/.ipynb_checkpoints
+python/__pycache__
