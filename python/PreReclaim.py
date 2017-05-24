@@ -74,16 +74,18 @@ def draw_cpu_chart(content, ax, xmax):
 def draw_mem_chart(content, ax, xmax):
     frame = pd.read_csv(StringIO(content['log']), sep='\s+', skiprows=[0, 1])
     frame.set_index('time', inplace=True)
+    frame.rename(columns={'mem.av': 'available', 'mem.fr': 'free', 'mem.pc': 'pagecache', 'mem.sw': 'swap'}, inplace=True)
     title = content['appname'] + ' ' + str(content['sec'])
-    ax = frame[['mem.av', 'mem.fr']].plot(
+    ax = frame[['available', 'free', 'pagecache']].plot(
         ax=ax, 
         title=title, 
         linewidth=1, 
         xlim=(0, xmax),
+        color=['k','y','b'],
         grid=True,
         legend=True)
 
-    frame['mem.sw'].plot(
+    frame['swap'].plot(
         ax=ax, 
         style='r--', 
         xlim=(0, xmax), 
@@ -118,11 +120,16 @@ def show(filename):
 
 def launching_time(filename):
     results = []
+    names = []
     contents = read_from_file(filename)
     for content in contents:
         results.append(content['sec'])
-    return results
-
+        names.append(content['appname'])
+       
+    df = DataFrame(results)
+    df = df.T
+    df.columns = names 
+    return df
 
 # In[7]:
 
@@ -179,21 +186,13 @@ def compare(filenames, select):
 
 # In[9]:
 
-def show_result(files, cols):
+def show_result(files):
     frames = []
     for file in files :
-        frame = DataFrame(launching_time(file))
-        frame = frame.T
-        frame.columns = cols
+        frame = launching_time(file)
         frame['file'] = file
         frames.append(frame)
 
     df = pd.concat(frames, ignore_index=True)
     df['sum'] = df.sum(axis=1)
     return df
-
-
-# In[ ]:
-
-
-

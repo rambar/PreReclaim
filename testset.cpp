@@ -22,6 +22,7 @@
 #endif
 
 const string TestSet::Constants::KSWAPD_NAME 		= "kswapd0";
+const string TestSet::Constants::RESOURCED_NAME 	= "resourced";
 
 const string TestSet::Constants::JSON_LAUNCHTYPE 	= "launchType";
 const string TestSet::Constants::JSON_COMMAND 		= "command";
@@ -40,19 +41,21 @@ void TestSet::PrintSystemUsageHeader() {
 	logger << "tot.cpu\t";
 	logger << "usr.cpu\t";
 	logger << "kswapd\t";
+	logger << "rescd\t";
 	logger << "mem.av\t";
 	logger << "mem.fr\t";
 	logger << "mem.sw\t";
 	logger << "mem.pc\n";
 }
 
-void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const MemInfo &memInfo) {
+void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, CPUUsage &resourcedUsage, const MemInfo &memInfo) {
 	double cpuActive, cpuIdle;
-	double userActive, kswapdActive;
+	double userActive, kswapdActive, resourcedActive;
 	
 	userUsage.GetCPUUsage(cpuActive, cpuIdle);
 	userUsage.GetProcUsage(userActive);
 	kswapdUsage.GetProcUsage(kswapdActive);
+	resourcedUsage.GetProcUsage(resourcedActive);
 
 	logger.precision(1);
 	logger << left << userUsage.GetRunningTime();
@@ -65,7 +68,7 @@ void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const
 
 	if(userUsage.GetUsageMonitor() == CPUUsage::S_USAGE_USER_PROC) {
 		if(userUsage.GetPID() == -1) {
-			logger << " \"" << userUsage.GetProcName() << "\" not found";
+			logger << " \"" << userUsage.GetProcName() << "\" not found ";
 		}
 		else {
 			logger.setf(ios::fixed, ios::floatfield);
@@ -81,6 +84,10 @@ void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const
 	
 	logger.precision(0);
 	logger << kswapdActive;
+	logger << "\t";
+
+	logger.precision(0);
+	logger << resourcedActive;
 	logger << "\t";
 
 	logger << KBtoMB(memInfo.available);
@@ -283,15 +290,22 @@ void TestSet::FillProcname(string &procname, string &sparam){
 bool TestSet::StartTest() {
 	// kswapd cpu usage measurement
 	int kswapdPid = Proc::FindProcessName(Constants::KSWAPD_NAME);
+	int resourcedPid = Proc::FindProcessName(Constants::RESOURCED_NAME);
+	
 	if(kswapdPid == -1) {
 		logger << "kswapd is not enabled" << endl;
 		return 0;
+	}
+
+	if(resourcedPid == -1) {
+		logger << "resourced is not enabled" << endl;
 	}
 
 	for (vector<Testcase *>::iterator it = listTestset.begin() ; it != listTestset.end(); ++it) {
 		Launcher launcher;
 		CPUUsage userUsage;
 		CPUUsage kswapdUsage;
+		CPUUsage resourcedUsage;
 		MemInfo memInfo;
 
 		//get parameters from testcase data struct
@@ -307,11 +321,13 @@ bool TestSet::StartTest() {
 
 		//set kswapd pid
 		kswapdUsage.SetPID(kswapdPid);
+		resourcedUsage.SetPID(resourcedPid);
 
 		if(type == S_LAUNCH_FORK_AND_EXEC) {
 			//tick first-time before launching application
 			userUsage.Tick();
 			kswapdUsage.Tick();
+			resourcedUsage.Tick();
 			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_BLACK, "fork_exec");
 			
 			childpid = launcher.forkAndExec(sparam, waitChild);
@@ -330,6 +346,7 @@ bool TestSet::StartTest() {
 			//tick first-time before launching application
 			userUsage.Tick();
 			kswapdUsage.Tick();
+			resourcedUsage.Tick();
 
 			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_BLACK, "aul_launch");
 			
@@ -360,7 +377,7 @@ bool TestSet::StartTest() {
 
 				if(userUsage.IsMeasurable()) {
 					memInfo.Read();	
-					PrintSystemUsage(userUsage, kswapdUsage, memInfo);
+					PrintSystemUsage(userUsage, kswapdUsage, resourcedUsage, memInfo);
 				}
 			}
 			
@@ -393,10 +410,11 @@ bool TestSet::StartTest() {
 				
 				userUsage.Tick();
 				kswapdUsage.Tick();
+				resourcedUsage.Tick();
 				
 				if(userUsage.IsMeasurable()) {
 					memInfo.Read();
-					PrintSystemUsage(userUsage, kswapdUsage, memInfo);
+					PrintSystemUsage(userUsage, kswapdUsage, resourcedUsage, memInfo);
 
 					if(userUsage.IsUsageStable()) {
 						logger.precision(1);

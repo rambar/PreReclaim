@@ -36,6 +36,7 @@ private:
 		static const string ZERO;
 
 		static const string KSWAPD_NAME;
+		static const string RESOURCED_NAME;
 	};
 
 	class Testcase {
@@ -72,7 +73,7 @@ private:
 	void AddTestset(const LaunchType type, string sparam, long lparam, const MonitorType monitor, const double usageBelow, string procname, bool waitStablized);
 
 	void PrintSystemUsageHeader();
-	void PrintSystemUsage(CPUUsage &, CPUUsage &, const MemInfo &);
+	void PrintSystemUsage(CPUUsage &, CPUUsage &, CPUUsage &, const MemInfo &);
 	bool AulLaunch(string);
 
 	void FillProcname(string &procname, string &sparam);
