@@ -308,12 +308,15 @@ bool TestSet::StartTest() {
 			//tick first-time before launching application
 			userUsage.Tick();
 			kswapdUsage.Tick();
-		
+			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_BLACK, "fork_exec");
+			
 			childpid = launcher.forkAndExec(sparam, waitChild);
 			if(childpid == -1) {
 				logger << "Launch failed" << endl;
 				return 0;
 			}
+
+			ANNOTATE_CHANNEL_END(50);
 
 			logger << endl << "Fork Launching... \"" << sparam << "\" pid:" << childpid << endl;
 			logger << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "tot.cpu": "usr.cpu") 
@@ -323,8 +326,12 @@ bool TestSet::StartTest() {
 			//tick first-time before launching application
 			userUsage.Tick();
 			kswapdUsage.Tick();
+
+			ANNOTATE_CHANNEL_COLOR(50, ANNOTATE_BLACK, "aul_launch");
 			
 			AulLaunch(sparam);
+
+			ANNOTATE_CHANNEL_END(50);
 
 			logger << endl << "AUL Launching... \"" << sparam << "\"" << endl;
 			logger << "Wait until " << ((monitor == S_MONITOR_CPU_TOTAL)? "tot.cpu": "usr.cpu") 
