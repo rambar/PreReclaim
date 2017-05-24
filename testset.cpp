@@ -42,7 +42,8 @@ void TestSet::PrintSystemUsageHeader() {
 	logger << "kswapd\t";
 	logger << "mem.av\t";
 	logger << "mem.fr\t";
-	logger << "mem.sw\n";
+	logger << "mem.sw\t";
+	logger << "mem.pc\n";
 }
 
 void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const MemInfo &memInfo) {
@@ -89,6 +90,9 @@ void TestSet::PrintSystemUsage(CPUUsage &userUsage, CPUUsage &kswapdUsage, const
 	logger << "\t";
 	
 	logger << KBtoMB(memInfo.swapused);
+	logger << "\t";
+
+	logger << KBtoMB(memInfo.pagecache);
 	logger << "\t";
 	
 	logger << endl;

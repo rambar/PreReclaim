@@ -23,6 +23,8 @@ bool MemInfo::Read() {
 	
 		ss >> token;
 
+		unsigned int activefile, inactivefile;
+
 		if(!token.compare(MEMINFO_TOTAL))
 			ss >> total;
 		else if(!token.compare(MEMINFO_FREE))
@@ -33,8 +35,13 @@ bool MemInfo::Read() {
 			ss >> swaptotal;
 		else if(!token.compare(MEMINFO_SWAPFREE))
 			ss >> swapfree;
+		else if(!token.compare(MEMINFO_ACTIVEFILE))
+			ss >> activefile;
+		else if(!token.compare(MEMINFO_INACTIVEFILE))
+			ss >> inactivefile;
 
 		swapused = swaptotal - swapfree;
+		pagecache = activefile + inactivefile;
 	}
 
 	return true;
