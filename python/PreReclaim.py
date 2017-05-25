@@ -47,89 +47,102 @@ def read_from_file(filename) :
 
 # In[1]:
 
-def draw_cpu_chart(content, ax, xmax):
-    frame = pd.read_csv(StringIO(content['log']), sep='\s+', skiprows=[0, 1])
-    frame.set_index('time', inplace=True)
-    title = content['appname'] + ' ' + str(content['sec'])
-    ax = frame[['tot.cpu', 'usr.cpu', 'kswapd']].plot(ax=ax, 
-                                                      title=title, 
-                                                      linewidth=1, 
-                                                      ylim=(0, 105),
-                                                      xlim=(0, xmax),
-                                                      grid=True, 
-                                                      color=['b','g','r'],
-                                                      legend=False)
-    ax.annotate("launching finish",
-                (content['sec'], 100),
-                 xytext=(5, -15), 
-                 textcoords='offset points')
+def draw_cpu_chart(df, title, finish, ax, xmax):
+    ax = df[['tot.cpu', 'usr.cpu', 'kswapd']].plot(
+        ax=ax, 
+        title=title, 
+        linewidth=1, 
+        ylim=(0, 105),
+        xlim=(0, xmax),
+        grid=True, 
+        style=['b-','g-','r-'],
+        legend=False)
+    
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1),
+          fancybox=True, shadow=True, ncol=3)
+
+    #ax.annotate("launching finish",
+    #            (content['sec'], 100),
+    #             xytext=(5, -15), 
+    #             textcoords='offset points')
     ymin, ymax = ax.get_ylim()
-    ax.vlines(x=content['sec'], ymin=ymin, ymax=ymax-1, color='k', linewidth=2, linestyle='dashed')
+    ax.vlines(x=finish, ymin=ymin, ymax=ymax-1, color='y', linewidth=2)
     ax.set_xlabel("time (s)")
     ax.set_ylabel("cpu usage (%)")
 
-
 # In[4]:
 
-def draw_mem_chart(content, ax, xmax):
-    frame = pd.read_csv(StringIO(content['log']), sep='\s+', skiprows=[0, 1])
-    frame.set_index('time', inplace=True)
-    frame.rename(columns={'mem.av': 'available', 'mem.fr': 'free', 'mem.pc': 'pagecache', 'mem.sw': 'swap'}, inplace=True)
-    title = content['appname'] + ' ' + str(content['sec'])
-    ax = frame[['available', 'free', 'pagecache']].plot(
+def draw_mem_chart(df, title, finish, ax, xmax):
+    ax = df[['available', 'free']].plot(
         ax=ax, 
         title=title, 
         linewidth=1, 
         xlim=(0, xmax),
-        color=['k','y','b'],
+        style=['b-','g-'],
         grid=True,
-        legend=True)
-
-    frame['swap'].plot(
-        ax=ax, 
-        style='r--', 
-        xlim=(0, xmax), 
-        secondary_y=True, 
-        grid=True, 
-        legend=True)
+        legend=False)
+    
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1),
+          fancybox=True, shadow=True, ncol=2)
 
     ymin, ymax = ax.get_ylim()
-    ax.annotate("launching finish",
-                (content['sec'], ymax),
-                 xytext=(5, -15), 
-                 textcoords='offset points')
-    ax.vlines(x=content['sec'], ymin=ymin, ymax=ymax-1, color='k', linewidth=2, linestyle='dashed')
+    ax.vlines(x=finish, ymin=ymin, ymax=ymax-1, color='y', linewidth=2)
     ax.set_xlabel("time (s)")
     ax.set_ylabel("memory (MB)")
 
+def draw_mem_chart2(df, title, finish, ax, xmax):    
+    ax = df[['swap', 'pagecache']].plot(
+        ax=ax, 
+        title=title, 
+        linewidth=1, 
+        xlim=(0, xmax),
+        style=['b--', 'g-'],
+        grid=True,
+        secondary_y=['pagecache'],
+        legend=True)
+    
+    lines = ax.get_lines() + ax.right_ax.get_lines()
+    
+    ax.legend(lines, [l.get_label() for l in lines], loc='upper center', bbox_to_anchor=(0.5, -0.1),
+          fancybox=True, shadow=True, ncol=3)
+
+    ymin, ymax = ax.get_ylim()
+    ax.vlines(x=finish, ymin=ymin, ymax=ymax-0.1, color='y', linewidth=2)
+    ax.set_xlabel("time (s)")
+    ax.set_ylabel("swap (MB)")
+    ax.right_ax.set_ylabel("pagecache (MB)")
+
 # In[5]:
 
+def pre_process(content):
+    df = pd.read_csv(StringIO(content['log']), sep='\s+', skiprows=[0, 1])
+    df.set_index('time', inplace=True)
+    
+    if('mem.pc' not in list(df)):
+        df['mem.pc'] = 0
+    
+    df.rename(columns={'mem.av': 'available', 'mem.fr': 'free', 'mem.pc': 'pagecache', 'mem.sw': 'swap'}, inplace=True)
+    title = content['appname'] + ' ' + str(content['sec'])
+    finish = content['sec']
+    
+    return df, title, finish
+    
 def show(filename):
     contents = read_from_file(filename)
     
-    fig, axes = plt.subplots(len(contents), 2, figsize=(16, 20))
+    rows = len(contents)
+    
+    fig, axes = plt.subplots(len(contents), 3, figsize=(16, rows * 4))
     fig.subplots_adjust(hspace=0.7)
 
     for i, content in enumerate(contents):
-        xmax = content['sec']+ 1.0
-        draw_cpu_chart(content, axes[i][0], xmax)
-        draw_mem_chart(content, axes[i][1], xmax)
-
+        df, title, finish = pre_process(content)
+        xmax = finish + 1.0
+        draw_cpu_chart(df, title, finish, axes[i][0], xmax)
+        draw_mem_chart(df, title, finish, axes[i][1], xmax)
+        draw_mem_chart2(df, title, finish, axes[i][2], xmax)
 
 # In[6]:
-
-def launching_time(filename):
-    results = []
-    names = []
-    contents = read_from_file(filename)
-    for content in contents:
-        results.append(content['sec'])
-        names.append(content['appname'])
-       
-    df = DataFrame(results)
-    df = df.T
-    df.columns = names 
-    return df
 
 # In[7]:
 
@@ -137,9 +150,9 @@ def compare_all(filename1, filename2):
     contents1 = read_from_file(filename1)
     contents2 = read_from_file(filename2)
     
-    number_of_chart = len(contents1) + len(contents2)
+    rows = len(contents1) * 2
     
-    fig, axes = plt.subplots(number_of_chart, 2, figsize=(16, number_of_chart * 3))
+    fig, axes = plt.subplots(number_of_chart, 2, figsize=(16, rows * 4))
     fig.subplots_adjust(hspace=0.7)
     
     for i, (content1, content2) in enumerate(zip(contents1, contents2)):
@@ -152,26 +165,10 @@ def compare_all(filename1, filename2):
 
 # In[8]:
 
-def compare(filename1, filename2, select):
-    contents1 = read_from_file(filename1)
-    contents2 = read_from_file(filename2)
-    
-    number_of_chart = 2
-    fig, axes = plt.subplots(number_of_chart, 2, figsize=(16, number_of_chart * 3), sharex=True)
-    fig.subplots_adjust(hspace=0.5)
-    
-    for i, (content1, content2) in enumerate(zip(contents1, contents2)):
-        if(select != None and select == i):
-            xmax = max(content1['sec'], content2['sec']) + 1.0
-            draw_cpu_chart (content1, axes[0][0], xmax)
-            draw_mem_chart (content1, axes[0][1], xmax)
-            draw_cpu_chart (content2, axes[1][0], xmax)
-            draw_mem_chart (content2, axes[1][1], xmax)
-
 def compare(filenames, select):
     rows = len(filenames)
-    fig, axes = plt.subplots(rows, 2, figsize=(16, rows * 3), sharex=True)
-    fig.subplots_adjust(hspace=0.5)
+    fig, axes = plt.subplots(rows, 3, figsize=(16, rows * 4), sharex=True)
+    fig.subplots_adjust(hspace=0.7)
 
     xmax = 0
     for filename in filenames:
@@ -180,9 +177,12 @@ def compare(filenames, select):
 
     for i, filename in enumerate(filenames):
         contents = read_from_file(filename)
+        
+        df, title, finish = pre_process(contents[select])
     
-        draw_cpu_chart (contents[select], axes[i][0], xmax + 1)
-        draw_mem_chart (contents[select], axes[i][1], xmax + 1)
+        draw_cpu_chart (df, title, finish, axes[i][0], xmax + 1)
+        draw_mem_chart (df, title, finish, axes[i][1], xmax + 1)
+        draw_mem_chart2(df, title, finish, axes[i][2], xmax + 1)
 
 # In[9]:
 
@@ -195,4 +195,17 @@ def show_result(files):
 
     df = pd.concat(frames, ignore_index=True)
     df['sum'] = df.sum(axis=1)
+    return df
+
+def launching_time(filename):
+    results = []
+    names = []
+    contents = read_from_file(filename)
+    for content in contents:
+        results.append(content['sec'])
+        names.append(content['appname'])
+    
+    df = DataFrame(results)
+    df = df.T
+    df.columns = names 
     return df
