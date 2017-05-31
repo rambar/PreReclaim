@@ -15,7 +15,7 @@
 
 	{
 		"launchType": "PreReclaim",
-		"command" : "120000"
+		"command" : "200000"
 	},
 	{
 		"launchType": "AulLaunch",
@@ -32,7 +32,7 @@
 
 	{
 		"launchType": "PreReclaim",
-		"command" : "300000"
+		"command" : "200000"
 	},
 	{
 		"launchType": "AulLaunch",

@@ -48,18 +48,18 @@ def read_from_file(filename) :
 # In[1]:
 
 def draw_cpu_chart(df, title, finish, ax, xmax):
-    ax = df[['tot.cpu', 'usr.cpu', 'kswapd']].plot(
+    ax = df[['tot.cpu', 'usr.cpu', 'kswapd', 'rescd']].plot(
         ax=ax, 
         title=title, 
         linewidth=1, 
         ylim=(0, 105),
         xlim=(0, xmax),
         grid=True, 
-        style=['b-','g-','r-'],
+        style=['b-','g-','r-', 'k-'],
         legend=False)
     
     ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1),
-          fancybox=True, shadow=True, ncol=3)
+          fancybox=True, shadow=True, ncol=4)
 
     #ax.annotate("launching finish",
     #            (content['sec'], 100),
@@ -120,6 +120,9 @@ def pre_process(content):
     
     if('mem.pc' not in list(df)):
         df['mem.pc'] = 0
+
+    if('rescd' not in list(df)):
+        df['rescd'] = 0
     
     df.rename(columns={'mem.av': 'available', 'mem.fr': 'free', 'mem.pc': 'pagecache', 'mem.sw': 'swap'}, inplace=True)
     title = content['appname'] + ' ' + str(content['sec'])
@@ -152,15 +155,21 @@ def compare_all(filename1, filename2):
     
     rows = len(contents1) * 2
     
-    fig, axes = plt.subplots(number_of_chart, 2, figsize=(16, rows * 4))
+    fig, axes = plt.subplots(rows, 3, figsize=(16, rows * 4))
     fig.subplots_adjust(hspace=0.7)
     
     for i, (content1, content2) in enumerate(zip(contents1, contents2)):
         xmax = max(content1['sec'], content2['sec']) + 1.0
-        draw_cpu_chart(content1, axes[2*i][0], xmax)
-        draw_mem_chart(content1, axes[2*i][1], xmax)
-        draw_cpu_chart(content2, axes[2*i+1][0], xmax)
-        draw_mem_chart(content2, axes[2*i+1][1], xmax)
+        
+        df, title, finish = pre_process(content1)
+        draw_cpu_chart(df, title, finish , axes[2*i][0], xmax)
+        draw_mem_chart(df, title, finish , axes[2*i][1], xmax)
+        draw_mem_chart2(df, title, finish , axes[2*i][2], xmax)
+        
+        df, title, finish = pre_process(content2)
+        draw_cpu_chart(df, title, finish , axes[2*i+1][0], xmax)
+        draw_mem_chart(df, title, finish , axes[2*i+1][1], xmax)
+        draw_mem_chart2(df, title, finish , axes[2*i+1][2], xmax)
 
 
 # In[8]:
